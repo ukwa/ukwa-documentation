@@ -34,11 +34,11 @@ System Overview
 Services & Repositories
 -----------------------
 
-<table width="10%" style="text-align: center; display: table;">
+<table width="100%" style="text-align: center !important; display: table !important;">
 	<thead width="100%">
 	    <tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
     </thead>
-    <tbody>
+    <tbody width="100%">
 		<tr>
 			<th rowspan="2">Services</th>
 			<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
