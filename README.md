@@ -24,17 +24,32 @@ This document outlines the current and near-future web archiving system. It is i
 
 <table>
 	<tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
-	<tr><th>Services</th>
-		<td><a href="https://github.com/ukwa/ukwa-ingest-services">ukwa-ingest-services</a></td>
+	<tr>
+		<th>Services</th>
+		<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
+		<td>HDFS, HBase</td>
+		<td><a href="https://github.com/ukwa/ukwa-access-services"><i>ukwa-access-services</i></a></td>
+	</tr>
+	<tr>
+		<th rowspan="2">Management</th>
+		<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/python-shepherd"><i>python-shepherd</i></a></td>
+	</tr>
+	<tr>
+		<td><i>Ingest Task Scheduler</i></td>
 		<td></td>
-		<td><a href="https://github.com/ukwa/ukwa-access-services">ukwa-access-services</a></td></tr>
-	<tr><th>Management Tasks</th><td colspan="3" align="center"><a href="https://github.com/spotify/luigi">Python Luigi</a> tasks defined in <a href="https://github.com/ukwa/python-shepherd">python-shepherd</a></td></tr>
-	<tr><th>Task Scheduler</th><td>LuigiD@ingest</td><td></td><td>LuigiD@access</td></tr>
-	<tr><th>Monitoring</th><td colspan="3" align="center"><a href="https://github.com/ukwa/ukwa-monitor">ukwa-monitor</a></td></tr>
+		<td><i>Access Task Scheduler</i></td>
+	</tr>
+	<tr>
+		<th rowspan="2">Monitoring</th>
+		<td colspan="3" align="center">Tasks in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
+	</tr>
+	<tr>
+		<td colspan="3" align="center">Monitoring Task Scheduler</td>
+	</tr>
 </table>
 
 
-There are three major areas to cover: Services, Management & Monitoring. The Services are the main components of the crawl system, often deployed as Docker containers. The Management system coordinates the tasks that act upon the services, in order to automate whole content management life-cycle. The Monitoring system runs independently of the Management system, but automates checks that help ensure the whole system is running correctly.
+There are three major areas to cover: Services, Management & Monitoring. The Services are the main components of the crawl system, usually deployed as Docker containers. The Management system coordinates the tasks that act upon the services, in order to automate whole content management life-cycle. The Monitoring system runs independently of the Management system, but automates checks that help ensure the whole system is running correctly.
 
 ### Services ###
 
