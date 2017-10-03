@@ -5,7 +5,8 @@ Technical documentation for the UK Web Archive.
 
 <!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
 
-- [Introduction](#introduction)
+- [Overview](#overview)
+- [Service Deployment](#service-deployment)
 	- [Services](#services)
 	- [Management](#management)
 	- [Monitoring](#monitoring)
@@ -16,19 +17,28 @@ Technical documentation for the UK Web Archive.
 
 <!-- /MarkdownTOC -->
 
+Overview
+--------
 
-Introduction
-------------
+![High-level Architectural overview](./drawings/ng-was.png)
+
+Service Deployment
+------------------
 
 This document outlines the current and near-future web archiving system. It is intended to give an introduction to the major components and tie together the different source code repositories that are involved.
 
-<table>
+<table width="100%">
 	<tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
 	<tr>
-		<th>Services</th>
+		<th rowspan="2">Services</th>
 		<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
 		<td>HDFS, HBase</td>
 		<td><a href="https://github.com/ukwa/ukwa-access-services"><i>ukwa-access-services</i></a></td>
+	</tr>
+	<tr>
+		<td>On Docker</td>
+		<td>Native</td>
+		<td>On Docker</td>
 	</tr>
 	<tr>
 		<th rowspan="2">Management</th>
@@ -101,9 +111,9 @@ n.b. * UNDER DEVELOPMENT *
 Further Information
 -------------------
 
-* [[Design Principles]]
-* [[System State Management]]
-* [[Deployment]]
-* [[Development]]
-    * [[Working With Luigi]]
-* [[Future Development]]
+* [Design Principles](Design-Principles.md)
+* [System State Management](System-State-Management.md)
+* [Deployment](Deployment.md)
+* [Development](Development.md)
+    * [Working With Luigi](Working-With-Luigi.md)
+* [Future Development](Future-Development.md)
