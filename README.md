@@ -5,8 +5,9 @@ Technical documentation for the UK Web Archive.
 
 <!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
 
-- [Overview](#overview)
-- [Service Deployment](#service-deployment)
+- [Introduction](#introduction)
+- [System Overview](#system-overview)
+- [Services & Repositories](#services--repositories)
 	- [Services](#services)
 	- [Management](#management)
 	- [Monitoring](#monitoring)
@@ -17,45 +18,54 @@ Technical documentation for the UK Web Archive.
 
 <!-- /MarkdownTOC -->
 
-Overview
---------
 
-![High-level Architectural overview](./drawings/ng-was.png)
-
-Service Deployment
-------------------
+Introduction
+------------
 
 This document outlines the current and near-future web archiving system. It is intended to give an introduction to the major components and tie together the different source code repositories that are involved.
 
+
+System Overview
+---------------
+
+![High-level Architectural overview](./drawings/ng-was.png)
+
+Services & Repositories
+-----------------------
+
 <table width="100%">
-	<tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
-	<tr>
-		<th rowspan="2">Services</th>
-		<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
-		<td>HDFS, HBase</td>
-		<td><a href="https://github.com/ukwa/ukwa-access-services"><i>ukwa-access-services</i></a></td>
-	</tr>
-	<tr>
-		<td>On Docker</td>
-		<td>Native</td>
-		<td>On Docker</td>
-	</tr>
-	<tr>
-		<th rowspan="2">Management</th>
-		<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/python-shepherd"><i>python-shepherd</i></a></td>
-	</tr>
-	<tr>
-		<td><i>Ingest Task Scheduler</i></td>
-		<td></td>
-		<td><i>Access Task Scheduler</i></td>
-	</tr>
-	<tr>
-		<th rowspan="2">Monitoring</th>
-		<td colspan="3" align="center">Tasks in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
-	</tr>
-	<tr>
-		<td colspan="3" align="center">Monitoring Task Scheduler</td>
-	</tr>
+	<thead width="100%">
+	    <tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
+    </thead>
+    <tbody width="100%">
+		<tr>
+			<th rowspan="2">Services</th>
+			<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
+			<td>HDFS, HBase</td>
+			<td><a href="https://github.com/ukwa/ukwa-access-services"><i>ukwa-access-services</i></a></td>
+		</tr>
+		<tr>
+			<td>On Docker</td>
+			<td>Native</td>
+			<td>On Docker</td>
+		</tr>
+		<tr>
+			<th rowspan="2">Management</th>
+			<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/python-shepherd"><i>python-shepherd</i></a></td>
+		</tr>
+		<tr>
+			<td><i>Ingest Task Scheduler</i></td>
+			<td></td>
+			<td><i>Access Task Scheduler</i></td>
+		</tr>
+		<tr>
+			<th rowspan="2">Monitoring</th>
+			<td colspan="3" align="center">Tasks in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center">Monitoring Task Scheduler</td>
+		</tr>
+	</tbody>
 </table>
 
 
