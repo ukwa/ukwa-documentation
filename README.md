@@ -19,6 +19,7 @@ Technical documentation for the UK Web Archive.
 <!-- /MarkdownTOC -->
 
 
+
 Introduction
 ------------
 
@@ -33,11 +34,11 @@ System Overview
 Services & Repositories
 -----------------------
 
-<table width="100%">
-	<thead width="100%">
+<table style="text-align: center; width:90%; display:table;">
+	<thead>
 	    <tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
     </thead>
-    <tbody width="100%">
+    <tbody>
 		<tr>
 			<th rowspan="2">Services</th>
 			<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
