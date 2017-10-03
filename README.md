@@ -34,8 +34,8 @@ System Overview
 Services & Repositories
 -----------------------
 
-<table style="text-align: center; width:90%; display:table;">
-	<thead>
+<table width="10%" style="text-align: center; display: table;">
+	<thead width="100%">
 	    <tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
     </thead>
     <tbody>
