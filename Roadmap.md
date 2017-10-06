@@ -1,12 +1,12 @@
 Roadmap
 =======
 
-Crawl Engine
-------------
+Ingest NG Phase 2
+------------------
 
-Working on [ukwa-heritrix](https://github.com/ukwa/ukwa-heritrix) to improve our crawl engine.
+### Crawl Engine
 
-### Ingest NG Phase 2
+See [ukwa-heritrix](https://github.com/ukwa/ukwa-heritrix).
 
 #### Goals
 
