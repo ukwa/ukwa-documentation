@@ -18,6 +18,9 @@ Technical documentation for the UK Web Archive.
 
 <!-- /MarkdownTOC -->
 
+<!--
+See the [ukwa-documentation](https://github.com/ukwa/ukwa-documentation#ukwa-documentation) for an overview.
+-->
 
 
 Introduction
@@ -52,7 +55,7 @@ Services & Repositories
 		</tr>
 		<tr>
 			<th rowspan="2">Management</th>
-			<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/python-shepherd"><i>python-shepherd</i></a></td>
+			<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/ukwa-manage"><i>ukwa-manage</i></a></td>
 		</tr>
 		<tr>
 			<td><i>Ingest Task Scheduler</i></td>
@@ -81,7 +84,7 @@ There are two main sets of services, each of which has one or more [*Docker Comp
 
 ### Management ###
 
-The [*python-shepherd*](https://github.com/ukwa/python-shepherd) code base (rename to ukwa-manage?) contains all the ‘glue’ code that orchestrates our content life-cycle management, implemented as [*Python Luigi*](https://github.com/spotify/luigi) tasks.
+The [*ukwa-manage*](https://github.com/ukwa/ukwa-manage) code base contains all the ‘glue’ code that orchestrates our content life-cycle management, implemented as [*Python Luigi*](https://github.com/spotify/luigi) tasks.
 
 All events, across all production systems, are initiated by cron jobs on `wash`. For example, a cron job on `wash` may initiate a Luigi task on the the `ingest` server that scans crawl engines for new content to upload to HDFS. Both the `ingest` and `access` servers have a copy of `python-shepherd` installed, and each runs their own LuigiD task scheduler (which provides a UI and manages task execution).
 
