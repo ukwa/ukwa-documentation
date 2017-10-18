@@ -32,7 +32,7 @@ System Overview
 
 High-level workflows are described here - more detailed documentation on individual tasks will be available [here](http://ukwa-shepherd.readthedocs.io/en/latest/).
 
-![High-level Architectural Overview](./drawings/ng-was-phase-3.png)
+![High-level Architectural Overview](./drawings/ng-was-phase-3.jpg)
 
 The goal is a stable and robust crawl lifecycle, automated end-to-end. The frequent crawl stream should run with no manual intervention, and while the domain crawl may be initiated manually, the ingest and processing of content collected by the crawl should use the same framework.
 
