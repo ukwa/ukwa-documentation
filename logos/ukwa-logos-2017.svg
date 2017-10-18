@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1488.189"
+   height="1052.3622"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="ukwa-logos-2017.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3890">
+      <stop
+         style="stop-color:#1f53a9;stop-opacity:1;"
+         offset="0"
+         id="stop3892" />
+      <stop
+         style="stop-color:#276ad9;stop-opacity:1;"
+         offset="1"
+         id="stop3894" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3882">
+      <stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop3884" />
+      <stop
+         style="stop-color:#808080;stop-opacity:0.27350429;"
+         offset="1"
+         id="stop3886" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3882"
+       id="linearGradient3888"
+       x1="195.97533"
+       y1="939.12201"
+       x2="192.94116"
+       y2="696.17102"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3890"
+       id="linearGradient3896"
+       x1="194.04108"
+       y1="939.11407"
+       x2="190.84406"
+       y2="689.6684"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.69937899"
+     inkscape:cx="270.23974"
+     inkscape:cy="486.43443"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1637"
+     inkscape:window-height="1005"
+     inkscape:window-x="43"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,5.988066e-5)">
+    <rect
+       y="20.131287"
+       x="22.673027"
+       height="420"
+       width="630"
+       id="rect3821"
+       style="fill:#2e6dd9;fill-opacity:1;stroke:none"
+       inkscape:export-filename="/Users/andy/Sites/opendata/images/ukwa-logo.png"
+       inkscape:export-xdpi="149.95587"
+       inkscape:export-ydpi="149.95587" />
+    <rect
+       style="fill:#2e6dd9;fill-opacity:1;stroke:none"
+       id="rect3007"
+       width="240"
+       height="240"
+       x="102.94847"
+       y="457.72635"
+       inkscape:export-filename="/Users/andy/Documents/workspace/opendata/images/ukwa-icon.png"
+       inkscape:export-xdpi="149.95587"
+       inkscape:export-ydpi="149.95587" />
+    <g
+       id="g3027"
+       transform="translate(-380,-340)">
+      <text
+         sodipodi:linespacing="80.000001%"
+         id="text2995"
+         y="476.65723"
+         x="431.7121"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="476.65723"
+           x="431.7121"
+           id="tspan2997"
+           sodipodi:role="line">UK</tspan><tspan
+           id="tspan2999"
+           y="591.85724"
+           x="431.7121"
+           sodipodi:role="line">WEB</tspan><tspan
+           id="tspan3001"
+           y="707.05725"
+           x="431.7121"
+           sodipodi:role="line">ARCHIVE</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3003"
+         y="754.92371"
+         x="426.39691"
+         style="font-size:57px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         xml:space="preserve"><tspan
+           y="754.92371"
+           x="426.39691"
+           id="tspan3005"
+           sodipodi:role="line">preserving uk websites</tspan></text>
+    </g>
+    <g
+       id="g3813"
+       inkscape:export-filename="/Users/andy/Documents/workspace/opendata/images/ukwa-icon.png"
+       inkscape:export-xdpi="149.95587"
+       inkscape:export-ydpi="149.95587"
+       transform="translate(0,40)">
+      <text
+         transform="translate(0,308.2677)"
+         sodipodi:linespacing="80.000001%"
+         id="text2985"
+         y="222.20291"
+         x="214.47598"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           id="tspan2989"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           y="222.20291"
+           x="214.47598"
+           sodipodi:role="line">UK</tspan><tspan
+           id="tspan2993"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           y="337.40292"
+           x="214.47598"
+           sodipodi:role="line" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         x="220.69864"
+         y="530.47058"
+         id="text3801"
+         sodipodi:linespacing="80.000001%"><tspan
+           sodipodi:role="line"
+           x="220.69864"
+           y="530.47058"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           id="tspan3803" /><tspan
+           sodipodi:role="line"
+           x="220.69864"
+           y="645.67059"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           id="tspan3805">WA</tspan></text>
+    </g>
+    <rect
+       inkscape:export-ydpi="149.95587"
+       inkscape:export-xdpi="149.95587"
+       inkscape:export-filename="/Users/andy/Documents/workspace/waybacks/wayback-ukwa/src/main/webapp/images/toolbar/ukwa-icon.png"
+       y="723.7121"
+       x="101.51863"
+       height="240"
+       width="240"
+       id="rect3084"
+       style="fill:#2e6dd9;fill-opacity:1;stroke:none" />
+    <g
+       inkscape:export-ydpi="149.95587"
+       inkscape:export-xdpi="149.95587"
+       inkscape:export-filename="/Users/andy/Documents/workspace/opendata/images/ukwa-icon.png"
+       id="g3849"
+       transform="translate(0,306)">
+      <text
+         xml:space="preserve"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         x="214.47598"
+         y="222.20291"
+         id="text3851"
+         sodipodi:linespacing="80%"
+         transform="translate(0,308.2677)"><tspan
+           sodipodi:role="line"
+           x="214.47598"
+           y="222.20291"
+           style="font-size:132px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:center;line-height:80%;writing-mode:lr;text-anchor:middle;fill:#ffffff;font-family:Open Sans;-inkscape-font-specification:Open Sans Semi-Bold"
+           id="tspan3853">UK</tspan><tspan
+           sodipodi:role="line"
+           x="214.47598"
+           y="337.40292"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:80.00000119000000609%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Open Sans"
+           id="tspan3855" /></text>
+      <text
+         sodipodi:linespacing="80%"
+         id="text3857"
+         y="530.47058"
+         x="220.69864"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           id="tspan3859"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           y="530.47058"
+           x="220.69864"
+           sodipodi:role="line" /><tspan
+           id="tspan3861"
+           style="font-size:132px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:center;line-height:80%;writing-mode:lr;text-anchor:middle;fill:#ffffff;font-family:Open Sans;-inkscape-font-specification:Open Sans Semi-Bold"
+           y="645.67059"
+           x="220.69864"
+           sodipodi:role="line">WA</tspan></text>
+    </g>
+    <path
+       transform="matrix(1.429595,0,0,1.4496115,382.73727,-395.06721)"
+       d="m 325.89467,812.86401 c 0,69.79841 -58.8461,126.38119 -131.43643,126.38119 -72.59034,0 -131.436435,-56.58278 -131.436435,-126.38119 0,-69.7984 58.846095,-126.38118 131.436435,-126.38118 72.59033,0 131.43643,56.58278 131.43643,126.38118 z"
+       sodipodi:ry="126.38119"
+       sodipodi:rx="131.43643"
+       sodipodi:cy="812.86401"
+       sodipodi:cx="194.45824"
+       id="path3880"
+       style="fill:url(#linearGradient3896);fill-opacity:1;stroke:none"
+       sodipodi:type="arc"
+       inkscape:export-filename="/Users/andy/Documents/workspace/opendata/images/ukwa-icon-2017-app.png"
+       inkscape:export-xdpi="122.62"
+       inkscape:export-ydpi="122.62" />
+    <path
+       style="fill:#2e6dd9;fill-opacity:1;stroke:none"
+       d="M 544.76898,662.229 827.66418,786.62507 544.76898,923.6766 z"
+       id="rect3912"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/Users/andy/Documents/workspace/opendata/images/ukwa-icon-2017-app.png"
+       inkscape:export-xdpi="122.62"
+       inkscape:export-ydpi="122.62" />
+    <g
+       transform="translate(440,246)"
+       id="g3898"
+       inkscape:export-filename="/Users/andy/Documents/workspace/opendata/images/ukwa-icon-2017-app.png"
+       inkscape:export-xdpi="122.62"
+       inkscape:export-ydpi="122.62">
+      <text
+         transform="translate(0,308.2677)"
+         sodipodi:linespacing="80.000001%"
+         id="text3900"
+         y="222.20291"
+         x="214.47598"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           id="tspan3902"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           y="222.20291"
+           x="214.47598"
+           sodipodi:role="line">UK</tspan><tspan
+           id="tspan3904"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           y="337.40292"
+           x="214.47598"
+           sodipodi:role="line" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         x="220.69864"
+         y="530.47058"
+         id="text3906"
+         sodipodi:linespacing="80.000001%"><tspan
+           sodipodi:role="line"
+           x="220.69864"
+           y="530.47058"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           id="tspan3908" /><tspan
+           sodipodi:role="line"
+           x="220.69864"
+           y="645.67059"
+           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           id="tspan3910">WA</tspan></text>
+    </g>
+    <rect
+       inkscape:export-ydpi="27.428572"
+       inkscape:export-xdpi="27.428572"
+       inkscape:export-filename="/Users/andy/Sites/opendata/images/ukwa-logo-banner.png"
+       style="fill:#2e6dd9;fill-opacity:1;stroke:none"
+       id="rect3225"
+       width="630"
+       height="420"
+       x="702.67303"
+       y="20.131287" />
+    <g
+       transform="translate(300,-340)"
+       id="g3227">
+      <text
+         xml:space="preserve"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         x="431.7121"
+         y="476.65723"
+         id="text3229"
+         sodipodi:linespacing="80.000001%"><tspan
+           sodipodi:role="line"
+           id="tspan3231"
+           x="431.7121"
+           y="476.65723"
+           style="-inkscape-font-specification:Open Sans Bold;font-family:Open Sans;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:133px">UK</tspan><tspan
+           sodipodi:role="line"
+           x="431.7121"
+           y="591.85724"
+           id="tspan3233"
+           style="-inkscape-font-specification:Open Sans Bold;font-family:Open Sans;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:133px">WEB</tspan><tspan
+           sodipodi:role="line"
+           x="431.7121"
+           y="707.05725"
+           id="tspan3235"
+           style="-inkscape-font-specification:Open Sans Bold;font-family:Open Sans;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:133px">ARCHIVE</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:57px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         x="426.39691"
+         y="754.92371"
+         id="text3237"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3239"
+           x="426.39691"
+           y="754.92371"
+           style="-inkscape-font-specification:Open Sans;font-family:Open Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:53.5px">preserving uk websites</tspan></text>
+    </g>
+  </g>
+</svg>
