@@ -54,7 +54,7 @@ This material is cached on HDFS, from where it can be indexed for access and als
 
 Hadoop jobs are used to index the WARC files for access and search, and WARC records can be streamed from the HDFS storage backend as required. The indexes and HDFS provide the primary APIs that power the front-end services.
 
-All *ingest* and *access* tasks are launched via cron from a central service (known as `sh`), but each is scheduled by a dedicated instance of the Python Luigi Daemon. For example, a cron job on `sh` may initiate a Luigi task on the the *ingest* server that scans crawl engines for new content to upload to HDFS.
+All *ingest* and *access* tasks are launched via cron from a central service (known as `wash`), but each is scheduled by a dedicated instance of the Python Luigi Daemon. For example, a cron job on `wash` may initiate a Luigi task on the the *ingest* server that scans crawl engines for new content to upload to HDFS.
 
 An entirely independent *monitor* layer runs it's own tasks to inspect the status of the services and the various data stores, and stores the results in ElasticSearch for inspection in Grafana and/or Kibana. We recognise the [monitoring and QA are the same thing](https://plus.google.com/+RipRowan/posts/eVeouesvaVX) and aim to raise the bar for automated monitoring an QA of web archiving processes.
 
