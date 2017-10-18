@@ -61,10 +61,25 @@ To make do this as carefully as possible, we perform a two-stage copy-and-verify
 
 There are two implementations of the copy-then-verify step. One is designed to run locally on the source machine, and the other runs on a central machine and uses ssh to remotely log into a crawl server and scan the contents. See here:
 
-[*https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest*](https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest)
-
+*[https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest](https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest)*
 These are called variations of ‘move to HDFS’ and can be used to carry out a one-step copy-verify-delete if required (but I’d like to move to this two-step approach).
 
-The process to scan HDFS, hash all the files, and store the hashes somewhere useful is still under development: [*https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py\#L170*](https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py#L170)
-
+The process to scan HDFS, hash all the files, and store the hashes somewhere useful is still under development: *[https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py\#L170](https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py#L170)*
 The open question is how best to batch HDFS files for batching and how best to store the hashes so the ‘verify and delete’ process can compare the local server with HDFS and compare the Java-based and Python-based hashes to check all are consistent. The Python-derived hashes can be store in the assembled
+
+
+### Harvesting Workflow ###
+
+n.b. * UNDER DEVELOPMENT *
+
+| Step              | Description   |
+| ----------------- | ------------- |
+| Start/stop crawls |  |
+| Move to HDFS      |  |
+| Analyse           | As content appears on HDFS, we first need to identify the ‘chunks of crawl’ described above. We start this by scanning log files. For each new set of logs, we scan for associated WARC files, potential documents, run basic stats analysis. |
+| Verify            | This would be the logical spot to run the Map-Reduce hasher and double-check the hashes are as expected, at which point we can clear the files on the crawl servers for deletion. |
+| Assemble          | We take the initial chunks of logs and warc and assemble them into a single description that also contains any required metadata in associated ZIP files. This also contains the SHA-512 of the files and any necessary ARK identifiers. The main result is a JSON description of the crawl at a given point in time. Any crawl process that generates these can be plumbed into the downstream processes. |
+| Package & Submit  | Take each chunk and assemble SIPs incrementally, Submit them to DLS |
+| Validate          | We check the DLS export, and we check against our DLS Access Point. |
+| Analysis & Indexing | ...following on from Assembly, we can now start to process chunks of crawl for access. See [*2017 Web Archive Search Strategy*](http://drive.google.com/open?id=1CJUvyI1XPOZt6oEl_2oFRJHXrv8K3_jT36AkOSEcjzw) |
+

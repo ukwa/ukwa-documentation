@@ -12,8 +12,6 @@ Technical documentation for the UK Web Archive.
 	- [Management](#management)
 	- [Monitoring](#monitoring)
 	- [Major Components & Interfaces](#major-components--interfaces)
-- [Life-cycle Overview](#life-cycle-overview)
-	- [Harvesting Workflow](#harvesting-workflow)
 - [Further Information](#further-information)
 
 <!-- /MarkdownTOC -->
@@ -32,7 +30,34 @@ This document outlines the current and near-future web archiving system. It is i
 System Overview
 ---------------
 
+High-level workflows are described here - more detailed documentation on individual tasks will be available [here](http://ukwa-shepherd.readthedocs.io/en/latest/).
+
 ![High-level Architectural overview](./drawings/ng-was.png)
+
+The goal is a stable and robust crawl lifecycle, automated end-to-end. The frequent crawl stream should run with no manual intervention, and while the domain crawl may be initiated manually, the ingest and processing of content collected by the crawl should use the same framework.
+
+During long-running processes, failure is expected. Therefore, everything is built to be idempotent, as it may be retried many times. Transient failure are reported but not critical unless persistent.
+
+Overall, we use a small number of larger, modular components (mostly written in Java), and then ‘glue’ them together using Python scripts. Where appropriate, these scripts use the [*Luigi*](https://github.com/spotify/luigi) task framework to help ensure the processes are robust and recoverable. All services are wrapped as Docker containers for deployment.
+
+On the *ingest* side, we can make use of any crawl engine that:
+
+* Can consume a list of seeds and honor an appropriate scope:
+    * Either the 'crawl feed' from W3ACT that defines our frequent crawls (seeds, caps, crawl launch dates and frequencies, etc.)
+    * Or the domain crawl seed list, with a scope that permits GeoIP lookup as well as U.K. domain scoping.
+* Emits the results in the form we require:
+    * A set of WARC files, and associated logs.
+    * In a standard folder structure reflecting the crawl stream and the crawl launch date.
+    * Along with any necessary metadata e.g. crawl configuration files, usually packaged as a ZIP.
+
+This material is cached on HDFS, from where it can be indexed for access and also wrapped for submission to the DLS. All critical data is stored here as simple files in the standard folder structure, and all irreplaceable data should be store in the same way. All downstream processes depend only upon the state of the HDFS system (either directly or in faster, cached forms). i.e. there should be no coupling between the *ingest* and *access* sides.
+
+Hadoop jobs are used to index the WARC files for access and search, and WARC records can be streamed from the HDFS storage backend as required. The indexes and HDFS provide the primary APIs that power the front-end services.
+
+All *ingest* and *access* tasks are launched via cron from a central service (known as `sh`), but each is scheduled by a dedicated instance of the Python Luigi Daemon. For example, a cron job on `sh` may initiate a Luigi task on the the *ingest* server that scans crawl engines for new content to upload to HDFS.
+
+An entirely independent *monitor* layer runs it's own tasks to inspect the status of the services and the various data stores, and stores the results in ElasticSearch for inspection in Grafana and/or Kibana. We recognise the [monitoring and QA are the same thing](https://plus.google.com/+RipRowan/posts/eVeouesvaVX) and aim to raise the bar for automated monitoring an QA of web archiving processes.
+
 
 Services & Repositories
 -----------------------
@@ -101,25 +126,14 @@ The monitoring tasks check that the necessary services are running, and that cri
 The curation front end, the frequent crawl engine, the shepherd, the domain crawler, the storage, the indexes, the access services.
 
 
-Life-cycle Overview
--------------------
-
-High-level workflows are described here - more detailed documentation on individual tasks will be available [here](http://ukwa-shepherd.readthedocs.io/en/latest/) one day!
-
-### Harvesting Workflow ###
-
-n.b. * UNDER DEVELOPMENT *
-
-| Step              | Description   |
-| ----------------- | ------------- |
-| Start/stop crawls |  |
-| Move to HDFS      |  |
-| Analyse           | As content appears on HDFS, we first need to identify the ‘chunks of crawl’ described above. We start this by scanning log files. For each new set of logs, we scan for associated WARC files, potential documents, run basic stats analysis. |
-| Verify            | This would be the logical spot to run the Map-Reduce hasher and double-check the hashes are as expected, at which point we can clear the files on the crawl servers for deletion. |
-| Assemble          | We take the initial chunks of logs and warc and assemble them into a single description that also contains any required metadata in associated ZIP files. This also contains the SHA-512 of the files and any necessary ARK identifiers. The main result is a JSON description of the crawl at a given point in time. Any crawl process that generates these can be plumbed into the downstream processes. |
-| Package & Submit  | Take each chunk and assemble SIPs incrementally, Submit them to DLS |
-| Validate          | We check the DLS export, and we check against our DLS Access Point. |
-| Analysis & Indexing | ...following on from Assembly, we can now start to process chunks of crawl for access. See [*2017 Web Archive Search Strategy*](http://drive.google.com/open?id=1CJUvyI1XPOZt6oEl_2oFRJHXrv8K3_jT36AkOSEcjzw) |
+- Developed by us and/or IIPC members:
+    - [*W3ACT*](https://github.com/ukwa/w3act) (UKWA-only)
+    - [*Heritrix3*](https://github.com/internetarchive/heritrix3)
+    - [*warcprox*](https://github.com/internetarchive/warcprox) (Python)
+    - [*webarchive-discovery*](https://github.com/ukwa/webarchive-discovery)
+    - [*OutbackCDX*](https://github.com/nla/outbackcdx) (a.k.a. tinycdxserver)
+    - [*OpenWayback*](https://github.com/iipc/openwayback)
+    - The UKWA Website engine [*ukwa/ukwa-ui*](https://github.com/ukwa/ukwa-ui)
 
 
 Further Information

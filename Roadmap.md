@@ -49,12 +49,14 @@ This one routes all in-scope URIs via a Kafka queue, which can be used to recons
 - document and provide examples of keyed messages https://varunksaini.com/blog/send-key-value-messages-to-kafka-from-console-producer/
 - check setting stats to zero is working 
 - refine OutbackCDX Recently Seen lookup to query for just the most recent matches rather than all, to avoid filtering. [DONE]
-- think about how to plumb in crawler restart logic when pulling from Kafka. Should it be 'earliest' by default? How to reset when we need to recover fully?
+- think about how to plumb in crawler restart logic when pulling from Kafka. Should it be 'earliest' by default? How to reset when we need to recover fully? [DONE]
 - write up spark/storm comparison e.g. https://mapr.com/blog/stream-processing-everywhere-what-use/ - move Storm POC work into a suitable place and document how we could shift some processing to Storm and some reporting to Spark
 - document idea of switching from OutbackCDX to HBase as this may improve parallel performance and may make ad hoc queries easier (rather than relying on crawl logs)
 - explore the idea of directly exposing the Kafka streams, using filtering to move backward and forwards through what a crawl did.
 - Look at integrating OutbackCDX in warcprox, following this approach: https://github.com/internetarchive/warcprox/pull/37/files
 - Look at publishing crawled URIs from warcprox, following this approach: https://github.com/internetarchive/warcprox/pull/32
+- Use [this nice Kafka UI](https://github.com/Landoop/kafka-topics-ui) although this requires [Kafka REST](https://github.com/confluentinc/kafka-rest) as well (although there is a [Kafka REST docker image](https://hub.docker.com/r/confluentinc/cp-kafka-rest/))
+- Clean up our ukwa-manage/LuigiD container along [these lines](https://github.com/pysysops/docker-luigid/blob/master/Dockerfile)
 
 Ingest NG Phase 1
 ------------------
