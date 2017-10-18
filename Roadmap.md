@@ -55,7 +55,7 @@ This one routes all in-scope URIs via a Kafka queue, which can be used to recons
 - explore the idea of directly exposing the Kafka streams, using filtering to move backward and forwards through what a crawl did.
 - Look at integrating OutbackCDX in warcprox, following this approach: https://github.com/internetarchive/warcprox/pull/37/files
 - Look at publishing crawled URIs from warcprox, following this approach: https://github.com/internetarchive/warcprox/pull/32
-- Use [this nice Kafka UI](https://github.com/Landoop/kafka-topics-ui) although this requires [Kafka REST](https://github.com/confluentinc/kafka-rest) as well (although there is a [Kafka REST docker image](https://hub.docker.com/r/confluentinc/cp-kafka-rest/))
+- Instead of [Trifecta](https://github.com/ldaniels528/trifecta), use [this nice Kafka UI](https://github.com/Landoop/kafka-topics-ui) although this requires [Kafka REST](https://github.com/confluentinc/kafka-rest) as well (although there is a [Kafka REST docker image](https://hub.docker.com/r/confluentinc/cp-kafka-rest/))
 - Clean up our ukwa-manage/LuigiD container along [these lines](https://github.com/pysysops/docker-luigid/blob/master/Dockerfile)
 
 Ingest NG Phase 1
