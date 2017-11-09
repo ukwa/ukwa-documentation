@@ -50,7 +50,7 @@ On the *ingest* side, we can make use of any crawl engine that:
     * In a standard folder structure reflecting the crawl stream and the crawl launch date.
     * Along with any necessary metadata e.g. crawl configuration files, usually packaged as a ZIP.
 
-This material is cached on HDFS, from where it can be indexed for access and also wrapped for submission to the DLS. All critical data is stored here as simple files in the standard folder structure, and all irreplaceable data should be store in the same way. All downstream processes depend only upon the state of the HDFS system (either directly or in faster, cached forms). i.e. there should be no coupling between the *ingest* and *access* sides.
+This material is cached on HDFS, from where it can be indexed for access and also wrapped for submission to the DLS. All critical data is stored here as simple files in the standard folder structure, and all irreplaceable data should be store in the same way. All downstream processes depend only upon the state of the HDFS system (either directly or in faster, cached forms). i.e. ideally there should be no coupling between the *ingest* and *access* sides (a notable exception is the Q.A. Wayback service exposed via W3ACT, which shares the same back-end as the reader access systems in order to avoid unexpected differences between the two).
 
 Hadoop jobs are used to index the WARC files for access and search, and WARC records can be streamed from the HDFS storage backend as required. The indexes and HDFS provide the primary APIs that power the front-end services.
 
@@ -117,9 +117,11 @@ n.b. we may split the management codebase into a library and three separate task
 
 ### Monitoring ###
 
-The [*ukwa-monitor*](https://github.com/ukwa/ukwa-monitor) codebase monitors and reports on all UKWA processes, including ingest. This provides HTML reports, a dashboard, and raises alerts by probing the production system. It is also based on Luigi tasks, but no part of any production system depends on it, and it runs it’s own cron jobs (rather than being initiated by `wash`) and it's own LuigiD scheduler. If it's down, nothing else should be affected. 
+The [*ukwa-monitor*](https://github.com/ukwa/ukwa-monitor) codebase monitors and reports on all UKWA processes, including ingest. This provides a dashboard and raises alerts by probing the production system. It runs independendly, inspecting the state of the system and reporting on it. If it's down, nothing else should be affected. If any part of the production system is down, or if important tasks fail to run, the monitoring system should raise the alert.
 
-The monitoring tasks check that the necessary services are running, and that critical management tasks have been executed successfully. If services are down, or transient failures become persistant, it is the role of the monitor engine to raise the alert.
+To allow the alerts to be handled, the monitoring system will also hold any useful debugging information to help direct the web archiving team to the problematic service component.
+
+For more details, see [Monitoring Services](Monitoring-Services.md).
 
 ### Major Components & Interfaces ###
 
@@ -145,3 +147,4 @@ Further Information
 * [Development](Development.md)
     * [Working With Luigi](Working-With-Luigi.md)
 * [Future Development](Future-Development.md)
+
