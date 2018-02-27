@@ -12,7 +12,6 @@ Technical documentation for the UK Web Archive.
 	- [Management](#management)
 	- [Monitoring](#monitoring)
 	- [Major Components & Interfaces](#major-components--interfaces)
-- [Further Information](#further-information)
 
 <!-- /MarkdownTOC -->
 
@@ -58,6 +57,9 @@ All *ingest* and *access* tasks are launched via cron from a central service (kn
 
 An entirely independent *monitor* layer runs it's own tasks to inspect the status of the services and the various data stores, and stores the results in ElasticSearch for inspection in Grafana and/or Kibana. We recognise the [monitoring and QA are the same thing](https://plus.google.com/+RipRowan/posts/eVeouesvaVX) and aim to raise the bar for automated monitoring an QA of web archiving processes.
 
+* [Design Principles](Design-Principles.md)
+* [System State Management](System-State-Management.md)
+* [Future Development](Future-Development.md)
 
 Services & Repositories
 -----------------------
@@ -88,6 +90,10 @@ Services & Repositories
 			<td><i>Access Task Scheduler</i></td>
 		</tr>
 		<tr>
+			<th rowspan="2">Reporting</th>
+			<td colspan="3" align="center">Via <a href="https://github.com/ukwa/ukwa-reports"><i>ukwa-reports</i></a></td>
+		</tr>
+		<tr>
 			<th rowspan="2">Monitoring</th>
 			<td colspan="3" align="center">Tasks in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
 		</tr>
@@ -107,13 +113,22 @@ There are two main sets of services, each of which has one or more [*Docker Comp
 - [*ukwa-ingest-services*](https://github.com/ukwa/ukwa-ingest-services) with separate Docker Compose definitions for the crawl engine (Heritrix3 etc.) and for the frontend services (e.g. W3ACT etc.) 
 - [*ukwa-access-services*](https://github.com/ukwa/ukwa-access-services) which covers end-user services like our website, APIs etc.
 
+See [Deployment](Deployment.md) for more details.
+
 ### Management ###
 
 The [*ukwa-manage*](https://github.com/ukwa/ukwa-manage) code base contains all the ‘glue’ code that orchestrates our content life-cycle management, implemented as [*Python Luigi*](https://github.com/spotify/luigi) tasks.
 
 All events, across all production systems, are initiated by cron jobs on `wash`. For example, a cron job on `wash` may initiate a Luigi task on the the `ingest` server that scans crawl engines for new content to upload to HDFS. Both the `ingest` and `access` servers have a copy of `python-shepherd` installed, and each runs their own LuigiD task scheduler (which provides a UI and manages task execution).
 
-n.b. we may split the management codebase into a library and three separate task sets (for ingest, storage and access) in the future.
+Some low-level documentation can be found at http://ukwa-manage.readthedocs.io/ but the overall workflows and usage are described here:
+
+* Ingest:
+    * [HDFS Content Workflows](./workflows/ingest-listings.md)
+* Access
+    * [Indexing Workflows](./workflows/access-indexing.md)
+* [Development](Development.md)
+    * [Working With Luigi](Working-With-Luigi.md)
 
 ### Monitoring ###
 
@@ -127,24 +142,14 @@ For more details, see [Monitoring Services](Monitoring-Services.md).
 
 The curation front end, the frequent crawl engine, the shepherd, the domain crawler, the storage, the indexes, the access services.
 
-
 - Developed by us and/or IIPC members:
     - [*W3ACT*](https://github.com/ukwa/w3act) (UKWA-only)
-    - [*Heritrix3*](https://github.com/internetarchive/heritrix3)
+    - [*Heritrix3* with UKWA extensions](https://github.com/ukwa/ukwa-heritrix)
     - [*warcprox*](https://github.com/internetarchive/warcprox) (Python)
-    - [*webarchive-discovery*](https://github.com/ukwa/webarchive-discovery)
-    - [*OutbackCDX*](https://github.com/nla/outbackcdx) (a.k.a. tinycdxserver)
+    - [*OutbackCDX*](https://github.com/nla/outbackcdx) (previously known as *tinycdxserver*)
     - [*OpenWayback*](https://github.com/iipc/openwayback)
+    - [*webarchive-discovery*](https://github.com/ukwa/webarchive-discovery)
     - The UKWA Website engine [*ukwa/ukwa-ui*](https://github.com/ukwa/ukwa-ui)
 
 
-Further Information
--------------------
-
-* [Design Principles](Design-Principles.md)
-* [System State Management](System-State-Management.md)
-* [Deployment](Deployment.md)
-* [Development](Development.md)
-    * [Working With Luigi](Working-With-Luigi.md)
-* [Future Development](Future-Development.md)
 

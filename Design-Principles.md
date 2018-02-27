@@ -4,6 +4,11 @@ During long-running processes, failure is expected. Therefore, everything is bui
 
 Overall, we use a small number of larger, modular components (mostly written in Java), and then ‘glue’ them together using Python scripts. Where appropriate, these scripts use the [*Luigi*](https://github.com/spotify/luigi) task framework to help ensure the processes are robust and recoverable. All services are wrapped as Docker containers for deployment.
 
+
+Upon completion, where relevant, the tasks register execution metrics
+with the [monitoring system](Monitoring-Services.md) so we can verify
+that these tasks are being run.
+
 All events, across all production systems, are initiated by cron jobs on sh.wa.bl.uk. For example, a cron job on sh.wa.bl.uk may initiate a Luigi task on the the ingest server that scans crawl engines for new content to upload to HDFS.
 
 Anything critical gets put on or backed-up on HDFS

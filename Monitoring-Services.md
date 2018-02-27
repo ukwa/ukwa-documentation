@@ -1,6 +1,18 @@
 Monitoring Services
 ===================
 
+<!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
+
+- [Introduction](#introduction)
+- [Overall Monitoring Approach](#overall-monitoring-approach)
+- [Alerts & Statistics](#alerts--statistics)
+- [Log Indexing & Debugging Console](#log-indexing--debugging-console)
+
+<!-- /MarkdownTOC -->
+
+Introduction
+------------
+
 We need to monitor services to raise alerts when things go wrong, to collect and track statistics on behaviour, and to allow us to debug issues when they arise. In the past, our services have been few in number, and deployed on only a few machines, and much of this has been handled using traditional tools which are not well-suited to highly 'elastic' containerised or cloud-oriented systems. ([This presentation](https://www.youtube.com/watch?v=hCBGyLRJ1qo) explores some of these issues.)
 
 As our container-oriented crawl system is likely to contain large numbers of separate services, we need to move to a scalable approach to monitoring, based on tracking critical metrics. As elsewhere, we prefer to configure and use well-established best-of-breed open source applications to handle these kind of infrastructural issues, and attempt to minimise the amount of custom code we need.

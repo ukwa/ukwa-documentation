@@ -14,7 +14,7 @@
    height="2104.7244"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="ukwa-logos-2017.svg">
   <defs
      id="defs4">
@@ -66,15 +66,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.69937899"
-     inkscape:cx="2379.7593"
-     inkscape:cy="612.24973"
+     inkscape:zoom="0.98907125"
+     inkscape:cx="1913.9825"
+     inkscape:cy="860.13302"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1636"
+     inkscape:window-width="1638"
      inkscape:window-height="1005"
-     inkscape:window-x="44"
+     inkscape:window-x="42"
      inkscape:window-y="1"
      inkscape:window-maximized="1" />
   <metadata
@@ -85,7 +85,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -102,7 +102,7 @@
        sodipodi:cy="1657.8994"
        sodipodi:rx="313.84985"
        sodipodi:ry="315.27969"
-       d="m 2367.8149,1657.8994 a 313.84985,315.27969 0 1 1 -627.6997,0 313.84985,315.27969 0 1 1 627.6997,0 z"
+       d="m 2367.8149,1657.8994 a 313.84985,315.27969 0 0 1 -313.8498,315.2797 313.84985,315.27969 0 0 1 -313.8499,-315.2797 313.84985,315.27969 0 0 1 313.8499,-315.2797 313.84985,315.27969 0 0 1 313.8498,315.2797 z"
        transform="matrix(1.0012773,0,0,0.9967364,-2.2234672,-1045.9219)"
        inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/circular.png"
        inkscape:export-xdpi="73.32"
@@ -131,35 +131,37 @@
        id="g3027"
        transform="translate(-380,-520)">
       <text
-         sodipodi:linespacing="80.000001%"
          id="text2995"
          y="476.65723"
          x="431.7121"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="476.65723"
            x="431.7121"
            id="tspan2997"
-           sodipodi:role="line">UK</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:144px;line-height:0.80000001">UK</tspan><tspan
            id="tspan2999"
            y="591.85724"
            x="431.7121"
-           sodipodi:role="line">WEB</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:144px;line-height:0.80000001">WEB</tspan><tspan
            id="tspan3001"
            y="707.05725"
            x="431.7121"
-           sodipodi:role="line">ARCHIVE</tspan></text>
+           sodipodi:role="line"
+           style="font-size:144px;line-height:0.80000001">ARCHIVE</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text3003"
          y="754.92371"
          x="426.39691"
-         style="font-size:57px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="754.92371"
            x="426.39691"
            id="tspan3005"
-           sodipodi:role="line">preserving uk websites</tspan></text>
+           sodipodi:role="line"
+           style="font-size:57px;line-height:1.25">preserving uk websites</tspan></text>
     </g>
     <g
        id="g3813"
@@ -169,38 +171,36 @@
        transform="translate(0,-140)">
       <text
          transform="translate(0,308.2677)"
-         sodipodi:linespacing="80.000001%"
          id="text2985"
          y="222.20291"
          x="214.47598"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            id="tspan2989"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            y="222.20291"
            x="214.47598"
            sodipodi:role="line">UK</tspan><tspan
            id="tspan2993"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            y="337.40292"
-           x="214.47598"
-           sodipodi:role="line" /></text>
+           x="236.13223"
+           sodipodi:role="line"> </tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
          x="220.69864"
          y="530.47058"
-         id="text3801"
-         sodipodi:linespacing="80.000001%"><tspan
+         id="text3801"><tspan
            sodipodi:role="line"
-           x="220.69864"
+           x="242.35489"
            y="530.47058"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-           id="tspan3803" /><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+           id="tspan3803"> </tspan><tspan
            sodipodi:role="line"
            x="220.69864"
            y="645.67059"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            id="tspan3805">WA</tspan></text>
     </g>
     <rect
@@ -221,43 +221,41 @@
        transform="translate(0,126)">
       <text
          xml:space="preserve"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
          x="214.47598"
          y="222.20291"
          id="text3851"
-         sodipodi:linespacing="80.000001%"
          transform="translate(0,308.2677)"><tspan
            sodipodi:role="line"
            x="214.47598"
            y="222.20291"
-           style="font-size:132px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Open Sans;-inkscape-font-specification:Open Sans Semi-Bold"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:132px;line-height:80.00000119%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            id="tspan3853">UK</tspan><tspan
            sodipodi:role="line"
-           x="214.47598"
-           y="327.80292"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Open Sans"
-           id="tspan3855" /></text>
+           x="234.32755"
+           y="330.61905"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:132px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Open Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+           id="tspan3855"> </tspan></text>
       <text
-         sodipodi:linespacing="80.000001%"
          id="text3857"
          y="530.47058"
          x="220.69864"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            id="tspan3859"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            y="530.47058"
-           x="220.69864"
-           sodipodi:role="line" /><tspan
+           x="242.35489"
+           sodipodi:role="line"> </tspan><tspan
            id="tspan3861"
-           style="font-size:132px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Open Sans;-inkscape-font-specification:Open Sans Semi-Bold"
-           y="635.39484"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:132px;line-height:80.00000119%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+           y="634.66583"
            x="220.69864"
            sodipodi:role="line">WA</tspan></text>
     </g>
     <path
        transform="matrix(1.429595,0,0,1.4496115,382.73727,-575.06721)"
-       d="m 325.89467,812.86401 a 131.43643,126.38119 0 1 1 -262.872865,0 131.43643,126.38119 0 1 1 262.872865,0 z"
+       d="M 325.89467,812.86401 A 131.43643,126.38119 0 0 1 194.45824,939.2452 131.43643,126.38119 0 0 1 63.021805,812.86401 131.43643,126.38119 0 0 1 194.45824,686.48283 131.43643,126.38119 0 0 1 325.89467,812.86401 Z"
        sodipodi:ry="126.38119"
        sodipodi:rx="131.43643"
        sodipodi:cy="812.86401"
@@ -285,38 +283,36 @@
        inkscape:export-ydpi="122.62">
       <text
          transform="translate(0,308.2677)"
-         sodipodi:linespacing="80.000001%"
          id="text3900"
          y="222.20291"
          x="214.47598"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            id="tspan3902"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            y="222.20291"
            x="214.47598"
            sodipodi:role="line">UK</tspan><tspan
            id="tspan3904"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            y="337.40292"
-           x="214.47598"
-           sodipodi:role="line" /></text>
+           x="236.13223"
+           sodipodi:role="line"> </tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
          x="220.69864"
          y="530.47058"
-         id="text3906"
-         sodipodi:linespacing="80.000001%"><tspan
+         id="text3906"><tspan
            sodipodi:role="line"
-           x="220.69864"
+           x="242.35489"
            y="530.47058"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-           id="tspan3908" /><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+           id="tspan3908"> </tspan><tspan
            sodipodi:role="line"
            x="220.69864"
            y="645.67059"
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:80.00000119%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;line-height:80.00000119%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
            id="tspan3910">WA</tspan></text>
     </g>
     <rect
@@ -334,38 +330,36 @@
        id="g3227">
       <text
          xml:space="preserve"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="431.7121"
          y="476.65723"
-         id="text3229"
-         sodipodi:linespacing="80.000001%"><tspan
+         id="text3229"><tspan
            sodipodi:role="line"
            id="tspan3231"
            x="431.7121"
            y="476.65723"
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">UK</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:0.80000001;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold'">UK</tspan><tspan
            sodipodi:role="line"
            x="431.7121"
            y="583.05725"
            id="tspan3233"
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">WEB</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:0.80000001;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold'">WEB</tspan><tspan
            sodipodi:role="line"
            x="431.7121"
            y="689.45721"
            id="tspan3235"
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">ARCHIVE</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:0.80000001;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold'">ARCHIVE</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:57px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="426.39691"
          y="754.92371"
-         id="text3237"
-         sodipodi:linespacing="125%"><tspan
+         id="text3237"><tspan
            sodipodi:role="line"
            id="tspan3239"
            x="426.39691"
            y="754.92371"
-           style="font-size:53.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans">preserving uk websites</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.5px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans'">preserving uk websites</tspan></text>
     </g>
     <rect
        y="290.13129"
@@ -381,35 +375,33 @@
        id="g3062"
        transform="translate(600,30.38672)">
       <text
-         sodipodi:linespacing="80.000001%"
          id="text3064"
          y="476.65723"
          x="431.7121"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:0.80000001;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold'"
            y="476.65723"
            x="431.7121"
            id="tspan3066"
            sodipodi:role="line">UK</tspan><tspan
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:0.80000001;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold'"
            id="tspan3068"
            y="583.05725"
            x="431.7121"
            sodipodi:role="line">WEB</tspan><tspan
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:0.80000001;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold'"
            id="tspan3070"
            y="689.45721"
            x="431.7121"
            sodipodi:role="line">ARCHIVE</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text3072"
          y="754.92371"
          x="426.39691"
-         style="font-size:57px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:53.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.5px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans'"
            y="754.92371"
            x="426.39691"
            id="tspan3074"
@@ -419,15 +411,14 @@
        transform="matrix(0.9000017,0,0,0.9000017,1416.6116,89.295705)"
        id="g3089"
        inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/circular.png"
-       inkscape:export-xdpi="27.428572"
-       inkscape:export-ydpi="27.428572">
+       inkscape:export-xdpi="73.32"
+       inkscape:export-ydpi="73.32">
       <text
          xml:space="preserve"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="431.7121"
          y="501.86734"
          id="text3091"
-         sodipodi:linespacing="89.999998%"
          inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/circular.png"
          inkscape:export-xdpi="73.32"
          inkscape:export-ydpi="73.32"><tspan
@@ -435,17 +426,17 @@
            id="tspan3093"
            x="431.7121"
            y="501.86734"
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">UK</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">UK</tspan><tspan
            sodipodi:role="line"
            x="431.7121"
            y="621.56732"
            id="tspan3095"
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">WEB</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">WEB</tspan><tspan
            sodipodi:role="line"
            x="431.7121"
-           y="741.26727"
+           y="741.26733"
            id="tspan3097"
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">ARCHIVE</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">ARCHIVE</tspan></text>
     </g>
     <rect
        y="-19.868713"
@@ -455,32 +446,31 @@
        id="rect3873"
        style="fill:#2e6dd9;fill-opacity:1;stroke:none"
        inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/ukwa-logo-banner.png"
-       inkscape:export-xdpi="17.35714"
-       inkscape:export-ydpi="17.35714" />
+       inkscape:export-xdpi="37.25"
+       inkscape:export-ydpi="37.25" />
     <text
        xml:space="preserve"
-       style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="1456.9952"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       x="1452.9952"
        y="106.41332"
        id="text3877"
-       sodipodi:linespacing="89.999998%"
        inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/ukwa-logo-banner.png"
        inkscape:export-xdpi="17.35714"
        inkscape:export-ydpi="17.35714"><tspan
          sodipodi:role="line"
-         x="1456.9952"
+         x="1452.9952"
          y="106.41332"
-         style="font-size:132px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:132px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan3899">UK WEB</tspan><tspan
          sodipodi:role="line"
-         x="1456.9952"
+         x="1452.9952"
          y="225.21332"
-         style="font-size:132px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:132px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan3909"> ARCHIVE</tspan></text>
     <rect
-       inkscape:export-ydpi="27.428572"
-       inkscape:export-xdpi="27.428572"
-       inkscape:export-filename="/Users/andy/Sites/opendata/images/ukwa-logo-banner.png"
+       inkscape:export-ydpi="73.139999"
+       inkscape:export-xdpi="73.139999"
+       inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/square.png"
        style="fill:#2e6dd9;fill-opacity:1;stroke:none"
        id="rect3930"
        width="630"
@@ -488,32 +478,31 @@
        x="2418.0581"
        y="290.13129" />
     <g
-       inkscape:export-ydpi="27.428572"
-       inkscape:export-xdpi="27.428572"
-       inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/circular.png"
+       inkscape:export-ydpi="73.139999"
+       inkscape:export-xdpi="73.139999"
+       inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/square.png"
        id="g3932"
        transform="matrix(0.9000017,0,0,0.9000017,2091.0302,89.295705)">
       <text
          inkscape:export-ydpi="73.32"
          inkscape:export-xdpi="73.32"
          inkscape:export-filename="/Users/andy/Documents/workspace/ukwa-documentation/logos/circular.png"
-         sodipodi:linespacing="89.999998%"
          id="text3934"
          y="501.86734"
          x="431.7121"
-         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
            y="501.86734"
            x="431.7121"
            id="tspan3936"
            sodipodi:role="line">UK</tspan><tspan
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
            id="tspan3938"
            y="621.56732"
            x="431.7121"
            sodipodi:role="line">WEB</tspan><tspan
-           style="font-size:133px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:89.99999762%;writing-mode:lr-tb;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:133px;line-height:89.99999762%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
            id="tspan3940"
            y="741.26733"
            x="431.7121"

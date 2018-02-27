@@ -15,3 +15,5 @@ How Luigi is deployed
 /etc/supervisor.d/luigi.ini
 
 etc.
+
+`get_metrics`
