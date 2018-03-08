@@ -81,7 +81,7 @@ Services & Repositories
 			<td>On Docker</td>
 		</tr>
 		<tr>
-			<th rowspan="4">Management</th>
+			<th rowspan="2">Management</th>
 			<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/ukwa-manage"><i>ukwa-manage</i></a></td>
 		</tr>
 		<tr>
