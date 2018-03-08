@@ -90,8 +90,8 @@ Services & Repositories
 			<td><i>Access Task Scheduler</i></td>
 		</tr>
 		<tr>
-			<th>Monitoring</th>
-			<td colspan="3" align="center">Defined in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
+			<th>Monitoring Services</th>
+			<td colspan="3" align="center"><a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
 		</tr>
 	</tbody>
 </table>
