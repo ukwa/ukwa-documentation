@@ -72,7 +72,7 @@ Services & Repositories
 		<tr>
 			<th rowspan="2">Services</th>
 			<td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
-			<td>HDFS, HBase</td>
+			<td>HDFS, OutbackCDX</td>
 			<td><a href="https://github.com/ukwa/ukwa-access-services"><i>ukwa-access-services</i></a></td>
 		</tr>
 		<tr>
@@ -81,7 +81,7 @@ Services & Repositories
 			<td>On Docker</td>
 		</tr>
 		<tr>
-			<th rowspan="2">Management</th>
+			<th rowspan="4">Management</th>
 			<td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/ukwa-manage"><i>ukwa-manage</i></a></td>
 		</tr>
 		<tr>
@@ -90,15 +90,8 @@ Services & Repositories
 			<td><i>Access Task Scheduler</i></td>
 		</tr>
 		<tr>
-			<th rowspan="2">Reporting</th>
-			<td colspan="3" align="center">Via <a href="https://github.com/ukwa/ukwa-reports"><i>ukwa-reports</i></a></td>
-		</tr>
-		<tr>
-			<th rowspan="2">Monitoring</th>
-			<td colspan="3" align="center">Tasks in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
-		</tr>
-		<tr>
-			<td colspan="3" align="center">Monitoring Task Scheduler</td>
+			<th>Monitoring</th>
+			<td colspan="3" align="center">Defined in <a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
 		</tr>
 	</tbody>
 </table>
