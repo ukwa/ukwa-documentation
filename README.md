@@ -103,10 +103,14 @@ There are three major areas to cover: Services, Management & Monitoring. The Ser
 
 There are two main sets of services, each of which has one or more [*Docker Compose*](https://docs.docker.com/compose/) files to define different deployments, from local development to full production.
 
+When developing, the system should be run via the `docker-compose` command, and using the `docker-compose.yml` file held in the root directory of the component that you are working on.
+
+When deploying service into production (or into a formal beta/alpha/test environment), separate orchestration files should be used (currently Docker Swarm compose files held in the following repositories:
+
 - [*ukwa-ingest-services*](https://github.com/ukwa/ukwa-ingest-services) with separate Docker Compose definitions for the crawl engine (Heritrix3 etc.) and for the frontend services (e.g. W3ACT etc.) 
 - [*ukwa-access-services*](https://github.com/ukwa/ukwa-access-services) which covers end-user services like our website, APIs etc.
 
-See [Deployment](Deployment.md) for more details.
+See [Development Walkthrough](Development-Walkthrough.md) for more details.
 
 ### Management ###
 
