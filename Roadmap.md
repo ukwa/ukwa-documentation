@@ -1,7 +1,7 @@
 Roadmap (reverse chronological milestones)
 =======
 
-Ingest NG Phase 2
+Ingest v.4 Phase 2
 ------------------
 
 ### Ingest Orchestration 
@@ -58,7 +58,7 @@ This one routes all in-scope URIs via a Kafka queue, which can be used to recons
 - Instead of [Trifecta](https://github.com/ldaniels528/trifecta), use [this nice Kafka UI](https://github.com/Landoop/kafka-topics-ui) although this requires [Kafka REST](https://github.com/confluentinc/kafka-rest) as well (although there is a [Kafka REST docker image](https://hub.docker.com/r/confluentinc/cp-kafka-rest/))
 - Clean up our ukwa-manage/LuigiD container along [these lines](https://github.com/pysysops/docker-luigid/blob/master/Dockerfile)
 
-Ingest NG Phase 1
+Ingest v.4 Phase 1
 ------------------
 
 ### Ingest Orchestration 
@@ -73,3 +73,16 @@ Ingest NG Phase 1
 #### Goals
 
 #### Strategy:
+
+Ingest v. 3
+-----------
+Heritrix (pulse)
+
+Ingest v. 2
+-----------
+WCT + H3 (DC)
+
+Ingest v. 1
+-----------
+
+WCT
