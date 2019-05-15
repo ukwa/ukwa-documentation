@@ -1,6 +1,72 @@
 Roadmap (reverse chronological milestones)
 =======
 
+Web Rendering & Automated QA
+----------------------------
+
+The idea is to execute this sequence:
+
+- Set up proxy and headers for all requests.
+- Go to the URL.
+- When we hit onReady, capture the image etc.
+- Execute any Memento Tracer-style navigation assistance scripts.
+- Extract the navigation URLs and enqueue them for crawl.
+- (etc.)
+
+n.b. we also need to clear the cache.
+
+We currently use PhantomJS via warcprox to capture seeds. We capture:
+
+- onreadydom
+- screenshot
+- thumbnail
+- imagemap
+- har
+
+We want to use these to auto-evaluate crawl quality, by also screenshotting the archived page in proxy mode. We also want to align this work with the Memento Tracer project, and also deal with the fact that PhantomJS is EOL. Ideally, we want the screenshot-of-archived-pages to be a generic service that is exposes an oEmbed API.  See e.g. http://micawber.readthedocs.io/en/latest/
+
+One option, which would improve compatibility with the Memento Tracer project, would be to move all of this to the Selenium WebDriver API. The problem here is that both the crawl-time render and the playback-time render required us to set additional headers (`WARCProx-Meta` to name WARC files on capture, and `Accept-Datetime` to select Mementos during playback).  This is not directly supported by the WebDriver API, and appears to be considered out of scope, as they recommend using an additional proxy (specifically BrowserMob) to modify headers. This is very clumsy for us, as we wish to modify the headers per-render, and so each render process would need to run a separate proxy. This is not something SeleniumGrid appears to support.
+
+It is doable if you use PhantomJS as the Selenium back-end, because PhantomJS has a 'custom headers' API. But as PhantomJS is EOL, we need to move to Chrome and/or Firefox, and getting them to work in the same way may require us developing a web browser extension that somehow exposed the ability to modify the headers.  It's not clear if this would work, and it's depends on techologies our team has little experience with.
+
+However, this may not be necessary. The Google Chrome Puppeteer documentation indicates that they do provide an [API for adding extra HTTP headers](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetextrahttpheadersheaders). We could use Puppeteer (or it [Python alternative Pyppeteer](https://pypi.org/project/pyppeteer/)) and set the headers as needed.
+
+So, the remaining question is, can we talk to a Chrome instance, hooked up via Selenium, so we can use the [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) to [set headers](https://chromedevtools.github.io/devtools-protocol/tot/Network#method-setExtraHTTPHeaders) and then execute the Selenium script.
+
+I guess this should work. If we instanciate the Chrome instance in pyppeteer, then we can presumable execute any specific setup at that point, and then pass the instance (i.e. the remote debugging port) over to Selenium. Some Selenium stuff might not work if we do this [because they rely on a custom module that ChromeDriver installs](https://sites.google.com/a/chromium.org/chromedriver/help/operation-not-supported-when-using-remote-debugging), but I expect that would probably not affect the kinds of navigation-assist logic that is the main focus of the Tracer work.
+
+Here's an example from the [ChromeDriver docs](https://sites.google.com/a/chromium.org/chromedriver/getting-started):
+
+```java
+WebDriver driver = new RemoteWebDriver("http://127.0.0.1:9515", DesiredCapabilities.chrome());
+driver.get("http://www.google.com");
+```
+
+or [for Python](https://selenium-python.readthedocs.io/getting-started.html#using-selenium-with-remote-webdriver):
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+driver = webdriver.Remote(
+   command_executor='http://127.0.0.1:4444/wd/hub',
+   desired_capabilities=DesiredCapabilities.CHROME)
+```
+
+Hm, except I think this expects the remote to start a session, one that talks the WebDriver protocol rather than DevTools? Not sure. Actually,it looks like you can pass `debuggerAddress` to ChromeDriver, e.g. from [here](https://stackoverflow.com/questions/12698843/how-do-i-pass-options-to-the-selenium-chrome-driver-using-python#12698844):
+
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.add_argument("--disable-extensions")
+driver = webdriver.Chrome(chrome_options=chrome_options)
+```
+
+So, starting it with pyppeteer and passing the `debuggerAddress` to ChromeDriver for the Selenium stage should work okay.
+
+
+
 Ingest NG Phase 2
 ------------------
 
