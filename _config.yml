@@ -22,8 +22,8 @@ email: web-archivist@bl.uk
 description: >-
   Technical documentation about the UK Web Archive.
 
-baseurl: /ukwa-documentation  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: http://data.webarchive.org.uk                  # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url: https://stupefied-poincare-14b392.netlify.com # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################

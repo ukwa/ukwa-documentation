@@ -302,6 +302,3 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-scholar
   tzinfo-data
-
-BUNDLED WITH
-   1.17.2
