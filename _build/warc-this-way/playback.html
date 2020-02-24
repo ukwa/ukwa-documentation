@@ -1,0 +1,75 @@
+---
+title: |-
+  Playback
+pagenum: 3
+prev_page:
+  url: /warc-this-way/index.html
+next_page:
+  url: 
+suffix: .md
+search: cdx warc webrecorder sort using file option large big need io player server resources content offset corresponding scale collections size service range sorted indexer url records index filename where record resource locator interface user performs e small few tools pywb openwayback youll files open upload create collection offers playback access locally com approaches used indexes generally ensure merge fit incremental updates incrementally outbackcdx australia library solrwayback redis doesnt much very text although introduction play back archived able mapping requested contain seen different times usually done three components maps urls series results crawled instance refers position begins takes retrieves replay allows
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Playback</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p>To play back archived resources, we need to be able to look content up by URL -- mapping 
+the requested URL to the WARC records that contain that content as seen at different times.
+This is usually done using three components:</p>
+<ol>
+<li>A content index (CDX) that maps URLs to the series of <code>(WARC filename, offset)</code> results, one for each crawled instance, where the <code>offset</code> refers to the position in the WARC file where the corresponding WARC Record begins.</li>
+<li>A resource locator that takes the WARC filename and offset and retrieves the corresponding WARC record.</li>
+<li>A replay interface that allows the user to request URIs and performs and performs any necessary modifications (e.g. re-writing links) before delivering the response to the user.</li>
+</ol>
+<p>When operating at small scale (maybe a few million WARC records at most), tools like pywb and OpenWayback can do all of these for you. However, when you have a lot of resources, you'll probably need to manage the CDX separately.</p>
+<h2 id="Small-Collections">Small Collections<a class="anchor-link" href="#Small-Collections"> </a></h2><p>If you have collections of WARC files that is a manageable size, i.e. you have enough time and resources to deal with them manually, there are a few ways to quickly open them up and take a look.</p>
+<h3 id="Upload-to-Webrecorder.io">Upload to Webrecorder.io<a class="anchor-link" href="#Upload-to-Webrecorder.io"> </a></h3><p>You can create a free account on <a href="https://webrecorder.io/">webrecorder.io</a>, and use the <code>Upload</code> button to create an online collection, which is private by default but can be made public if you wish.  From there, the Webrecorder service offers a range of playback options, including access via a range of older web browsers.</p>
+<h3 id="Open-using-the-Webrecorder-Player">Open using the Webrecorder Player<a class="anchor-link" href="#Open-using-the-Webrecorder-Player"> </a></h3><p>If you want to access your WARCs locally, one option is to install the <a href="https://github.com/webrecorder/webrecorder-player#webrecorder-player">Webrecorder Player</a>. This offers a similar interface to the Webrecorder.io service, but everything is run locally.</p>
+<h2 id="Large-Collections">Large Collections<a class="anchor-link" href="#Large-Collections"> </a></h2><p>Here we describe the two main approaches used for large-scale CDX indexes<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup>.</p>
+<h3 id="Big,-sorted-CDX-file.">Big, sorted CDX file.<a class="anchor-link" href="#Big,-sorted-CDX-file."> </a></h3><p>A large file, generally constructed using OpenWayback or Pywb's cdx-indexer tools and GNU sort. The basic workflow would be:</p>
+<div class="highlight"><pre><span></span><span class="c1"># ensure sort order is not locale-sensitive</span>
+<span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>C
+cdx-indexer warc1.warc <span class="p">|</span> sort &gt; warc1.cdx
+cdx-indexer warc2.warc <span class="p">|</span> sort &gt; warc2.cdx
+...
+sort --merge warc1.cdx warc2.cdx warc3.cdx ... &gt; big.cdx
+</pre></div>
+<p>For large scale sorting ensure you give <code>sort</code> a large amount of RAM with <code>--buffer-size</code> and set <code>--temporary-directory</code> to somewhere that can fit the whole dataset.</p>
+<p>Generally people using this option have some sort of scheme for doing incremental updates. Like a big master CDX file and one or more smaller ones they add to incrementally and then periodically merge into the big one.</p>
+<h3 id="A-CDX-Server">A CDX Server<a class="anchor-link" href="#A-CDX-Server"> </a></h3><p>A "CDX server" which can incrementally be updated. OutbackCDX is my one, used I think currently by Australia, British Library and New Zealand. SolrWayback is another option. Finally Ilya mentioned recently that PyWb can use a Redis server for this purpose.</p>
+<h3 id="Comparing-these-approaches">Comparing these approaches<a class="anchor-link" href="#Comparing-these-approaches"> </a></h3><p>The tradeoffs:</p>
+<ul>
+<li>Big sorted CDX file: nice option if your collection doesn't change much. Very easy to understand - just sorted a text file. Very amenable to processing using platforms like Hadoop.</li>
+<li>OutbackCDX: stores the index compressed - about 1/5th the size of the corresponding CDX files. Quite convenient for incremental updates.</li>
+<li>SolrWayback: saves you from maintaining separate Solr and CDX indexes. Although it sounds like in your case you aren't planning to do full text search so this option doesn't make that much sense.</li>
+<li>Redis: off the shelf database tool, intended for datasets that fit inside memory, no compression (although you could possibly use an alternative implementation like LedisDB to gain some of those features)</li>
+</ul>
+<h2 id="Repository-Integration">Repository Integration<a class="anchor-link" href="#Repository-Integration"> </a></h2><p>If you need to integrate with your organisations storage facility, rather than using the local filesystem, you'll need to configure 
+your playback software to use an external resource locator service.</p>
+<ul>
+<li>HTTP Server supporting byte range requests</li>
+<li>HttpFS</li>
+<li>...</li>
+</ul>
+<div class="footnotes">
+<hr>
+<ol><li id="fn-1"><p>Thanks to <a href="https://twitter.com/atosborne">Alex Osborne</a> of the <a href="https://www.nla.gov.au/">National Library of Australia</a> for providing most of this information.<a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
