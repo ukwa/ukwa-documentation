@@ -152,6 +152,7 @@ exclude:
 - vendor/cache/
 - vendor/gems/
 - vendor/ruby/
+- content
 
 plugins:
 - jekyll-redirect-from
