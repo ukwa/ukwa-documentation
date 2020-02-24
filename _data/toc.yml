@@ -23,7 +23,7 @@
 
 # Top-level page
 - title: Home
-  url: /index
+  url: /intro
   not_numbered: true
 
 # Chapter on how UKWA runs:
