@@ -22,24 +22,44 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Home
-  url: /intro
+- title: Introduction
+  url: /index
   not_numbered: true
+  expand_sections: true
+  sections:
+  - title: How UKWA Works
+    url: /how-ukwa-works/index
+    not_numbered: true
 
-# Chapter on how UKWA runs:
-- title: How UKWA Works
-  url: /how-ukwa-works/index
+# Chapter on using UKWA APIs/services:
+- title: UKWA For Robots
+  url: /using-ukwa-services/index
   not_numbered: true
   expand_sections: true
 
-# Chapter on running your own web archive:
-- title: WARC This Way
-  url: /warc-this-way/index
+# Chapter on collecting your own web archives:
+- title: Make Your Own Web Archives
+  url: /make-your-own-warcs/index
+  not_numbered: true
+  expand_sections: true
+
+# Chapter on making use of your own web archive filess:
+- title: Use Your Web Archives
+  url: /use-your-warcs/index
   not_numbered: true
   expand_sections: true
   sections:
   - title: Playback
-    url: /warc-this-way/playback
+    url: /use-your-warcs/playback
+    not_numbered: true
+  - title: Integration
+    url: /use-your-warcs/integration
+    not_numbered: true
+  - title: Search
+    url: /use-your-warcs/search
+    not_numbered: true
+  - title: Analysis
+    url: /use-your-warcs/analysis
     not_numbered: true
 
 # External link

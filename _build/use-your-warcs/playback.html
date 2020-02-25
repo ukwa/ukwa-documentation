@@ -1,13 +1,13 @@
 ---
 title: |-
   Playback
-pagenum: 3
+pagenum: 5
 prev_page:
-  url: /warc-this-way/index.html
+  url: /use-your-warcs/index.html
 next_page:
-  url: 
+  url: /use-your-warcs/integration.html
 suffix: .md
-search: cdx warc webrecorder sort using file option large big need io player server resources content offset corresponding scale collections size service range sorted indexer url records index filename where record resource locator interface user performs e small few tools pywb openwayback youll files open upload create collection offers playback access locally com approaches used indexes generally ensure merge fit incremental updates incrementally outbackcdx australia library solrwayback redis doesnt much very text although introduction play back archived able mapping requested contain seen different times usually done three components maps urls series results crawled instance refers position begins takes retrieves replay allows
+search: cdx warc webrecorder sort using file option large big need io player server resources content offset corresponding scale collections files size service range sorted indexer url records index filename where record resource locator interface user performs e small few tools pywb openwayback youll open upload create collection offers playback access locally com approaches used indexes generally ensure merge fit incremental updates incrementally outbackcdx australia library solrwayback redis doesnt much very text although introduction play back archived able mapping requested contain seen different times usually done three components maps urls series results crawled instance refers position begins takes retrieves replay allows
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -50,7 +50,7 @@ sort --merge warc1.cdx warc2.cdx warc3.cdx ... &gt; big.cdx
 <li>SolrWayback: saves you from maintaining separate Solr and CDX indexes. Although it sounds like in your case you aren't planning to do full text search so this option doesn't make that much sense.</li>
 <li>Redis: off the shelf database tool, intended for datasets that fit inside memory, no compression (although you could possibly use an alternative implementation like LedisDB to gain some of those features)</li>
 </ul>
-<h2 id="Repository-Integration">Repository Integration<a class="anchor-link" href="#Repository-Integration"> </a></h2><p>If you need to integrate with your organisations storage facility, rather than using the local filesystem, you'll need to configure 
+<h2 id="Accessing-Your-WARC-Files">Accessing Your WARC Files<a class="anchor-link" href="#Accessing-Your-WARC-Files"> </a></h2><p>If you need to integrate with your organisations storage facility, rather than using the local filesystem, you'll need to configure 
 your playback software to use an external resource locator service.</p>
 <ul>
 <li>HTTP Server supporting byte range requests</li>
