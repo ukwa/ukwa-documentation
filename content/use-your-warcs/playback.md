@@ -1,5 +1,4 @@
-Introduction
-------------
+# Playback
 
 To play back archived resources, we need to be able to look content up by URL -- mapping 
 the requested URL to the WARC records that contain that content as seen at different times.

@@ -1,0 +1,22 @@
+title UKWA Access
+
+anchor Reader [0.9,0.6]
+anchor Researcher [0.9, 0.3]
+
+component View [0.8,0.6]
+component Browse [0.8,0.5]
+component Search [0.8,0.35]
+component Analyse [0.8,0.2]
+
+component Website [0.7,0.25]
+component Datasets [0.7,0.5]
+component API [0.7,0.12]
+component Juypter [0.7, 0.02]
+
+component Wayback [0.6, 0.3]
+component CDX Index [0.5, 0.55]
+component Solr Index [0.5, 0.35]
+
+component WARCs [0.4,0.6]
+
+component Hadoop [0.1, 0.7]

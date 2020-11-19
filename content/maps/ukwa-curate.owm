@@ -1,0 +1,40 @@
+title The UKWA Curation System
+
+anchor Curator [0.95,0.375]
+
+component Curate Crawled Sites [0.9,0.4] label [3, -20]
+component Harvest Crawled Documents [0.9,0.3] label [-68, -24]
+
+Curator->Harvest Crawled Documents
+Curator->Curate Crawled Sites
+
+component W3ACT [0.7,0.2] label [-52, 5]
+
+//component WikiBase [0.8,0.65] 
+//Curate Crawled Sites+>WikiBase
+
+Harvest Crawled Documents->W3ACT
+Curate Crawled Sites->W3ACT
+
+component QA Wayback [0.6,0.3] label [-86, 8]
+component PostgreSQL [0.65,0.7]
+component pdftohtmlEX [0.65,0.5]
+
+W3ACT->PostgreSQL
+W3ACT->pdftohtmlEX
+pdftohtmlEX->QA Wayback
+W3ACT->QA Wayback
+//WikiBase->QA Wayback
+
+component OutbackCDX [0.45,0.4] 
+component CDX Indexer [0.4,0.2] label [-33, 29]
+
+QA Wayback->OutbackCDX
+
+component WARCs [0.35,0.6]
+component HDFS [0.1,0.7]
+
+HDFS->WARCs
+WARCs->QA Wayback
+WARCs->CDX Indexer
+CDX Indexer->OutbackCDX

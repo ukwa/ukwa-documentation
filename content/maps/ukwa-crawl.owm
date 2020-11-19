@@ -1,0 +1,43 @@
+title The UKWA Crawl System
+
+anchor Curator [0.95,0.375]
+anchor Archivist [0.95,0.67]
+
+component Curate Crawled Sites [0.9,0.4] label [3, -20]
+component Harvest Crawled Documents [0.9,0.3] label [-68, -24]
+component Crawl Sites [0.9,0.67] label [9, 6]
+
+Curator->Harvest Crawled Documents
+Curator->Curate Crawled Sites
+Archivist->Crawl Sites
+
+component W3ACT [0.7,0.2] label [-52, 5]
+component QA Wayback [0.65,0.35] label [-68, 17]
+component PostgreSQL [0.65,0.7]
+
+component OutbackCDX [0.6,0.4]
+component Crawl Engine [0.45,0.35] label [-35, 24]
+component Crawl Launcher [0.5, 0.2] label [-43, 25]
+
+Harvest Crawled Documents->W3ACT
+Curate Crawled Sites->W3ACT
+Crawl Sites->W3ACT
+
+W3ACT->Crawl Launcher
+W3ACT->PostgreSQL
+Crawl Launcher->Crawl Engine
+QA Wayback->W3ACT
+QA Wayback->OutbackCDX
+
+component Kafka [0.3,0.7]
+component ukwa-heritrix [0.3,0.35] label [-38, 27]
+component webrender-api [0.3,0.1]
+component ClamAV [0.3,0.6]
+
+component WARCs & Logs [0.4,0.6]
+component HDFS [0.1,0.7]
+
+Crawl Engine->WARCs & Logs
+WARCs & Logs->HDFS
+WARCs & Logs->OutbackCDX
+WARCs & Logs->QA Wayback

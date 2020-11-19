@@ -1,0 +1,28 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: UKWA Technical Documentation
+author: The UK Web Archive
+logo: "assets/logos/ukwa-2018-onwhite-close.svg"
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: cache
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/ukwa/ukwa-documentation  # Online location of your book
+  path_to_book: content  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+# Add in logos etc.
+sphinx:
+  config:
+    html_extra_path: ['assets']

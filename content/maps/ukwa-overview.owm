@@ -1,0 +1,54 @@
+title UKWA Overview
+
+anchor Archivist [0.9,0.7]
+anchor Curator [0.9,0.55]
+anchor Reader [0.9,0.26]
+
+component Collect [0.8, 0.75] label [5, -13]
+component Describe [0.8, 0.6] label [5, -13]
+component View [0.8,0.5] label [-22, -13]
+component Browse [0.8,0.4] label [-56, 4]
+component Search [0.8,0.25] label [-50, 4]
+component Analyse [0.8,0.11] label [-53, 4]
+
+Archivist->Collect
+Archivist->View
+Curator->Describe
+Curator->View
+Reader->View
+Reader->Browse
+Reader->Search
+Reader->Analyse
+
+component Website [0.65,0.2] label [-54, 10]
+component Wayback [0.625,0.35] label [-43, -13]
+component W3ACT [0.65,0.5] label [14, 9]
+
+Collect->W3ACT
+Describe->W3ACT
+View->Website
+View->W3ACT
+Browse->Website
+Search->Website
+Analyse->Website
+
+component Indexes [0.5, 0.3] label [-57, 9]
+component Frequent Crawl [0.385, 0.25] label [-78, 23]
+component Domain Crawl [0.3, 0.25] label [-70, 26]
+component WARCs [0.2,0.7]
+
+Website->Indexes
+Website->Wayback
+Wayback->Indexes
+Wayback->WARCs
+
+W3ACT->Wayback
+W3ACT->Frequent Crawl
+
+Frequent Crawl->WARCs
+Domain Crawl->WARCs
+WARCs->Indexes
+
+component Hadoop [0.1, 0.9]
+
+WARCs->Hadoop
