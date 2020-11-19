@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Steps in Development &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/Future-Development.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Future-Development.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-work-ideas">
+   Development Work Ideas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qa">
+   QA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-collections">
+   Managing Collections
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#embedding-archived-web-resources">
+   Embedding Archived Web Resources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflows">
+   Workflows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wider-issues">
+   Wider Issues
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
+<ul class="simple">
+<li><p><a class="reference external" href="#next-steps-in-development">Next Steps in Development</a></p>
+<ul>
+<li><p><a class="reference external" href="#development-work-ideas">Development Work Ideas</a></p></li>
+<li><p><a class="reference external" href="#qa">QA</a></p></li>
+<li><p><a class="reference external" href="#managing-collections">Managing Collections</a></p></li>
+<li><p><a class="reference external" href="#embedding-archived-web-resources">Embedding Archived Web Resources</a></p></li>
+<li><p><a class="reference external" href="#workflows">Workflows</a></p></li>
+<li><p><a class="reference external" href="#wider-issues">Wider Issues</a></p></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<div class="section" id="next-steps-in-development">
+<h1>Next Steps in Development<a class="headerlink" href="#next-steps-in-development" title="Permalink to this headline">¶</a></h1>
+<p>The largest gap in the current indexing stack is problem of ‘reduplication’ - compensating for the ‘revisit’ records which we use to avoid storing multiple copies of the same resource. At index time, we need to reverse the de-duplication so we can search through the content of these resources over the whole time-frame. For this to work, we need a large index where we can store information associated with a URI, but drawn from different WARC records.</p>
+<p>This kind of lookup table (effectively a very large JOIN), would also have other uses:</p>
+<ul class="simple">
+<li><p>Associating Request records with the relevant Response.</p></li>
+<li><p>Storing full timelines for each URI, e.g. when we visited and it was gone, based on the crawl logs.</p></li>
+<li><p>Associating metadata or annotations with the target resource, e.g. taking advantage of the gov.uk content API during indexing, or exploiting additional metadata extracted using tools like <a class="reference external" href="https://any23.apache.org/"><em>any23</em></a>.</p></li>
+<li><p>Estimate URI lifespan, to add as a search facet.</p></li>
+<li><p>At crawl time, as a lookup that replaces and improves upon the current methods of deduplication and ‘already-seen-URIs’ checks, further reducing the amount of stage managed by the Heritrix crawler itself and significantly lowering the memory footprint due to the removal of the Bloom-filter-based already-seen URI lookup method.</p></li>
+</ul>
+<p>In this model, the crawl logs and WARCs would be processed to populate this large lookup table. The simplest approach is probably a single ‘timeline’ index (CDX-style), grouping pointers to records by target URI. As we index WARCs, we could look up the current URI to look for additional information to add to the record. It could probably be done using OutbackCDX, but if there are scaling issues (or if a more sophisticated data model is needed) it would be a good fit for a dedicated Solr index, or possibly HBase if very high performance and very large scale are required.</p>
+<p>A more sophisticated tactic would be to use HBase as the main data store, not just for lookups. The WARC processing would populate HBase rather than Solr, but we could generate the Solr index from HBase. This would allow more complex <em>ad hoc</em> analysis and may make re-generating Solr indexes slightly easier. However, it’s a more difficult approach to scale <em>down</em>, so would probably be of less interest to our IIPC colleagues.</p>
+<p>The webarchive-discovery project needs some attention, once we’ve settled on plan. I intend to propose something along the lines of:</p>
+<ul class="simple">
+<li><p>A cleared front-end/back-end separation, as for <a class="reference external" href="https://github.com/solrmarc"><em>solrmarc</em></a>, where we encourage a common Solr document model and indexing process, but accept that front-end technologies might vary.</p></li>
+<li><p>A plan to bring Shine and UKWA together as our front-end.</p></li>
+<li><p>Some kind of plan for how to provide additional services, like link-graphs, or format data, etc.</p></li>
+</ul>
+<p>See also <a class="reference external" href="https://trello.com/b/nJCKUtYf/ukwa-next-generation-services">https://trello.com/b/nJCKUtYf/ukwa-next-generation-services</a></p>
+<div class="section" id="development-work-ideas">
+<h2>Development Work Ideas<a class="headerlink" href="#development-work-ideas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>W3ACT:</p>
+<ul>
+<li><p>Browser plugin for curation to complement W3ACT?</p></li>
+</ul>
+</li>
+<li><p>Crawler development:</p>
+<ul>
+<li><p>External Frontier, storing queues outside H3 and in e.g. Redis/HBase</p></li>
+<li><p>CDX-based (re-using the Timeline Index described above) already-seen and de-duplication</p></li>
+<li><p>Container-level crawl job management</p></li>
+<li><p>Finer-grained jobs and launch windows</p></li>
+</ul>
+</li>
+<li><p>Analysis &amp; Processing</p>
+<ul>
+<li><p>Robust lifecycle management and alerting</p></li>
+<li><p>Automated screenshot comparison</p></li>
+<li><p>Report generation</p></li>
+</ul>
+</li>
+<li><p>Access:</p>
+<ul>
+<li><p>High-fidelity playback without re-writing:</p>
+<ul>
+<li><p>Dedicated desktop browser in ‘proxy mode’, not unlike <a class="reference external" href="https://github.com/N0taN3rd/wail"><em>WAIL</em></a></p></li>
+<li><p>and/or Netcapsule old browsers over the web <a class="reference external" href="http://oldweb.today/">http://oldweb.today/</a></p></li>
+</ul>
+</li>
+<li><p>Jupyter notebooks for general analysis.</p></li>
+<li><p>Secondary (especially non-consumptive) datasets.</p></li>
+<li><p>Full-text search across all holdings, combining data sources.</p></li>
+</ul>
+</li>
+</ul>
+<p>The ‘big’ parts are the externalised frontier and the timeline index.</p>
+</div>
+<div class="section" id="qa">
+<h2>QA<a class="headerlink" href="#qa" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Set up Archived Screenshot engine: Puppeteer to render pages against OpenWayback, masked by MITMProxy/SSLStrip. Also notes 404 embeds that are missing and logs these missed embedded URLs in a Kafka queue.</p></li>
+<li><p>Also collect NotInArchive logs from QA Wayback, feed to Logstash from Docker logs and push missed URLs onto a Kafka queue (not marked as embeds)</p></li>
+<li><p>Set up patch crawl stream to scope the incoming URLs and crawl them.</p></li>
+<li><p>Set up a task that periodically requests the screenshots for curated URLs.</p>
+<ul>
+<li><p>If possible, measure and report improvements/reduction in 404s over time.</p></li>
+<li><p>If possible, compare with original screenshot too.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="managing-collections">
+<h2>Managing Collections<a class="headerlink" href="#managing-collections" title="Permalink to this headline">¶</a></h2>
+<p>Instead of managing curated metadata in our own custom tools, I’d like to use off-the-shelve collection management tools that can be extended to cover web archives.</p>
+<p>There are three areas to consider, which are currently all handled in W3ACT, but may be better handled separately.</p>
+<ul class="simple">
+<li><p>Targets: Seeds and scopes and crawl authorisation/licencing.</p></li>
+<li><p>Collections: Groups of archived web resources, used for presentation</p></li>
+<li><p>Documents: Looking for documents among the archived resources, to add into the main catalogue.</p></li>
+</ul>
+<p>This is not meant to imply that access and curation happen in the same system. The main idea is that we need an interface for curators to manage the data, which may well get published elsewhere. However, it may make sense to use the system for general access too, rather than having a separate website for that.</p>
+<p>There is little point in shifting this data our of W3ACT unless it reduces the amount of code we need to maintain and the number of systems we need to manage. Therefore, we wish to consider moving this data into systems that can be supported by third-parties at modest cost, and that are based on open standard and open source so we can avoid vendor lock-in and shop around for support.</p>
+<p>Possible engines include <a class="reference external" href="http://omeka.org/">Omeka</a>, Blacklight’s <a class="reference external" href="http://spotlight.projectblacklight.org/">Spotlight</a> and <a class="reference external" href="https://www.drupal.org/">Drupal</a>. There’s also <span class="xref myst">Plone</span> which is a but like a Python version of Drupal but requires more back-end coding work. Then there are other tools like Collective Access, OpenRefine, citation managers like Zotero and Bibsonomy, and bookmark services like Pinboard/Delicious and Diigo.</p>
+<p>Drupal is very general, very powerful, and widely used. It is quite complex to manage and maintain, so third-party support would be needed, but there are lots of options. It’s not ‘pre-tuned’ to our kind of use cases, so would require a good deal of customisation at first, but is very flexible and could cover a wide range of use cases (e.g. we could probably move Permissions + Targets into it without using custom code, just configuring supported modules). Cloud hosting and support appears to be widespread but may be fairly expensive, but this requires more investigation (e.g. <a class="reference external" href="https://pantheon.io/">Pantheon</a> &amp; possible <a class="reference external" href="https://pantheon.io/edu">Pantheon EDU</a>, <a class="reference external" href="https://www.acquia.com/gb/products-services/acquia-cloud">Acquia Cloud</a>, <a class="reference external" href="https://platform.sh/">platform.sh</a>). Only Acquia Cloud includes automatic upgrades for security issues, although <a class="reference external" href="https://www.drupal.org/hosting-support/2015-04-11/hosts-that-perform-security-updates">in the past Drupal hosting services have acted quickly to respond to major issues</a>. At small scale, this is not terribly expensive (around £1,400/year for Acquia Cloud’s smallest server, which for curators only is likely fine.)</p>
+<p><a class="reference external" href="https://omeka.org/s/">Omeka S</a> is less widely used, but seems to match our use cases more closely. There are not as many support options as Drupal, but <a class="reference external" href="http://www.omeka.net/">hosting and support</a> is available from the lead developers at affordable rates, and [other support options are available)(https://digirati.com/updates/insights/a-crowdsourcing-platform-for-wales/). It seems very well suited to handling modern metadata. e.g. I was able to import a prototype <a class="reference external" href="https://groups.google.com/d/msg/memento-dev/xNHUXDxPxaQ/XQ250Y3AAwAJ">RDF model for Memento</a> into Omeka easily, and this could be used to clearly mark up our archived web pages and web sites. It can manage multi-lingual data, and also supports <a class="reference external" href="https://omeka.org/s/modules/ValueSuggest/">things like FAST and Library of Congress Subject Headings</a> using standard modules. The main different with our current model is that Omeka Collections (Item Sets) are not  hierarchical and would be managed as a flat list, although the heirarchy could still be captured via <code class="docutils literal notranslate"><span class="pre">Has</span> <span class="pre">Part</span></code> or <code class="docutils literal notranslate"><span class="pre">Is</span> <span class="pre">Part</span> <span class="pre">Of</span></code> relationships, or by using an additional taxonomy to manage where items appear. If needed, it can be used via Docker too, as shown <a class="reference external" href="https://github.com/klokantech/omeka-s-docker">here</a>.</p>
+<p>To make using it easier, it would make sense to consider adding some kind of helper module to smooth the process of discovering archived resources for inclusion, using Wayback (and perhaps Solr) queries to help pick the timestamps of interest. This could be a kind of ‘importer’ that pre-populated any necessary fields, e.g. oEmbeds (see below). For example, the Document Harvester workflow could be re-built as a Omeka Importer that queried the Solr service to find documents relating to e.g. ‘Watched Sites’ Items owned by a particular user (say).</p>
+<p>Spotlight is more geared towards highlighting items in a Solr index. This quite suites the Document use case, but the system is less strong on the kind of metadata management required in the other cases. There are also no hosted options and little formal third-party support, so we’d have to take this on in house. This would be worth it if we could much most internal Solr UI work onto Blacklight.</p>
+<p>Note that the main challenge in using any of these for the main public website is how to handle the integration of the kind of search-oriented functionality we use in Shine. For example, it may be possible to use Omeka as a end-user collections browser, but then hand over to a dedicated search UI for complex Solr queries.</p>
+<p><a class="reference external" href="http://www.collectiveaccess.org/getting-started">Collective Access</a> is not dissimilar, but appears to be too keenly focussed on a much broader set of use cases.</p>
+<p>An alternative approach would be to drive the whole process from <span class="xref myst">Zotero</span>. We could build up shared bibliographies and co-author them using any Zotero-compatible tool. The crawlers could read <a class="reference external" href="https://api.zotero.org/groups/76372/items/top?start=0&amp;limit=25&amp;format=json&amp;v=1">feeds like this one</a> to ensure we rapidly processed candidate URLs. Managing multi-lingual data in Zotero would be difficult, but otherwise it’s a good fit.</p>
+<p>OpenRefine is a futher option that may make sense to consider for some use cases.</p>
+<p>Similarly, we could integrate with <a class="reference external" href="https://bibsonomy.bitbucket.io/">Bibsonomy</a>, which works rather like Zotero although it’s not able to build heirarchical collections. e.g. <a class="reference external" href="https://www.bibsonomy.org/user/anj">my test account is here</a>.</p>
+</div>
+<div class="section" id="embedding-archived-web-resources">
+<h2>Embedding Archived Web Resources<a class="headerlink" href="#embedding-archived-web-resources" title="Permalink to this headline">¶</a></h2>
+<p>We would like to support common methods for embedding archived web pages in other web media, along the lines of that discussed in <a class="reference external" href="http://ws-dl.blogspot.co.uk/2017/08/2017-08-11-where-can-we-post-stories.html">this blog post about storytelling with web archives</a>. To this end, our Collections and our Archived Web Sites and our Archived Web Pages (OpenWayback) should ideally expose social card data. e.g. <a class="reference external" href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">Twitter Cards</a>, Open Graph etc.</p>
+<p>Beyond social media, there is a <a class="reference external" href="https://oembed.com/">oEmbed</a> standard that makes it easier to embed content in blogs and other engines. We could expose this service, and also register it with e.g. <a class="reference external" href="http://embed.ly/providers/new">Embedly</a> so more people can use it. The way Twitter itself support <a class="reference external" href="https://dev.twitter.com/web/embedded-tweets">embedded tweets</a> and <a class="reference external" href="https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-oembed">oEmbed</a> may help us understand how to achieve the same for archived web pages.</p>
+<p>For example, we could create a <code class="docutils literal notranslate"><span class="pre">rich</span></code> embed HTML snippet which includes basic information about an archived resource, overlayed on a screenshot (where possible). Clicking would take you through to the Wayback playback, much like any other media embed.</p>
+<p>Both <a class="reference external" href="https://omeka.org/s/docs/user-manual/content/media/#add-media">Omeka</a> and <a class="reference external" href="https://www.drupal.org/project/url_embed">Drupal</a> support oEmbed, so this standard could also be used to simplify our own systems.</p>
+</div>
+<div class="section" id="workflows">
+<h2>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Website &amp; Web Page Collection Management (very good fit for Omeka, but Drupal could be extended to cover it)</p></li>
+<li><p>Document Harvesting, and related grey literature like company reports (could be an Omeka importer, or in Drupal, but ‘MEX’ functionality would need some work and it may be better as a standalone component?)</p></li>
+<li><p>Crawl Targets (seeds and scopes etc.) including permissions. (Clumsy in Omeka, better fit for Drupal – like the original ACT!)</p></li>
+<li><p>Crawl Target Licensing Process (Could be done in Drupal, likely using standard modules.)</p></li>
+<li><p>Site Nomination (all automatically-in-scope URLs crawled immediately. All nominations recorded for review. Pretty straightforward in Drupal).</p></li>
+</ul>
+<p>Done right, the collections manager could also replace the basic browsing part of the new website engine. We would switch over to the new engine for search, but collections browsing could be done elsewhere.</p>
+</div>
+<div class="section" id="wider-issues">
+<h2>Wider Issues<a class="headerlink" href="#wider-issues" title="Permalink to this headline">¶</a></h2>
+<p>Security: A couple of proof-of-concept publications have shown that web archives can be ‘edited’ retrospectively, so we need to take that onboard.</p>
+<p>How we are tackling bias is not expressed explicitly? Transparency, unthinking machines, complementing information professional approach.</p>
+<p>User comments/feedback on collections useful for understanding how we need to document things.</p>
+<p>BREXIT:</p>
+<p>NPLD: Agreed: Equality of accessibility, digital facsimile for newsprint magazine. Plus two documents of disagreement. They are suggesting a consulation process about the web archives. Publishers, percentage of content disputed.  Maybe sneak some less-controversial stuff through pre-Brexit, but proposal is a further consulation on access and/or changes on regulations which means post-Brexit.</p>
+<p>Services to Research Community where is makes sense.</p>
+<p>Content Strategy: Led by Sally Halper. Document Harvester mentioned as expected. Web archive as source of intellegence on publishing in the UK. Alongside other contemporary British collections. Much digital content within there too. e.g. internally host as web sites we index? Or by web team. Problem is exposing them as web sites really. Sound Archive hardware repository.</p>
+<p>Preservation platform idea, news across different media, other areas.</p>
+<p>Everything Available/Research Services: Building services for audience sectors. Web archiving OA comes up here. EThOS. Repository service.</p>
+<p>Labs using Student Passes to allow researchers to VPN in to actual get stuff done.</p>
+<p>Sources for growing UK domain. Data sets like open corporates, Wikipedia, companies house.</p>
+<p>Others wanting to wrap content we hold. Something like loaning a collection item. Embed specific archived targets in others sites. oEmbed.</p>
+<p>Desire to have access to WARCs for a specific site. (Consider splitting upstream? Switch to mutltiple jobs?) Could be content owner or collection dataset.</p>
+<p>End users: Create their own collection. Mix in Internet Archive material where we can’t archive it. “Flickr for archive websites.” Supply the narrative too.</p>
+<p>Google/search engine indexing of Collection sites might help surface stuff.</p>
+<p>More time improving search.</p>
+<p>Wikipedia, WikiCite, WikiData.</p>
+<p>Research user forum?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/TechArch.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/TechArch.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#system-overview">
+   System Overview
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#services-repositories">
+   Services &amp; Repositories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#services">
+     Services
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#management">
+     Management
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring">
+     Monitoring
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#major-components-interfaces">
+     Major Components &amp; Interfaces
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This document outlines the current and near-future web archiving system. It is intended to give an introduction to the major components and tie together the different source code repositories that are involved.</p>
+</div>
+<div class="section" id="system-overview">
+<h1>System Overview<a class="headerlink" href="#system-overview" title="Permalink to this headline">¶</a></h1>
+<p>High-level workflows are described here - more detailed documentation on individual tasks will be available <a class="reference external" href="http://ukwa-shepherd.readthedocs.io/en/latest/">here</a>.</p>
+<p><img alt="High-level Architectural Overview" src="inbox/./drawings/ng-was-phase-3.jpg" /></p>
+<p>The goal is a stable and robust crawl lifecycle, automated end-to-end. The frequent crawl stream should run with no manual intervention, and while the domain crawl may be initiated manually, the ingest and processing of content collected by the crawl should use the same framework.</p>
+<p>During long-running processes, failure is expected. Therefore, everything is built to be idempotent, as it may be retried many times. Transient failure are reported but not critical unless persistent.</p>
+<p>Overall, we use a small number of larger, modular components (mostly written in Java), and then ‘glue’ them together using Python scripts. Where appropriate, these scripts use the <a class="reference external" href="https://github.com/spotify/luigi"><em>Luigi</em></a> task framework to help ensure the processes are robust and recoverable. All services are wrapped as Docker containers for deployment.</p>
+<p>On the <em>ingest</em> side, we can make use of any crawl engine that:</p>
+<ul class="simple">
+<li><p>Can consume a list of seeds and honor an appropriate scope:</p>
+<ul>
+<li><p>Either the ‘crawl feed’ from W3ACT that defines our frequent crawls (seeds, caps, crawl launch dates and frequencies, etc.)</p></li>
+<li><p>Or the domain crawl seed list, with a scope that permits GeoIP lookup as well as U.K. domain scoping.</p></li>
+</ul>
+</li>
+<li><p>Emits the results in the form we require:</p>
+<ul>
+<li><p>A set of WARC files, and associated logs.</p></li>
+<li><p>In a standard folder structure reflecting the crawl stream and the crawl launch date.</p></li>
+<li><p>Along with any necessary metadata e.g. crawl configuration files, usually packaged as a ZIP.</p></li>
+</ul>
+</li>
+</ul>
+<p>This material is cached on HDFS, from where it can be indexed for access and also wrapped for submission to the DLS. All critical data is stored here as simple files in the standard folder structure, and all irreplaceable data should be store in the same way. All downstream processes depend only upon the state of the HDFS system (either directly or in faster, cached forms). i.e. ideally there should be no coupling between the <em>ingest</em> and <em>access</em> sides (a notable exception is the Q.A. Wayback service exposed via W3ACT, which shares the same back-end as the reader access systems in order to avoid unexpected differences between the two).</p>
+<p>Hadoop jobs are used to index the WARC files for access and search, and WARC records can be streamed from the HDFS storage backend as required. The indexes and HDFS provide the primary APIs that power the front-end services.</p>
+<p>All <em>ingest</em> and <em>access</em> tasks are launched via cron from a central service (known as <code class="docutils literal notranslate"><span class="pre">wash</span></code>), but each is scheduled by a dedicated instance of the Python Luigi Daemon. For example, a cron job on <code class="docutils literal notranslate"><span class="pre">wash</span></code> may initiate a Luigi task on the the <em>ingest</em> server that scans crawl engines for new content to upload to HDFS.</p>
+<p>An entirely independent <em>monitor</em> layer runs it’s own tasks to inspect the status of the services and the various data stores, and stores the results in ElasticSearch for inspection in Grafana and/or Kibana. We recognise the <a class="reference external" href="https://plus.google.com/+RipRowan/posts/eVeouesvaVX">monitoring and QA are the same thing</a> and aim to raise the bar for automated monitoring an QA of web archiving processes.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="Design-Principles.html"><span class="doc std std-doc">Design Principles</span></a></p></li>
+<li><p><a class="reference internal" href="System-State-Management.html"><span class="doc std std-doc">System State Management</span></a></p></li>
+<li><p><a class="reference internal" href="Future-Development.html"><span class="doc std std-doc">Future Development</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="services-repositories">
+<h1>Services &amp; Repositories<a class="headerlink" href="#services-repositories" title="Permalink to this headline">¶</a></h1>
+<table width="100%" style="text-align: center; display: table; border-collapse: collapse;">
+    <thead width="100%">
+        <tr><th></th><th>Ingest</th><th>Storage</th><th>Access</th></tr>
+    </thead>
+    <tbody width="100%">
+        <tr>
+            <th rowspan="2">Services</th>
+            <td><a href="https://github.com/ukwa/ukwa-ingest-services"><i>ukwa-ingest-services</i></a></td>
+            <td>HDFS, OutbackCDX</td>
+            <td><a href="https://github.com/ukwa/ukwa-access-services"><i>ukwa-access-services</i></a></td>
+        </tr>
+        <tr>
+            <td>On Docker</td>
+            <td>Native</td>
+            <td>On Docker</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Management</th>
+            <td colspan="3" align="center"><a href="https://github.com/spotify/luigi"><i>Python Luigi</i></a> tasks defined in <a href="https://github.com/ukwa/ukwa-manage"><i>ukwa-manage</i></a></td>
+        </tr>
+        <tr>
+            <td><i>Ingest Task Scheduler</i></td>
+            <td></td>
+            <td><i>Access Task Scheduler</i></td>
+        </tr>
+        <tr>
+            <th>Monitoring Services</th>
+            <td colspan="3" align="center"><a href="https://github.com/ukwa/ukwa-monitor"><i>ukwa-monitor</i></a></td>
+        </tr>
+    </tbody>
+</table>
+<p>There are three major areas to cover: Services, Management &amp; Monitoring. The Services are the main components of the crawl system, usually deployed as Docker containers. The Management system coordinates the tasks that act upon the services, in order to automate whole content management life-cycle. The Monitoring system runs independently of the Management system, but automates checks that help ensure the whole system is running correctly.</p>
+<div class="section" id="services">
+<h2>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h2>
+<p>There are two main sets of services, each of which has one or more <a class="reference external" href="https://docs.docker.com/compose/"><em>Docker Compose</em></a> files to define different deployments, from local development to full production.</p>
+<p>When developing, the system should be run via the <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> command, and using the <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file held in the root directory of the component that you are working on.</p>
+<p>When deploying service into production (or into a formal beta/alpha/test environment), separate orchestration files should be used (currently Docker Swarm compose files held in the following repositories:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-ingest-services"><em>ukwa-ingest-services</em></a> with separate Docker Compose definitions for the crawl engine (Heritrix3 etc.) and for the frontend services (e.g. W3ACT etc.)</p></li>
+<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-access-services"><em>ukwa-access-services</em></a> which covers end-user services like our website, APIs etc.</p></li>
+</ul>
+<p>See <a class="reference internal" href="Development-Walkthrough.html"><span class="doc std std-doc">Development Walkthrough</span></a> for more details.</p>
+</div>
+<div class="section" id="management">
+<h2>Management<a class="headerlink" href="#management" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/ukwa/ukwa-manage"><em>ukwa-manage</em></a> code base contains all the ‘glue’ code that orchestrates our content life-cycle management, implemented as <a class="reference external" href="https://github.com/spotify/luigi"><em>Python Luigi</em></a> tasks.</p>
+<p>All events, across all production systems, are initiated by cron jobs on <code class="docutils literal notranslate"><span class="pre">wash</span></code>. For example, a cron job on <code class="docutils literal notranslate"><span class="pre">wash</span></code> may initiate a Luigi task on the the <code class="docutils literal notranslate"><span class="pre">ingest</span></code> server that scans crawl engines for new content to upload to HDFS. Both the <code class="docutils literal notranslate"><span class="pre">ingest</span></code> and <code class="docutils literal notranslate"><span class="pre">access</span></code> servers have a copy of <code class="docutils literal notranslate"><span class="pre">python-shepherd</span></code> installed, and each runs their own LuigiD task scheduler (which provides a UI and manages task execution).</p>
+<p>Some low-level documentation can be found at http://ukwa-manage.readthedocs.io/ but the overall workflows and usage are described here:</p>
+<ul class="simple">
+<li><p>Ingest:</p>
+<ul>
+<li><p><span class="xref myst">HDFS Content Workflows</span></p></li>
+</ul>
+</li>
+<li><p>Access</p>
+<ul>
+<li><p><span class="xref myst">Indexing Workflows</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">Development</span></p>
+<ul>
+<li><p><a class="reference internal" href="Working-With-Luigi.html"><span class="doc std std-doc">Working With Luigi</span></a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/ukwa/ukwa-monitor"><em>ukwa-monitor</em></a> codebase monitors and reports on all UKWA processes, including ingest. This provides a dashboard and raises alerts by probing the production system. It runs independendly, inspecting the state of the system and reporting on it. If it’s down, nothing else should be affected. If any part of the production system is down, or if important tasks fail to run, the monitoring system should raise the alert.</p>
+<p>To allow the alerts to be handled, the monitoring system will also hold any useful debugging information to help direct the web archiving team to the problematic service component.</p>
+<p>For more details, see <a class="reference internal" href="Monitoring-Services.html"><span class="doc std std-doc">Monitoring Services</span></a>.</p>
+</div>
+<div class="section" id="major-components-interfaces">
+<h2>Major Components &amp; Interfaces<a class="headerlink" href="#major-components-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The curation front end, the frequent crawl engine, the shepherd, the domain crawler, the storage, the indexes, the access services.</p>
+<ul class="simple">
+<li><p>Developed by us and/or IIPC members:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/ukwa/w3act"><em>W3ACT</em></a> (UKWA-only)</p></li>
+<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-heritrix"><em>Heritrix3</em> with UKWA extensions</a></p></li>
+<li><p><a class="reference external" href="https://github.com/internetarchive/warcprox"><em>warcprox</em></a> (Python)</p></li>
+<li><p><a class="reference external" href="https://github.com/nla/outbackcdx"><em>OutbackCDX</em></a> (previously known as <em>tinycdxserver</em>)</p></li>
+<li><p><a class="reference external" href="https://github.com/iipc/openwayback"><em>OpenWayback</em></a></p></li>
+<li><p><a class="reference external" href="https://github.com/ukwa/webarchive-discovery"><em>webarchive-discovery</em></a></p></li>
+<li><p>The UKWA Website engine <a class="reference external" href="https://github.com/ukwa/ukwa-ui"><em>ukwa/ukwa-ui</em></a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

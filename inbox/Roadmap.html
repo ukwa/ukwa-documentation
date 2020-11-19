@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap (reverse chronological milestones) &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/Roadmap.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Roadmap.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#web-rendering-automated-qa">
+   Web Rendering &amp; Automated QA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingest-ng-phase-2">
+   Ingest NG Phase 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ingest-orchestration">
+     Ingest Orchestration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#goals">
+       Goals
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crawl-engine">
+     Crawl Engine
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Goals
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strategy">
+       Strategy:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#to-be-considered">
+       To Be Considered:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingest-v-4-phase-1">
+   Ingest v.4 Phase 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ingest Orchestration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Goals
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Strategy:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Crawl Engine
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Goals
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Strategy:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingest-v-3">
+   Ingest v. 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingest-v-2">
+   Ingest v. 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingest-v-1">
+   Ingest v. 1
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="roadmap-reverse-chronological-milestones">
+<h1>Roadmap (reverse chronological milestones)<a class="headerlink" href="#roadmap-reverse-chronological-milestones" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="web-rendering-automated-qa">
+<h2>Web Rendering &amp; Automated QA<a class="headerlink" href="#web-rendering-automated-qa" title="Permalink to this headline">¶</a></h2>
+<p>The idea is to execute this sequence:</p>
+<ul class="simple">
+<li><p>Set up proxy and headers for all requests.</p></li>
+<li><p>Go to the URL.</p></li>
+<li><p>When we hit onReady, capture the image etc.</p></li>
+<li><p>Execute any Memento Tracer-style navigation assistance scripts.</p></li>
+<li><p>Extract the navigation URLs and enqueue them for crawl.</p></li>
+<li><p>(etc.)</p></li>
+</ul>
+<p>n.b. we also need to clear the cache.</p>
+<p>We currently use PhantomJS via warcprox to capture seeds. We capture:</p>
+<ul class="simple">
+<li><p>onreadydom</p></li>
+<li><p>screenshot</p></li>
+<li><p>thumbnail</p></li>
+<li><p>imagemap</p></li>
+<li><p>har</p></li>
+</ul>
+<p>We want to use these to auto-evaluate crawl quality, by also screenshotting the archived page in proxy mode. We also want to align this work with the Memento Tracer project, and also deal with the fact that PhantomJS is EOL. Ideally, we want the screenshot-of-archived-pages to be a generic service that is exposes an oEmbed API.  See e.g. http://micawber.readthedocs.io/en/latest/</p>
+<p>One option, which would improve compatibility with the Memento Tracer project, would be to move all of this to the Selenium WebDriver API. The problem here is that both the crawl-time render and the playback-time render required us to set additional headers (<code class="docutils literal notranslate"><span class="pre">WARCProx-Meta</span></code> to name WARC files on capture, and <code class="docutils literal notranslate"><span class="pre">Accept-Datetime</span></code> to select Mementos during playback).  This is not directly supported by the WebDriver API, and appears to be considered out of scope, as they recommend using an additional proxy (specifically BrowserMob) to modify headers. This is very clumsy for us, as we wish to modify the headers per-render, and so each render process would need to run a separate proxy. This is not something SeleniumGrid appears to support.</p>
+<p>It is doable if you use PhantomJS as the Selenium back-end, because PhantomJS has a ‘custom headers’ API. But as PhantomJS is EOL, we need to move to Chrome and/or Firefox, and getting them to work in the same way may require us developing a web browser extension that somehow exposed the ability to modify the headers.  It’s not clear if this would work, and it’s depends on techologies our team has little experience with.</p>
+<p>However, this may not be necessary. The Google Chrome Puppeteer documentation indicates that they do provide an <a class="reference external" href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetextrahttpheadersheaders">API for adding extra HTTP headers</a>. We could use Puppeteer (or it <a class="reference external" href="https://pypi.org/project/pyppeteer/">Python alternative Pyppeteer</a>) and set the headers as needed.</p>
+<p>So, the remaining question is, can we talk to a Chrome instance, hooked up via Selenium, so we can use the <a class="reference external" href="https://chromedevtools.github.io/devtools-protocol/">Chrome DevTools Protocol</a> to <a class="reference external" href="https://chromedevtools.github.io/devtools-protocol/tot/Network#method-setExtraHTTPHeaders">set headers</a> and then execute the Selenium script.</p>
+<p>I guess this should work. If we instanciate the Chrome instance in pyppeteer, then we can presumable execute any specific setup at that point, and then pass the instance (i.e. the remote debugging port) over to Selenium. Some Selenium stuff might not work if we do this <a class="reference external" href="https://sites.google.com/a/chromium.org/chromedriver/help/operation-not-supported-when-using-remote-debugging">because they rely on a custom module that ChromeDriver installs</a>, but I expect that would probably not affect the kinds of navigation-assist logic that is the main focus of the Tracer work.</p>
+<p>Here’s an example from the <a class="reference external" href="https://sites.google.com/a/chromium.org/chromedriver/getting-started">ChromeDriver docs</a>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">WebDriver</span> <span class="n">driver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RemoteWebDriver</span><span class="p">(</span><span class="s">&quot;http://127.0.0.1:9515&quot;</span><span class="p">,</span> <span class="n">DesiredCapabilities</span><span class="p">.</span><span class="na">chrome</span><span class="p">());</span>
+<span class="n">driver</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>or <a class="reference external" href="https://selenium-python.readthedocs.io/getting-started.html#using-selenium-with-remote-webdriver">for Python</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.desired_capabilities</span> <span class="kn">import</span> <span class="n">DesiredCapabilities</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span><span class="p">(</span>
+   <span class="n">command_executor</span><span class="o">=</span><span class="s1">&#39;http://127.0.0.1:4444/wd/hub&#39;</span><span class="p">,</span>
+   <span class="n">desired_capabilities</span><span class="o">=</span><span class="n">DesiredCapabilities</span><span class="o">.</span><span class="n">CHROME</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hm, except I think this expects the remote to start a session, one that talks the WebDriver protocol rather than DevTools? Not sure. Actually,it looks like you can pass <code class="docutils literal notranslate"><span class="pre">debuggerAddress</span></code> to ChromeDriver, e.g. from <a class="reference external" href="https://stackoverflow.com/questions/12698843/how-do-i-pass-options-to-the-selenium-chrome-driver-using-python#12698844">here</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
+<span class="n">chrome_options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+<span class="n">chrome_options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--disable-extensions&quot;</span><span class="p">)</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">chrome_options</span><span class="o">=</span><span class="n">chrome_options</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So, starting it with pyppeteer and passing the <code class="docutils literal notranslate"><span class="pre">debuggerAddress</span></code> to ChromeDriver for the Selenium stage should work okay.</p>
+</div>
+<div class="section" id="ingest-ng-phase-2">
+<h2>Ingest NG Phase 2<a class="headerlink" href="#ingest-ng-phase-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ingest-orchestration">
+<h3>Ingest Orchestration<a class="headerlink" href="#ingest-orchestration" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="goals">
+<h4>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Clean-up Heritrix management tools, moving all to https://github.com/ukwa/hapy</p></li>
+<li><p>Tidy up what was python-shepherd, now called https://github.com/ukwa/ukwa-manage</p></li>
+<li><p>Move Docker Compose service deployment configurations into https://github.com/ukwa/ukwa-ingest-services</p>
+<ul>
+<li><p>Consider deploying our <a class="reference external" href="https://github.com/ukwa/httpfs">HttpFS varient</a> in this way too.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="crawl-engine">
+<h3>Crawl Engine<a class="headerlink" href="#crawl-engine" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference external" href="https://github.com/ukwa/ukwa-heritrix">ukwa-heritrix</a>.</p>
+<div class="section" id="id1">
+<h4>Goals<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Improved robustness and monitorability.</p></li>
+<li><p>Extraction of ‘already seen’ and ‘persist log’ state into an external service.</p></li>
+<li><p>Ability to rebuild the frontier easily.</p></li>
+<li><p>Dynamic crawl workflow where individual targets launch when needed.</p></li>
+<li><p>Permit elastic Heritrix3 deployment.</p></li>
+</ul>
+</div>
+<div class="section" id="strategy">
+<h4>Strategy:<a class="headerlink" href="#strategy" title="Permalink to this headline">¶</a></h4>
+<p>Route scoped (‘to crawl’) URIs via external Kafka queue, which can also be used to launch crawls.
+This become a full log of requested crawls, which can be used to re-build the frontier by re-consuming the entire queue.
+To improve deduplicate handling and to control re-crawling frequency, we also use OutbackCDX as an external register of
+what has happened in the crawl so far. This is also used to discard fulfilled crawl requests when re-populating the frontier.</p>
+<p>This one routes all in-scope URIs via a Kafka queue, which can be used to reconstruct the frontier in the event of failure.</p>
+</div>
+<div class="section" id="to-be-considered">
+<h4>To Be Considered:<a class="headerlink" href="#to-be-considered" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Consider adding a recently-crawled check before dispatching to the <code class="docutils literal notranslate"><span class="pre">to-crawl</span></code> queue, to avoid overstuffing queues.</p></li>
+<li><p>Sketch out who to stop/start many instances and launch/unpause/pause/terminate jobs, consider pulling Heritrix3 Python management library in to here as CLI utils to be called from outside. (see <a class="reference external" href="https://webarchive.jira.com/wiki/spaces/Heritrix/pages/5735014/Heritrix+3.x+API+Guide">the H3 API Guide</a>). Move most H3 code out of ukwa-manage and into <a class="reference external" href="https://github.com/ukwa/python-heritrix.git">our python-heritrix fork</a></p></li>
+<li><p>this should include extracting status information for monitoring, running helper scripts, etc.</p></li>
+<li><p>Add sheets etc back in and ensure sheet associations and re-crawl frequencies can be set appropriately from the messages themselves.</p></li>
+<li><p>look at using full scopes from W3ACT rather than ‘growing’ scopes.</p></li>
+<li><p>consider how best to generate the surt TTL mapping.</p></li>
+<li><p>consider separating discovered/out of scope/to crawl streams</p></li>
+<li><p>design streams for different npld/pw/by Content</p></li>
+<li><p>key on host, and in the Python client too (check crawl key is host for us, consider using that)</p></li>
+<li><p>document and provide examples of keyed messages https://varunksaini.com/blog/send-key-value-messages-to-kafka-from-console-producer/</p></li>
+<li><p>check setting stats to zero is working</p></li>
+<li><p>refine OutbackCDX Recently Seen lookup to query for just the most recent matches rather than all, to avoid filtering. [DONE]</p></li>
+<li><p>think about how to plumb in crawler restart logic when pulling from Kafka. Should it be ‘earliest’ by default? How to reset when we need to recover fully? [DONE]</p></li>
+<li><p>write up spark/storm comparison e.g. https://mapr.com/blog/stream-processing-everywhere-what-use/ - move Storm POC work into a suitable place and document how we could shift some processing to Storm and some reporting to Spark</p></li>
+<li><p>document idea of switching from OutbackCDX to HBase as this may improve parallel performance and may make ad hoc queries easier (rather than relying on crawl logs)</p></li>
+<li><p>explore the idea of directly exposing the Kafka streams, using filtering to move backward and forwards through what a crawl did.</p></li>
+<li><p>Look at integrating OutbackCDX in warcprox, following this approach: https://github.com/internetarchive/warcprox/pull/37/files</p></li>
+<li><p>Look at publishing crawled URIs from warcprox, following this approach: https://github.com/internetarchive/warcprox/pull/32</p></li>
+<li><p>Instead of <a class="reference external" href="https://github.com/ldaniels528/trifecta">Trifecta</a>, use <a class="reference external" href="https://github.com/Landoop/kafka-topics-ui">this nice Kafka UI</a> although this requires <a class="reference external" href="https://github.com/confluentinc/kafka-rest">Kafka REST</a> as well (although there is a <a class="reference external" href="https://hub.docker.com/r/confluentinc/cp-kafka-rest/">Kafka REST docker image</a>)</p></li>
+<li><p>Clean up our ukwa-manage/LuigiD container along <a class="reference external" href="https://github.com/pysysops/docker-luigid/blob/master/Dockerfile">these lines</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="ingest-v-4-phase-1">
+<h2>Ingest v.4 Phase 1<a class="headerlink" href="#ingest-v-4-phase-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Ingest Orchestration<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Goals<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id4">
+<h4>Strategy:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Crawl Engine<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h4>Goals<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id7">
+<h4>Strategy:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="ingest-v-3">
+<h2>Ingest v. 3<a class="headerlink" href="#ingest-v-3" title="Permalink to this headline">¶</a></h2>
+<p>Heritrix (pulse)</p>
+</div>
+<div class="section" id="ingest-v-2">
+<h2>Ingest v. 2<a class="headerlink" href="#ingest-v-2" title="Permalink to this headline">¶</a></h2>
+<p>WCT + H3 (DC)</p>
+</div>
+<div class="section" id="ingest-v-1">
+<h2>Ingest v. 1<a class="headerlink" href="#ingest-v-1" title="Permalink to this headline">¶</a></h2>
+<p>WCT</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

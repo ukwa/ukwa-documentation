@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoring Services &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/Monitoring-Services.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Monitoring-Services.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overall-monitoring-approach">
+   Overall Monitoring Approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alerts-statistics">
+   Alerts &amp; Statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log-indexing-debugging-console">
+   Log Indexing &amp; Debugging Console
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="monitoring-services">
+<h1>Monitoring Services<a class="headerlink" href="#monitoring-services" title="Permalink to this headline">¶</a></h1>
+<!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
+<ul class="simple">
+<li><p><a class="reference external" href="#introduction">Introduction</a></p></li>
+<li><p><a class="reference external" href="#overall-monitoring-approach">Overall Monitoring Approach</a></p></li>
+<li><p><a class="reference external" href="#alerts--statistics">Alerts &amp; Statistics</a></p></li>
+<li><p><a class="reference external" href="#log-indexing--debugging-console">Log Indexing &amp; Debugging Console</a></p></li>
+</ul>
+<!-- /MarkdownTOC -->
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>We need to monitor services to raise alerts when things go wrong, to collect and track statistics on behaviour, and to allow us to debug issues when they arise. In the past, our services have been few in number, and deployed on only a few machines, and much of this has been handled using traditional tools which are not well-suited to highly ‘elastic’ containerised or cloud-oriented systems. (<a class="reference external" href="https://www.youtube.com/watch?v=hCBGyLRJ1qo">This presentation</a> explores some of these issues.)</p>
+<p>As our container-oriented crawl system is likely to contain large numbers of separate services, we need to move to a scalable approach to monitoring, based on tracking critical metrics. As elsewhere, we prefer to configure and use well-established best-of-breed open source applications to handle these kind of infrastructural issues, and attempt to minimise the amount of custom code we need.</p>
+</div>
+<div class="section" id="overall-monitoring-approach">
+<h2>Overall Monitoring Approach<a class="headerlink" href="#overall-monitoring-approach" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Monitoring for Alerts, Statistics &amp; Debugging" src="inbox/./drawings/ng-was-monitoring.jpg" /></p>
+<p>The monitoring system handles two classes information - metrics and logs. The metrics are used to generate alerts and statistics, and the logs are cached so we can debug problems.</p>
+</div>
+<div class="section" id="alerts-statistics">
+<h2>Alerts &amp; Statistics<a class="headerlink" href="#alerts-statistics" title="Permalink to this headline">¶</a></h2>
+<p>The metric monitoring system is focussed on exposing metrics that can be used to check the health of the system. For long-running services, this means ensuring those services are up and they are responding in a timely fashion. Batch jobs and tasks can’t be queried in this way, so instead are modified to update suitable metrics upon completion, and the monitoring system checks those metrics are being updated as expected.</p>
+<p>We use the <a class="reference external" href="https://prometheus.io/">Prometheus</a> metrics service to record and track these metrics, and <a class="reference external" href="https://grafana.com/">Grafana</a> to provide a sutiable service summary screen. We can add <a class="reference external" href="https://prometheus.io/docs/alerting/rules/">alert rules</a> to watch out for problems, and Prometheus will notify us via the <a class="reference external" href="https://prometheus.io/docs/alerting/alertmanager/">alert manager</a> component.</p>
+<p>We use Prometheus’s <a class="reference external" href="https://github.com/prometheus/blackbox_exporter">‘blackbox exporter’</a> to monitor our groups of HTTP services, and there are a large number of other <a class="reference external" href="https://prometheus.io/docs/instrumenting/exporters/">exporters and integrations</a> we use to monitor common software applications.</p>
+<p>Services that are specific to us require additional <a class="reference external" href="https://prometheus.io/docs/instrumenting/writing_exporters/">‘exporters’</a> or <a class="reference external" href="https://prometheus.io/docs/instrumenting/clientlibs/">instrumentation</a> to make the metrics available, but these are few in number and mostly just require us to re-factor our existing monitoring code.</p>
+<p>For batch tasks, each should post suitable metrics to the <a class="reference external" href="https://prometheus.io/docs/instrumenting/pushing/">Push Gateway</a> when completed, and the metric dashboard and alerts should be configured to monitor that the task has executed successfully within the expected time-frame.</p>
+<p>For example, when we back-up the W3ACT database, <a class="reference external" href="http://luigi.readthedocs.io/en/stable/tasks.html#events-and-callbacks">once the task chain complete successfully</a>, we post a timestamp and the size of the backup (in bytes) as metrics via the Push Gateway. These are polled by Prometheus, from where we can use Grafana to check that a backup has occurred in the last X hours, and that the new backup is of the expected size (roughly the same or larger than the previous backup). Raising alerts in this way, based on tests of expected outcomes, is much more robust than expecting that we will always be reliably alerted when a task fails to run.</p>
+<p>Areas to monitor:</p>
+<ul class="simple">
+<li><p>Check HTTP-based services are up and responsive (in groups)</p></li>
+<li><p>Check HDFS storage status and increase. (requires a custom ‘exporter’ to scrape HTML tags)</p></li>
+<li><p>Check Crawler status (requires a custom ‘exporter’ scanning Heritrix instances and summarising metrics)</p></li>
+<li><p>Check Crawler local disk space etc.</p></li>
+<li><p>Check AMQP/Kafka queues.</p></li>
+</ul>
+</div>
+<div class="section" id="log-indexing-debugging-console">
+<h2>Log Indexing &amp; Debugging Console<a class="headerlink" href="#log-indexing-debugging-console" title="Permalink to this headline">¶</a></h2>
+<p>Service logs and other events (like crawl events) routed from servers e.g. using <code class="docutils literal notranslate"><span class="pre">filebeat</span></code> to send logs to a Kafka service from which <code class="docutils literal notranslate"><span class="pre">logstash</span></code> can consume events and then push the results to <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>. This data can be inspected via <a class="reference external" href="https://www.elastic.co/products/kibana">Kibana</a>, which acts as a ‘debugging console’ that be used to work our what’s happening. Using Kafka as the transport makes it possible for all such logging processes to be done in a consistent manner without them being tightly-coupled.</p>
+<p>In contrast to the alerting &amp; statistics system, only the recent logs are kept here, although some useful metrics may be extracted from the logs and passed to the metrics service for tracking. Any ‘formal’ reporting should be implemented as ingest or access tasks rather than done here.</p>
+<p>Debugging of specific batch tasks should be possible via the Luigi Scheduler interfaces. In this case, the goal of the monitoring layer is to route you to the correct Luigi Scheduler and task result.</p>
+<p>For problems with long-running services, the goal is to summarise recent activity and direct you to the problematic system or systems.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contents &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/UKWA-Technical-Architecture.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/UKWA-Technical-Architecture.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overall-design">
+   Overall Design
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring">
+     Monitoring
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deployment">
+     Deployment
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harvest-ingest">
+   Harvest &amp; Ingest
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#moving-content-to-hdfs">
+     Moving content to HDFS
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse">
+     Analyse
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verify">
+     Verify
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assembe">
+     Assembe
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#package-submit">
+     Package &amp; Submit
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validate">
+     Validate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis-indexing">
+   Analysis &amp; Indexing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#next-steps-in-development">
+     Next Steps in Development
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Monitoring
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ideas">
+   Ideas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#development-work-ideas">
+     Development Work Ideas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>The goal is a stable and robust crawl lifecycle, automated end-to-end. The frequent crawl stream should run with no manual intervention, and while the domain crawl may be initiated manually, the ingest and processing of content collected by the crawl should use the same framework.</p>
+<p>This document covers the current and near-future architecture. Legacy components will not be described in detail here.</p>
+<div class="section" id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="overall-design">
+<h1>Overall Design<a class="headerlink" href="#overall-design" title="Permalink to this headline">¶</a></h1>
+<p>During long-running processes, failure is expected. Therefore, everything is built to be idempotent, as it may be retried many times. Transient failure are reported but not critical unless persistent.</p>
+<p>Overall, we use a small number of larger, modular components (mostly written in Java), and then ‘glue’ them together using Python scripts. Where appropriate, these scripts use the <a class="reference external" href="https://github.com/spotify/luigi"><em>Luigi</em></a> task framework to help ensure the processes are robust and recoverable. All services are wrapped as Docker containers for deployment.</p>
+<p>The major components are:</p>
+<ul class="simple">
+<li><p>Developed by us and/or IIPC members:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/ukwa/w3act"><em>W3ACT</em></a> (UKWA-only)</p></li>
+<li><p><a class="reference external" href="https://github.com/internetarchive/heritrix3"><em>Heritrix3</em></a></p></li>
+<li><p><a class="reference external" href="https://github.com/internetarchive/warcprox"><em>warcprox</em></a> (Python)</p></li>
+<li><p><a class="reference external" href="https://github.com/ukwa/webarchive-discovery"><em>webarchive-discovery</em></a></p></li>
+<li><p><a class="reference external" href="https://github.com/nla/outbackcdx"><em>OutbackCDX</em></a> (a.k.a. tinycdxserver)</p></li>
+<li><p><a class="reference external" href="https://github.com/iipc/openwayback"><em>OpenWayback</em></a></p></li>
+<li><p>The UKWA Website engine (currently under development as <a class="reference external" href="https://github.com/ukwa/marsspiders"><em>ukwa/marsspiders</em></a>)</p></li>
+</ul>
+</li>
+<li><p>Standard open source components:</p>
+<ul>
+<li><p>PostgreSQL</p></li>
+<li><p>Solr</p></li>
+<li><p>Hadoop (HDFS, Map-Reduce, and in time likely HBase too)</p></li>
+<li><p>ClamD</p></li>
+<li><p>PDFtoHTMLex</p></li>
+<li><p>Jupyter Notebooks</p></li>
+</ul>
+</li>
+</ul>
+<p>The <a class="reference external" href="https://github.com/ukwa/python-shepherd"><em>python-shepherd</em></a> code base (rename to ukwa-ingest?) contains all the ‘glue’ code that orchestrates these crawl processes. All lifecycle task code should be in here, from ingest to discovery. Note this this work is currently on the <a class="reference external" href="https://github.com/ukwa/python-shepherd/tree/hadoop-first"><em>hadoop-first</em></a> branch of that project.</p>
+<p>All events, across all production systems, are initiated by cron jobs on sh.wa.bl.uk. For example, a cron job on sh.wa.bl.uk may initiate a Luigi task on the the ingest server that scans crawl engines for new content to upload to HDFS.</p>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/ukwa/ukwa-monitor"><em>ukwa-monitor</em></a> codebase monitors and reports on all UKWA processes, including ingest. This provides reports/dashboards/alerts, by probing the production system. No part of any production system depends on it, however, and it runs it’s own cron jobs (rather than being initiated by sh.wa.bl.uk). If it’s down, nothing else should be affected. If transient failures persist, it is the role of the monitor engine to raise the alert.</p>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/ukwa/pulse"><em>pulse</em></a> codebase pulls the different crawl components together using <a class="reference external" href="https://www.docker.com/"><em>Docker</em></a>, and uses <a class="reference external" href="https://docs.docker.com/compose/"><em>Docker Compose</em></a> to define different deployments, from local development to full production.</p>
+<p>The intention is that the supplied <a class="reference external" href="https://github.com/ukwa/pulse/blob/master/docker-compose.yml"><em>docker-compose.yml</em></a> file can be use to run an end-to-end test of a crawl, all within a set of Docker containers running locally or as part of a Travis CI automated build.</p>
+<p>Production containers are built on <a class="reference external" href="https://hub.docker.com/u/ukwa/"><em>Docker Hub</em></a>, using automated builds based on tagged versions of the relevant GitHub codebases, e.g. <a class="reference external" href="https://hub.docker.com/r/ukwa/w3act/builds/"><em>here’s the build history for W3ACT</em></a>.</p>
+</div>
+</div>
+<div class="section" id="harvest-ingest">
+<h1>Harvest &amp; Ingest<a class="headerlink" href="#harvest-ingest" title="Permalink to this headline">¶</a></h1>
+<p>In the crawl engine, one front-end (currently the ‘shepherd’) provides their services to stop/start crawls. It downloads the information on what should be crawled using the ‘crawl feed’ API of W3ACT, and launched or re-launches crawls appropriated. It also performs any routine cleanup and management operations. It should not itself perform other processes like moving content to HDFS. (It does at the moment!)</p>
+<p>The ingest server manages the ingest process and verification of ingest, both to HDFS and DLS, and manages the other routine analysis and indexing processes.</p>
+<p>Each crawl is identified by a job name and a launch date, and this identifier is used to manage the content as it arrives. For example, the Weekly crawl launched on the 21st of March 2017 has the identifier weekly/20170321162430.</p>
+<p>The ingest server (pushes and) verifies content on HDFS, and permits deletion of content from the crawl engines. Our approach is that no other processing should be initiated based on the content locally-stored on each crawl engine. Nothing is done until the content is on HDFS.</p>
+<p>The content for this crawl is stored on HDFS under the following file convention:</p>
+<blockquote>
+<div><p>/heritrix/output/<strong>{TYPE}</strong>/weekly/20170321162430</p>
+</div></blockquote>
+<p>In usual crawling, we get WARCs, WARCs containing ‘nullified’ suspected viruses, and log files:</p>
+<blockquote>
+<div><p>/heritrix/output/warcs/weekly/20170321162430</p>
+<p>/heritrix/output/viral/weekly/20170321162430</p>
+<p>/heritrix/output/logs/weekly/20170321162430</p>
+</div></blockquote>
+<p>Every crawl is set to ‘checkpoint’ itself every few hours, and as part of this it rolls-over any WARC or log files that are currently in use. So, for each checkpoint, we get a crawl log file, like this:</p>
+<blockquote>
+<div><p>…/tweekly/20170321162430/crawl.log.cp00005-20170321222911</p>
+</div></blockquote>
+<p>This log file can be scanned to see which WARCs it refers to, and together these logs and WARCs form a coherent ‘chunk of crawl’.</p>
+<p>Note that the screenshot WARCs are slightly more difficult to handle as the checkpointing mechanism cannot currently be extended to simultaneously synchronize Heritrix3 and warcprox output. Here, we make a best effort to ensure the right screenshot WARCs are bundled with the right crawl logs, based on the timestamps of the resources.</p>
+<div class="section" id="moving-content-to-hdfs">
+<h2>Moving content to HDFS<a class="headerlink" href="#moving-content-to-hdfs" title="Permalink to this headline">¶</a></h2>
+<p>The most critical step in our workflow is moving crawled data from the crawl engine to HDFS, deleting it from the origin crawl server so that the crawlers don’t fill up and halt.</p>
+<p>To make do this as carefully as possible, we perform a two-stage copy-and-verify then verify-and-delete. Each stage computes the SHA-512 hash of each transferred file, and we use two separate HDFS hashing operations based on separate codebases.</p>
+<p>There are two implementations of the copy-then-verify step. One is designed to run locally on the source machine, and the other runs on a central machine and uses ssh to remotely log into a crawl server and scan the contents. See here:</p>
+<p><a class="reference external" href="https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest"><em>https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest</em></a></p>
+<p>These are called variations of ‘move to HDFS’ and can be used to carry out a one-step copy-verify-delete if required (but I’d like to move to this two-step approach).</p>
+<p>The process to scan HDFS, hash all the files, and store the hashes somewhere useful is still under development: <a class="reference external" href="https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py#L170"><em>https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py#L170</em></a></p>
+<p>The open question is how best to batch HDFS files for batching and how best to store the hashes so the ‘verify and delete’ process can compare the local server with HDFS and compare the Java-based and Python-based hashes to check all are consistent. The Python-derived hashes can be store in the assembled</p>
+</div>
+<div class="section" id="analyse">
+<h2>Analyse<a class="headerlink" href="#analyse" title="Permalink to this headline">¶</a></h2>
+<p>As content appears on HDFS, we first need to identify the ‘chunks of crawl’ described above. We start this by scanning log files.</p>
+<p>For each new set of logs, we scan for associated WARC files, potential documents, run basic stats analysis.</p>
+</div>
+<div class="section" id="verify">
+<h2>Verify<a class="headerlink" href="#verify" title="Permalink to this headline">¶</a></h2>
+<p>This would be the logical spot to run the Map-Reduce hasher and double-check the hashes are as expected, at which point we can clear the files on the crawl servers for deletion.</p>
+</div>
+<div class="section" id="assembe">
+<h2>Assembe<a class="headerlink" href="#assembe" title="Permalink to this headline">¶</a></h2>
+<p>We take the initial chunks of logs and warc and assemble them into a single description that also contains any required metadata in associated ZIP files. This also contains the SHA-512 of the files and any necessary ARK identifiers.</p>
+<p>The main result is a JSON description of the crawl at a given point in time. Any crawl process that generates these can be plumbed into the downstream processes.</p>
+</div>
+<div class="section" id="package-submit">
+<h2>Package &amp; Submit<a class="headerlink" href="#package-submit" title="Permalink to this headline">¶</a></h2>
+<p>Take each chunk and assemble SIPs incrementally</p>
+<p>Submit them to DLS</p>
+</div>
+<div class="section" id="validate">
+<h2>Validate<a class="headerlink" href="#validate" title="Permalink to this headline">¶</a></h2>
+<p>We check the DLS export, and we check against our DLS Access Point.</p>
+</div>
+</div>
+<div class="section" id="analysis-indexing">
+<h1>Analysis &amp; Indexing<a class="headerlink" href="#analysis-indexing" title="Permalink to this headline">¶</a></h1>
+<p>…following on from Assembly, we can now start to process chunks of crawl for access.</p>
+<p>See <a class="reference external" href="http://drive.google.com/open?id=1CJUvyI1XPOZt6oEl_2oFRJHXrv8K3_jT36AkOSEcjzw"><em>2017 Web Archive Search Strategy</em></a></p>
+<div class="section" id="next-steps-in-development">
+<h2>Next Steps in Development<a class="headerlink" href="#next-steps-in-development" title="Permalink to this headline">¶</a></h2>
+<p>The largest gap in the current indexing stack is problem of ‘reduplication’ - compensating for the ‘revisit’ records which we use to avoid storing multiple copies of the same resource. At index time, we need to reverse the de-duplication so we can search through the content of these resources over the whole time-frame. For this to work, we need a large index where we can store information associated with a URI, but drawn from different WARC records.</p>
+<p>This kind of lookup table (effectively a very large JOIN), would also have other uses:</p>
+<ul class="simple">
+<li><p>Associating Request records with the relevant Response.</p></li>
+<li><p>Storing full timelines for each URI, e.g. when we visited and it was gone, based on the crawl logs.</p></li>
+<li><p>Associating metadata or annotations with the target resource, e.g. taking advantage of the gov.uk content API during indexing, or exploiting additional metadata extracted using tools like <a class="reference external" href="https://any23.apache.org/"><em>any23</em></a>.</p></li>
+<li><p>Estimate URI lifespan, to add as a search facet.</p></li>
+<li><p>At crawl time, as a lookup that replaces and improves upon the current methods of deduplication and ‘already-seen-URIs’ checks, further reducing the amount of stage managed by the Heritrix crawler itself and significantly lowering the memory footprint due to the removal of the Bloom-filter-based already-seen URI lookup method.</p></li>
+</ul>
+<p>In this model, the crawl logs and WARCs would be processed to populate this large lookup table. The simplest approach is probably a single ‘timeline’ index (CDX-style), grouping pointers to records by target URI. As we index WARCs, we could look up the current URI to look for additional information to add to the record. It could probably be done using OutbackCDX, but if there are scaling issues (or if a more sophisticated data model is needed) it would be a good fit for a dedicated Solr index, or possibly HBase if very high performance and very large scale are required.</p>
+<p>A more sophisticated tactic would be to use HBase as the main data store, not just for lookups. The WARC processing would populate HBase rather than Solr, but we could generate the Solr index from HBase. This would allow more complex <em>ad hoc</em> analysis and may make re-generating Solr indexes slightly easier. However, it’s a more difficult approach to scale <em>down</em>, so would probably be of less interest to our IIPC colleagues.</p>
+<p>The webarchive-discovery project needs some attention, once we’ve settled on plan. I intend to propose something along the lines of:</p>
+<ul class="simple">
+<li><p>A cleared front-end/back-end separation, as for <a class="reference external" href="https://github.com/solrmarc"><em>solrmarc</em></a>, where we encourage a common Solr document model and indexing process, but accept that front-end technologies might vary.</p></li>
+<li><p>A plan to bring Shine and UKWA together as our front-end.</p></li>
+<li><p>Some kind of plan for how to provide additional services, like link-graphs, or format data, etc.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>Monitoring<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>At each stage, we can add monitoring processes that ‘reach into’ the above process chains and generate HTML reports, dashboards, alerts etc.</p>
+<p>The Dashboard</p>
+<p>Crawl Reports</p>
+<p>HDFS Reports</p>
+<p>Alerts</p>
+</div>
+<div class="section" id="ideas">
+<h1>Ideas<a class="headerlink" href="#ideas" title="Permalink to this headline">¶</a></h1>
+<p>See also <a class="reference external" href="https://trello.com/b/nJCKUtYf/ukwa-next-generation-services"><em>https://trello.com/b/nJCKUtYf/ukwa-next-generation-services</em></a></p>
+<div class="section" id="development-work-ideas">
+<h2>Development Work Ideas<a class="headerlink" href="#development-work-ideas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>W3ACT:</p>
+<ul>
+<li><p>Browser plugin for curation to complement W3ACT?</p></li>
+</ul>
+</li>
+<li><p>Crawler development:</p>
+<ul>
+<li><p>External Frontier, storing queues outside H3 and in e.g. Redis/HBase</p></li>
+<li><p>CDX-based (re-using the Timeline Index described above) already-seen and de-duplication</p></li>
+<li><p>Container-level crawl job management</p></li>
+<li><p>Finer-grained jobs and launch windows</p></li>
+</ul>
+</li>
+<li><p>Analysis &amp; Processing</p>
+<ul>
+<li><p>Robust lifecycle management and alerting</p></li>
+<li><p>Automated screenshot comparison</p></li>
+<li><p>Report generation</p></li>
+</ul>
+</li>
+<li><p>Access:</p>
+<ul>
+<li><p>High-fidelity playback without re-writing:</p>
+<ul>
+<li><p>Dedicated desktop browser in ‘proxy mode’, not unlike <a class="reference external" href="https://github.com/N0taN3rd/wail"><em>WAIL</em></a></p></li>
+<li><p>and/or Netcapsule old browsers over the web <a class="reference external" href="http://oldweb.today/"><em>http://oldweb.today/</em></a></p></li>
+</ul>
+</li>
+<li><p>Jupyter notebooks for general analysis.</p></li>
+<li><p>Secondary (especially non-consumptive) datasets.</p></li>
+<li><p>Full-text search across all holdings, combining data sources.</p></li>
+</ul>
+</li>
+</ul>
+<p>The ‘big’ parts are the externalised frontier and the timeline index.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

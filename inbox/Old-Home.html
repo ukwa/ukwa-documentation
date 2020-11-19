@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For NG Arch Pages &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/Old-Home.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Old-Home.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   For NG Arch Pages
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#document-harvesting-done-right">
+     Document Harvesting Done Right
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-workflow">
+     Current Workflow
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#development">
+     Development
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#future-plans">
+     Future Plans
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-to-luigi">
+   Moving to Luigi
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#job-stop-start-task-chain">
+     Job Stop/Start Task Chain
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assembly-task-chain">
+     Assembly Task Chain
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#packaging-task-chain">
+     Packaging Task Chain
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hdfs-transfer-task-chain">
+     HDFS Transfer Task Chain
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apis-formats">
+   APIs &amp; Formats
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-crawl-feeds">
+     The Crawl Feeds
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operating-notes">
+   Operating Notes
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
+<ul class="simple">
+<li><p><a class="reference external" href="#for-ng-arch-pages">For NG Arch Pages</a></p>
+<ul>
+<li><p><a class="reference external" href="#document-harvesting-done-right">Document Harvesting Done Right</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#introduction">Introduction</a></p>
+<ul>
+<li><p><a class="reference external" href="#current-workflow">Current Workflow</a></p></li>
+<li><p><a class="reference external" href="#development">Development</a></p></li>
+<li><p><a class="reference external" href="#installation">Installation</a></p></li>
+<li><p><a class="reference external" href="#future-plans">Future Plans</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#moving-to-luigi">Moving to Luigi</a></p></li>
+<li><p><a class="reference external" href="#apis--formats">APIs &amp; Formats</a></p>
+<ul>
+<li><p><a class="reference external" href="#the-crawl-feeds">The Crawl Feeds</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#operating-notes">Operating Notes</a></p></li>
+</ul>
+<!-- /MarkdownTOC -->
+<div class="section" id="for-ng-arch-pages">
+<h1>For NG Arch Pages<a class="headerlink" href="#for-ng-arch-pages" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Separate Solr (w/ compatible schema) for frequently crawled and curated content? Pain point is keeping those hosts out of the other indexes. I guess host or SURT-prefixed mapping is probably the right tactic.</p></li>
+</ul>
+<div class="section" id="document-harvesting-done-right">
+<h2>Document Harvesting Done Right<a class="headerlink" href="#document-harvesting-done-right" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Document Harvester UI decoupled from the W3ACT data model. Pulls lists of documents and ‘first guess’ metadata from a (dedicated) Solr rather than stored in the W3ACT DB. i.e. PDF’s with no DDHAPT status, from these hosts/prefixes.</p>
+<ul>
+<li><p>Can Luigi be used to store output of manual curation? Should it?</p></li>
+</ul>
+</li>
+<li><p>Luigi used to store state of extraction, and can be used to re-run extraction.</p></li>
+<li><p>Write a WARCDocumentSource that implements any23’s <a class="reference external" href="https://any23.apache.org/apidocs/org/apache/any23/source/DocumentSource.html">DocumentSource</a></p></li>
+<li><p>Include <a class="reference external" href="https://any23.apache.org/dev-data-extraction.html">any23</a> in the extraction process, if only for Watched Targets.</p></li>
+<li><p>Use data from multiple pages to infer the most likely ‘landing page’ rather than relying on harvester discovery path.</p></li>
+<li><p>Implement the ‘back-track-to-nearest-preceding-header’ logic as one of the fall-back title extractors.</p></li>
+<li><p>Also implement an extractor that pulls in manually curated metadata from DDHAPT.</p></li>
+<li><p>Assemble all the metadata that ‘points to’ a given Document, probably in Solr. Use this to pre-populate catalogue.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This repository contains our main ‘frequent’ crawl engine. It handles the bulk of our regular crawling activities, such as visiting news sites on a daily basis.</p>
+<p>The orchestration of processes to manage the crawls is handled as a series of Python <a class="reference external" href="http://docs.celeryproject.org/en/latest/userguide/tasks.html">tasks</a> executed on the <a class="reference external" href="http://www.celeryproject.org/">Celery</a> distributed task queue system. This uses a instance of <a class="reference external" href="https://www.rabbitmq.com/">RabbitMQ</a> to reliably store and distribute the work to be done. These tasks perform actions like starting and stopping crawl jobs, and packaging up the output. They also perform some mid-crawl processing, like extracting metadata for documents found during the crawl.</p>
+<p>This is quite closely tied to our systems, e.g. it includes submission to the British Library’s archival store, virus scanning mid-crawl, and other processes that depend on local policy. However, it is hoped that by working in the open we can maximise the chance of finding which components can be shared.</p>
+<div class="section" id="current-workflow">
+<h2>Current Workflow<a class="headerlink" href="#current-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The commands and Celery tasks described here are held in the <code class="docutils literal notranslate"><span class="pre">python-shepherd</span></code> submodule. The current code is in <code class="docutils literal notranslate"><span class="pre">python-shepherd/crawl</span></code>, and most of the tasks are in <code class="docutils literal notranslate"><span class="pre">python-shepherd/crawl/tasks.py</span></code>.</p>
+<ul class="simple">
+<li><p>A cron job is used to run the <code class="docutils literal notranslate"><span class="pre">pulse</span></code> command which enqueues a message indicating a particular H3 job should be (re)started (e.g. <code class="docutils literal notranslate"><span class="pre">pulse</span> <span class="pre">start</span> <span class="pre">daily</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop_start_job</span></code> reads <a class="reference external" href="#feeds">the crawl feeds</a> and (re)starts the specified crawl:</p>
+<ul>
+<li><p>[ ] TODO The H3 crawl job is started up and each seed gets rendered synchronously via <a class="reference external" href="https://github.com/ukwa/bl-heritrix-modules/blob/master/src/main/java/uk/bl/wap/crawler/processor/WrenderProcessor.java">a dedicated processor</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri_to_index</span></code> As the job proceeds, each successfully-crawled URI is posted to a message queue and sent on to tinycdxserver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri_of_doc</span></code> For document havesting, a subset of those messages is selected and processed by:</p>
+<ul>
+<li><p>Attempting to automatically extract appropriate metadata</p></li>
+<li><p>Pushing the resulting object to W3ACT for further attention/cataloguing.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">movetohdfs</span></code> A background process ferries WARCs from the crawl engine to HDFS</p></li>
+<li><p>When a job is stopped, the job and lauch IDs are passed to a queue for processing ()</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assemble_job_output</span></code> A dedicated task packages up the files associated with a job and ensures they are on HDFS</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build_sip</span></code> A second task them packages them up as a SIP</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">submit_sip</span></code> Then the SIP is submitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verify_sip</span></code> Then validated (NIY)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index_sip</span></code> (NIY)</p></li>
+</ul>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>We are using <a class="reference external" href="https://www.docker.com/">Docker</a> to make development of multi-component systems more manageable. Specifically, we define the set of services we need in a <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file (as per <a class="reference external" href="https://docs.docker.com/compose/">Docker Compose</a>). Where possible, we use stable binary images for these services, but as a number of our own services are under active development, we <a class="reference external" href="https://docs.docker.com/compose/reference/build/">build</a> them locally rather than downloading them.</p>
+<p>To make it easier to split these off into separate development processes as they stabilise, they are included here as <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a>. This means you must make sure you perform a <a class="reference external" href="http://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules">recursive clone</a> if you want to work on these components.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone --recursive git@github.com:ukwa/pulse.git
+</pre></div>
+</div>
+<p>Then, in the <code class="docutils literal notranslate"><span class="pre">pulse</span></code> directory, with Docker installed, you should be able to do this to build and run the whole engine:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker-compose up
+</pre></div>
+</div>
+<p>As development proceeds, you may find you need to run (or even force) a rebuild of the locally-defined components, to make sure changes get picked up:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker-compose build
+</pre></div>
+</div>
+<p>or to force a full rebuild of a specific component:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker-compose build --no-cache w3act
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">w3act</span></code> is set up to mount your Ivy2 folder (`~/.ivy2/) so it can avoid re-downloading the required dependencies over and over.</p>
+<p>n.b. seems like 3t annotation for fetchAttempts will be common, due to pre-requisites? yes ip:93.184.216.34,3t</p>
+<ul class="simple">
+<li><p>[ ] IP annotation missing.</p></li>
+<li><p>[ ] WarcFilename and WarcOffset missing.</p></li>
+<li><p>[ ] Content from warcprox is not virus scanned.</p></li>
+<li><p>[ ] Move to WARC processing task chain (checksum, copy-to-hdfs, virus-scan, cdx-index, extract-docs, solr-index)</p>
+<ul>
+<li><p>In this case, the H3 indexing part can be removed, and the crawl packager would initiate and then await the WARCs being uploaded.</p></li>
+<li><p>Note that we really should support checkpoint accumulation of content.</p></li>
+</ul>
+</li>
+<li><p>[ ] …</p></li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>TBA.</p>
+</div>
+<div class="section" id="future-plans">
+<h2>Future Plans<a class="headerlink" href="#future-plans" title="Permalink to this headline">¶</a></h2>
+<p>Rendering Seeds</p>
+<p>Want to render seeds with browser if possible, but fall back on H3 crawling if not. We do not want to crawl things twice. So, we want H3 to know it’s crawled the URI, and our previous work in this area made this difficult - we could pass seeds to a renderer via AMQP but the seed would still be crawled again by H3. So, the plan would be to create a Processor that uses a web-render service to process content and extract links. If that works, it records the extracted links and skips the rest of the crawl chain. If it fails, the failure is logged and the item is simply passed on to the next processor, which is the usual H3 FetchHTTP implementation.</p>
+<ul class="simple">
+<li><p>Dead seeds report needed, along with crawl logs and reports.</p></li>
+<li><p>Recrawl versus refresh, news sites especially.</p></li>
+<li><p>Store system status somewhere and generate dashboard from that rather than doing both in one.</p></li>
+<li><p>Propose multiple H3 workers, running through warcprox to unify WARCs</p></li>
+<li><p>Proposed post-H3 processing:</p>
+<ul>
+<li><p>Each job is registered with Bamboo.</p></li>
+<li><p>As each WARC file is closed, it is registered with Bamboo and enqueued for processing.</p></li>
+<li><p>A sequence of message queues is used to:</p>
+<ul>
+<li><p>Scan for viruses</p></li>
+<li><p>Upload to HDFS</p></li>
+<li><p>Index into CDX server</p></li>
+<li><p>Perform full-text indexing</p></li>
+<li><p>Scan for documents and extract metadata</p></li>
+</ul>
+</li>
+<li><p>At each point, the current status in Bamboo is updated via the Bamboo API.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="moving-to-luigi">
+<h1>Moving to Luigi<a class="headerlink" href="#moving-to-luigi" title="Permalink to this headline">¶</a></h1>
+<p>The Celery code works okay, but is rather brittle as it requires a lot of ‘boilerplate’ to make it properly robust. There are a number of production-quality workflow engines that we could use instead, and that provide better robustness and monitoring, like AirFlow and Luigi. AirFlow has a richer dashboard and uses Celery+RabbitMQ as it’s back-end, which makes it very scaleable, but it is very complex to use. The job definitions are hard to understand, basic things like how parameters are passed through are unclear, and the job state is dependend on a central database.</p>
+<p>Luigi, on the other hand, is not as scaleable but is much easier to understand and work with (<a class="reference external" href="http://bytepawn.com/luigi.html">here’s an intro</a>. Task inputs and outputs can be specified, and it makes it easy to use local or HDFS files as ‘markers’ in a manner similar to Makefiles, i.e “if this files exists, this job has been done”. This very much suites the way we work, and if we use HDFS where we can, it will be more robust and transparent than RabbitMQ. Of course, storing many small files in HDFS is wasteful, but you can fit 15,625 64MB files in a TB of HDFS storage, so we should not over-optimise for this. In practice, we can use local files for fine-grained work, and then shift the results to HDFS when chunks of work are complete.</p>
+<p>This approach will keep our original workflow, but rather than using message queues, we will use file outputs to record the state.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stop_job(jobName)</span></code> stops a job, outputting a /jobs/jobName-launchId-stopped file that contains data when the job has been stopped.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start_job(jobName)</span></code> looks to see the jobName is stopped, and re-starts, leaving a /jobs/jobName-launchId-started ?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assemble_job_output</span></code> pulls together the output from the job and pops in on HDFS, leaving a hdfs:/1_data/jobs/jobName/launchId/stopped file when done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build_sip</span></code> creates the SIP, leaving a hdfs:/1_data/heritrix/sips/….tar.gz when done. Also leave ARKs somewhere useful?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">submit_sip</span></code> submits the sip, leaving a submitted file when done (?)</p></li>
+</ul>
+<p>Something, somehow, processes WARCs for a job… Maybe yielded by assemble_job_output</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">move_to_hdfs(warc)</span></code> does move_to_hdfs if the target file does not exist (hash-check?)</p></li>
+</ul>
+<p>Then, independently of other processes (?), something should check for new WARCs and…</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cdx_index(warc)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">solr_index(warc)</span></code></p></li>
+</ul>
+<p>Also, periodic backups of local status files to HDFS would be something to build on this engine.</p>
+<p>On top, I need to allow checkpoint incremental processing. i.e. checkpoint_job(jobName) should lead to ‘assemble_job_output(jobName, launchId, cp)’, which should re-build a new sip with the checkpoint-ID added. <code class="docutils literal notranslate"><span class="pre">submit_sip</span></code> should be aware of this and prevent an earlier checkpoint being submitted.</p>
+<p>Note <a class="reference external" href="http://luigi.readthedocs.io/en/stable/api/luigi.contrib.hdfs.webhdfs_client.html#luigi.contrib.hdfs.webhdfs_client.WebHdfsClient">webhdfs is available</a> and the underlying library is the one we were already using.</p>
+<p>It can do <a class="reference external" href="http://luigi.readthedocs.io/en/stable/api/luigi.contrib.ssh.html">remote/SSH actions</a>, so we may be able to use this to avoid having to run on the same server as Heritrix (e.g. for populating the job files etc. via <a class="reference external" href="http://luigi.readthedocs.io/en/stable/api/luigi.contrib.ssh.html#luigi.contrib.ssh.RemoteTarget">RemoteTarget</a>)</p>
+<p>This system has excellent support for date-ranges, so it might make sense to bundle up the overall status into by-date summary files. This would make ‘backfill’ easier, i.e. re-scanning over a period of time and checking/reprocessing as necessary.</p>
+<p>NOTE requires allows tasks to run in parallel - task yielded from a run() will be serialised.</p>
+<p>Second version derives partial packages from checkpoints, before the final DONE package aggregates everything.</p>
+<p>So, final ‘stopped’ should look to process all crawl.log*</p>
+<p>output/logs/daily/20161019234428/alerts.log
+output/logs/daily/20161019234428/alerts.log.cp00001-20161020204551
+output/logs/daily/20161019234428/crawl.log
+output/logs/daily/20161019234428/crawl.log.cp00001-20161020204551
+output/logs/daily/20161019234428/frontier.recover.gz
+output/logs/daily/20161019234428/frontier.recover.gz.cp00001-20161020204551
+output/logs/daily/20161019234428/nonfatal-errors.log
+output/logs/daily/20161019234428/nonfatal-errors.log.cp00001-20161020204551
+output/logs/daily/20161019234428/progress-statistics.log
+output/logs/daily/20161019234428/progress-statistics.log.cp00001-20161020204551
+output/logs/daily/20161019234428/runtime-errors.log
+output/logs/daily/20161019234428/runtime-errors.log.cp00001-20161020204551
+output/logs/daily/20161019234428/uri-errors.log
+output/logs/daily/20161019234428/uri-errors.log.cp00001-20161020204551</p>
+<p>each should be packaged up, i.e.</p>
+<ul class="simple">
+<li><p>Take crawl.log.cp00001-20161020204551 and make [ job-name.launch-id.cp00001-20161020204551.info.json, job-name.launch-id.cp00001-20161020204551.logs.zip</p>
+<ul>
+<li><p>If we do mid-crawl packages, then we would make a job-name.launch-id.cp00001-20161020204551.package.json describing the aggregate content until that point.</p></li>
+</ul>
+</li>
+<li><p>If job-name.launch-id.stopped, do the same for crawl.log, but grab ALL the accounted and un-accounted for WARCs, creating job-name.launch-id.final.info.json</p></li>
+<li><p>Collect together all the mid-crawl data, creating job-name.launch-id.final.package.json</p></li>
+<li><p>Build SIP from that, once all dependencies are available on HDFS.</p></li>
+</ul>
+<div class="section" id="job-stop-start-task-chain">
+<h2>Job Stop/Start Task Chain<a class="headerlink" href="#job-stop-start-task-chain" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Task</p></th>
+<th class="head"><p>Requires</p></th>
+<th class="head"><p>Task Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>StopJob(job)</p></td>
+<td><p><em>none</em></p></td>
+<td><p>01.jobs.<em>{job.name}.{launch_id}</em>.stopped</p></td>
+</tr>
+<tr class="row-odd"><td><p>StartJob(job)</p></td>
+<td><p>StopJob(job)</p></td>
+<td><p>01.jobs.<em>{job.name}.{launch_id}</em>.started</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="assembly-task-chain">
+<h2>Assembly Task Chain<a class="headerlink" href="#assembly-task-chain" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>output</em>.Task</p></th>
+<th class="head"><p>Requires</p></th>
+<th class="head"><p>Task Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CheckJobStopped(job, launch_id)</p></td>
+<td><p><em>pulse.StopJobExternalTask</em></p></td>
+<td><p>01.jobs.<em>{job.name}.{launch_id}</em>.stopped</p></td>
+</tr>
+<tr class="row-odd"><td><p>PackageLogs(job, launch_id, stage)</p></td>
+<td><p>if stage == ‘final’: <br/> pulse.CheckJobStopped(job, launch_id)</p></td>
+<td><p>02.logs.<em>{job.name}.{launch_id}</em>.stage.zip</p></td>
+</tr>
+<tr class="row-even"><td><p>AssembleOutput(job, launch_id, stage)</p></td>
+<td><p>PackageLogs(job, launch_id, stage)</p></td>
+<td><p>03.outputs.<em>{job.name}.{launch_id}</em>.stage</p></td>
+</tr>
+<tr class="row-odd"><td><p>ProcessOutputs(job, launch_id)</p></td>
+<td><p>for each stage (checkpoint):<br/>AssembleOutput(job, launch_id, stage)</p></td>
+<td><p>04.assembled.<em>{job.name}.{launch_id}</em>.complete</p></td>
+</tr>
+<tr class="row-even"><td><p>ScanForOutputs(date_interval)</p></td>
+<td><p>for each (job, launch_id): <br/> ProcessOutputs(job, launch_id)</p></td>
+<td><p><em>none</em></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">output.ScanForOutputs(date_interval)</span></code> <br/> <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">each</span> <span class="pre">(job,</span> <span class="pre">launch_id)</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">output.ProcessOutputs(job,</span> <span class="pre">launch_id)</span></code> <br/> <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">each</span> <span class="pre">stage</span> <span class="pre">(checkpoint/final)</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">output.AssembleOutput(job,</span> <span class="pre">launch_id,</span> <span class="pre">stage)</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">output.PackageLogs(job,</span> <span class="pre">launch_id,</span> <span class="pre">stage)</span></code> <br/> <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">stage</span> <span class="pre">==</span> <span class="pre">'final'</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pulse.CheckJobStopped(job,</span> <span class="pre">launch_id)</span></code>:</p>
+<ul>
+<li><p><strong>Result:</strong> <code class="docutils literal notranslate"><span class="pre">01.jobs._{job.name}.{launch_id}_.stopped</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Result:</strong> <code class="docutils literal notranslate"><span class="pre">02.logs._{job.name}.{launch_id}_.stage.zip</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Result:</strong> <code class="docutils literal notranslate"><span class="pre">03.outputs._{job.name}.{launch_id}_.stage</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Result:</strong> <code class="docutils literal notranslate"><span class="pre">04.assembled._{job.name}.{launch_id}_.complete</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Result:</strong> <em>none</em></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="packaging-task-chain">
+<h2>Packaging Task Chain<a class="headerlink" href="#packaging-task-chain" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>package.ScanForPackages(date_interval)</em>:</p>
+<ul>
+<li><p><em>Output:</em> <em>none</em></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="hdfs-transfer-task-chain">
+<h2>HDFS Transfer Task Chain<a class="headerlink" href="#hdfs-transfer-task-chain" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">files.ScanForOutputFiles(date_interval)</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">files.CalculateLocalChecksum(date_interval)</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">files.VerifyOnHDFS(date_interval)</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">files.CopyToHDFS(date_interval)</span></code>:</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em>Output:</em> <em>none</em></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="apis-formats">
+<h1>APIs &amp; Formats<a class="headerlink" href="#apis-formats" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-crawl-feeds">
+<h2>The Crawl Feeds<a class="headerlink" href="#the-crawl-feeds" title="Permalink to this headline">¶</a></h2>
+<p>TODO consider harmonising with https://github.com/internetarchive/brozzler/blob/master/job-conf.rst</p>
+<p><a class="reference external" href="http://jsonlines.org/">JSON Lines</a> for data</p>
+</div>
+</div>
+<div class="section" id="operating-notes">
+<h1>Operating Notes<a class="headerlink" href="#operating-notes" title="Permalink to this headline">¶</a></h1>
+<p>Issue, track down:</p>
+<p>PULSE tasks logs indicate a H3 exception:</p>
+<p>./docker-prod.sh logs –tail 1000 ukwa-heritrix-weekly</p>
+<p>OOM</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

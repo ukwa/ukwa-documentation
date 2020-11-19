@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HDFS &#8212; UKWA Technical Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../how-ukwa-works/index.html">
+   How UKWA Works
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/access-indexing.html">
+     Indexing for Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../workflows/ingest-listings.html">
+     Ingest Tasks Based on HDFS Content
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/inbox/System-State-Management.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/System-State-Management.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   HDFS
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harvest-ingest">
+   Harvest &amp; Ingest
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#moving-content-to-hdfs">
+     Moving content to HDFS
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#harvesting-workflow">
+       Harvesting Workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <!-- MarkdownTOC depth=2 autolink=true bracket=round lowercase_only_ascii=true -->
+<ul class="simple">
+<li><p><a class="reference external" href="#hdfs">HDFS</a></p></li>
+<li><p><a class="reference external" href="#harvest--ingest">Harvest &amp; Ingest</a></p>
+<ul>
+<li><p><a class="reference external" href="#moving-content-to-hdfs">Moving content to HDFS</a></p></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<div class="section" id="hdfs">
+<h1>HDFS<a class="headerlink" href="#hdfs" title="Permalink to this headline">¶</a></h1>
+<p>We use folder layout conventions and <a class="reference external" href="https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html">user &amp; group permissions</a> on HDFS to attempt to ensure the following:</p>
+<ul class="simple">
+<li><p>Original content (like harvested WARCs) that cannot be re-generated is held safely and is very difficult to delete.</p></li>
+<li><p>That non-original but ‘expensive to recreate’ data (like task state or derived data) is kept in a separate part of the file system from the original content. This data should also be difficult to delete, but doing so is sometimes necessary, so we should ensure the data is managed in a way that prevents any such deletion event delete original content.</p></li>
+<li><p>Transient and temporary end user data should not be easy to delete except for the owning user.</p></li>
+</ul>
+<p>e.g. make an <code class="docutils literal notranslate"><span class="pre">archive</span></code> user that owns any original content, and make groups for the access/license terms? e.g. <code class="docutils literal notranslate"><span class="pre">npld</span></code> group content, etc. Even the user would not have write permission, and there would be no actual ‘archive’ user, meaning that an explicit <code class="docutils literal notranslate"><span class="pre">chown</span></code> by the hdfs superuser should be required first.</p>
+<p>The username that runs the NameNode, ‘hdfs’, is the superuser for HDFS is the only one that can perform some critical functions, and override all over permissions.</p>
+</div>
+<div class="section" id="harvest-ingest">
+<h1>Harvest &amp; Ingest<a class="headerlink" href="#harvest-ingest" title="Permalink to this headline">¶</a></h1>
+<p>In the crawl engine, one front-end (currently the ‘shepherd’) provides their services to stop/start crawls. It downloads the information on what should be crawled using the ‘crawl feed’ API of W3ACT, and launched or re-launches crawls appropriated. It also performs any routine cleanup and management operations. It should not itself perform other processes like moving content to HDFS. (It does at the moment!)</p>
+<p>The ingest server manages the ingest process and verification of ingest, both to HDFS and DLS, and manages the other routine analysis and indexing processes.</p>
+<p>Each crawl is identified by a job name and a launch date, and this identifier is used to manage the content as it arrives. For example, the Weekly crawl launched on the 21st of March 2017 has the identifier weekly/20170321162430.</p>
+<p>The ingest server (pushes and) verifies content on HDFS, and permits deletion of content from the crawl engines. Our approach is that no other processing should be initiated based on the content locally-stored on each crawl engine. Nothing is done until the content is on HDFS.</p>
+<p>The content for this crawl is stored on HDFS under the following file convention:</p>
+<blockquote>
+<div><p>/heritrix/output/<strong>{TYPE}</strong>/weekly/20170321162430</p>
+</div></blockquote>
+<p>In usual crawling, we get WARCs, WARCs containing ‘nullified’ suspected viruses, and log files:</p>
+<blockquote>
+<div><p>/heritrix/output/warcs/weekly/20170321162430</p>
+<p>/heritrix/output/viral/weekly/20170321162430</p>
+<p>/heritrix/output/logs/weekly/20170321162430</p>
+</div></blockquote>
+<p>Every crawl is set to ‘checkpoint’ itself every few hours, and as part of this it rolls-over any WARC or log files that are currently in use. So, for each checkpoint, we get a crawl log file, like this:</p>
+<blockquote>
+<div><p>…/tweekly/20170321162430/crawl.log.cp00005-20170321222911</p>
+</div></blockquote>
+<p>This log file can be scanned to see which WARCs it refers to, and together these logs and WARCs form a coherent ‘chunk of crawl’.</p>
+<p>Note that the screenshot WARCs are slightly more difficult to handle as the checkpointing mechanism cannot currently be extended to simultaneously synchronize Heritrix3 and warcprox output. Here, we make a best effort to ensure the right screenshot WARCs are bundled with the right crawl logs, based on the timestamps of the resources.</p>
+<div class="section" id="moving-content-to-hdfs">
+<h2>Moving content to HDFS<a class="headerlink" href="#moving-content-to-hdfs" title="Permalink to this headline">¶</a></h2>
+<p>The most critical step in our workflow is moving crawled data from the crawl engine to HDFS, deleting it from the origin crawl server so that the crawlers don’t fill up and halt.</p>
+<p>To make do this as carefully as possible, we perform a two-stage copy-and-verify then verify-and-delete. Each stage computes the SHA-512 hash of each transferred file, and we use two separate HDFS hashing operations based on separate codebases.</p>
+<p>There are two implementations of the copy-then-verify step. One is designed to run locally on the source machine, and the other runs on a central machine and uses ssh to remotely log into a crawl server and scan the contents. See here:</p>
+<p><em><a class="reference external" href="https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest">https://github.com/ukwa/python-shepherd/tree/hadoop-first/tasks/ingest</a></em>
+These are called variations of ‘move to HDFS’ and can be used to carry out a one-step copy-verify-delete if required (but I’d like to move to this two-step approach).</p>
+<p>The process to scan HDFS, hash all the files, and store the hashes somewhere useful is still under development: <em><a class="reference external" href="https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py#L170">https://github.com/ukwa/python-shepherd/blob/hadoop-first/tasks/process/hadoop/hasher.py#L170</a></em>
+The open question is how best to batch HDFS files for batching and how best to store the hashes so the ‘verify and delete’ process can compare the local server with HDFS and compare the Java-based and Python-based hashes to check all are consistent. The Python-derived hashes can be store in the assembled</p>
+<div class="section" id="harvesting-workflow">
+<h3>Harvesting Workflow<a class="headerlink" href="#harvesting-workflow" title="Permalink to this headline">¶</a></h3>
+<p>n.b. * UNDER DEVELOPMENT *</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Start/stop crawls</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Move to HDFS</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Analyse</p></td>
+<td><p>As content appears on HDFS, we first need to identify the ‘chunks of crawl’ described above. We start this by scanning log files. For each new set of logs, we scan for associated WARC files, potential documents, run basic stats analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Verify</p></td>
+<td><p>This would be the logical spot to run the Map-Reduce hasher and double-check the hashes are as expected, at which point we can clear the files on the crawl servers for deletion.</p></td>
+</tr>
+<tr class="row-even"><td><p>Assemble</p></td>
+<td><p>We take the initial chunks of logs and warc and assemble them into a single description that also contains any required metadata in associated ZIP files. This also contains the SHA-512 of the files and any necessary ARK identifiers. The main result is a JSON description of the crawl at a given point in time. Any crawl process that generates these can be plumbed into the downstream processes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Package &amp; Submit</p></td>
+<td><p>Take each chunk and assemble SIPs incrementally, Submit them to DLS</p></td>
+</tr>
+<tr class="row-even"><td><p>Validate</p></td>
+<td><p>We check the DLS export, and we check against our DLS Access Point.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Analysis &amp; Indexing</p></td>
+<td><p>…following on from Assembly, we can now start to process chunks of crawl for access. See <a class="reference external" href="http://drive.google.com/open?id=1CJUvyI1XPOZt6oEl_2oFRJHXrv8K3_jT36AkOSEcjzw"><em>2017 Web Archive Search Strategy</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./inbox"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
