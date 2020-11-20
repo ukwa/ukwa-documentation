@@ -55,7 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How UKWA Works" href="how-ukwa-works/index.html" />
+    <link rel="next" title="How UKWA Works" href="how-ukwa-works/_index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,18 +94,28 @@
 </ul>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="how-ukwa-works/index.html">
+  <a class="reference internal" href="how-ukwa-works/_index.html">
    How UKWA Works
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="workflows/access-indexing.html">
-     Indexing for Access
+    <a class="reference internal" href="how-ukwa-works/overview.html">
+     Technical Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="workflows/ingest-listings.html">
-     Ingest Tasks Based on HDFS Content
+    <a class="reference internal" href="how-ukwa-works/manage.html">
+     Management Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="how-ukwa-works/ingest.html">
+     Ingest Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="how-ukwa-works/access.html">
+     Access Services
     </a>
    </li>
   </ul>
@@ -191,9 +201,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/index.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/index.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -227,23 +237,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ukwa/ukwa-documentation/master?urlpath=tree/content/index.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -258,13 +251,14 @@
                 
   <div class="section" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
-<p>The UK Web Archive (UKWA) collects millions of websites each year, preserving them for future generations. You can find out more on our official website: https://www.webarchive.org.uk/</p>
-<p>Here, we share detailed technical information about how the UK Web Archive works. We do this because:</p>
+<p>The UK Web Archive (UKWA) collects millions of websites each year, preserving them for future generations. You can find out more on our official website: <a class="reference external" href="https://www.webarchive.org.uk/">www.webarchive.org.uk</a></p>
+<p>However, if you’d like more technical information about how the UK Web Archive works. We’re sharing this kind of information because:</p>
 <ul class="simple">
 <li><p>We hope it will help our own staff get up to speed.</p></li>
 <li><p>We hope it will help others understand what we do.</p></li>
 <li><p>We hope it will be helpful for anyone trying to set up or run a web archive.</p></li>
 </ul>
+<p>Please <a class="reference external" href="https://www.webarchive.org.uk/en/ukwa/contact">let us know</a> if you find it useful or have any feedback at all.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -297,7 +291,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="how-ukwa-works/index.html" title="next page">How UKWA Works</a>
+    <a class='right-next' id="next-link" href="how-ukwa-works/_index.html" title="next page">How UKWA Works</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

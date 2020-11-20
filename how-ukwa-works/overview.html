@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; UKWA Technical Documentation</title>
+    <title>Technical Overview &#8212; UKWA Technical Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,6 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Management Services" href="manage.html" />
+    <link rel="prev" title="How UKWA Works" href="_index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,29 +93,29 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../how-ukwa-works/_index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="_index.html">
    How UKWA Works
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/overview.html">
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Technical Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/manage.html">
+    <a class="reference internal" href="manage.html">
      Management Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/ingest.html">
+    <a class="reference internal" href="ingest.html">
      Ingest Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/access.html">
+    <a class="reference internal" href="access.html">
      Access Services
     </a>
    </li>
@@ -200,7 +202,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/inbox/Working-With-Luigi.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/how-ukwa-works/overview.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -220,7 +222,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Working-With-Luigi.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/overview.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -245,7 +247,27 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-architecture">
+   High-level Architecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#information-flows">
+   Information Flows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components-customisation-maturity">
+   Components, Customisation &amp; Maturity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-deployment">
+   Development &amp; Deployment
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -257,19 +279,55 @@
         
               <div>
                 
-  <p>Note resolution of TMP location issue, and note this point and that requires() is a worse place for dynamic dependencies than run(), but run() serialises execution.</p>
-<ul class="simple">
-<li><p>Describe issues around atomic behaviour and suitable patterns.</p></li>
-<li><p>Explain our patterns of use.</p></li>
-<li><p>Thoroughly document the MoveToHdfs process.</p></li>
-</ul>
-<p>https://luigi.readthedocs.io/en/stable/</p>
-<p>How Luigi is deployed</p>
-<p>/etc/luigi/client.cfg
-/etc/luigi/logging.cfg</p>
-<p>/etc/supervisor.d/luigi.ini</p>
-<p>etc.</p>
-<p><code class="docutils literal notranslate"><span class="pre">get_metrics</span></code></p>
+  <div class="section" id="technical-overview">
+<h1>Technical Overview<a class="headerlink" href="#technical-overview" title="Permalink to this headline">¶</a></h1>
+<p>To get an idea of the overall technical architecture, we won’t start with an attempt to enumerate every component involved. First, we’ll break it down as a set of larger technical areas, using the names we tend to use when discussing them.</p>
+<div class="section" id="high-level-architecture">
+<h2>High-level Architecture<a class="headerlink" href="#high-level-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The web archive is composed of a number of distinct groups of services, with clear data standards and APIs between them. This allows each group of services to evolve independently of the others.</p>
+<p>Here we present them as a <a class="reference external" href="https://learnwardleymapping.com/home/introduction/">Wardley map</a>, starting with users and the required user capabilities at the top, and moving down the chain of services that fulfil those needs. The horizontal position of each service group gives a rough indication of the maturity and degree of UKWA-specific customisation involved for each group of services.</p>
+<div class="figure align-center" id="ukwa-arch-overview">
+<a class="reference internal image-reference" href="../_images/ukwa-arch-overview-Overview.svg"><img alt="../_images/ukwa-arch-overview-Overview.svg" src="../_images/ukwa-arch-overview-Overview.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">A high-level <a class="reference external" href="https://learnwardleymapping.com/home/introduction/">Wardley map</a> of the main UK services.</span><a class="headerlink" href="#ukwa-arch-overview" title="Permalink to this image">¶</a></p>
+</div>
+<p>The dotted lines indicated data standards that connect services via regular updates, and the solid lines indicated live API connections. For example, the crawl services can proceed even if all other services are offline, but need to recieve updated crawl job specifications in order to change what and how we crawl web sites. In contrast, if our storage service is not available, all services that depend on viewing stored data will also break.</p>
+<p>Management and Monitoring services are not directly connected to the overall WARC lifecycle, but orchestrate and verify all activities via their external interfaces.</p>
+</div>
+<div class="section" id="information-flows">
+<h2>Information Flows<a class="headerlink" href="#information-flows" title="Permalink to this headline">¶</a></h2>
+<p>The <em>ingest</em> information flow, for <em>Archivists</em> and <em>Curators</em>, is as follows:</p>
+<ol class="simple">
+<li><p>The <em>Archivists</em> and <em>Curators</em> use the <em>Ingest Services</em> to configure the crawl parameters that say which sites to crawl, when, and how.</p></li>
+<li><p>The Frequent Crawl system takes the crawl definitions from the <em>Ingest Services</em> and attempts to crawl the specified sites.</p></li>
+<li><p>The Domain Crawl runs once a year and attempts to crawl all UK sites.</p></li>
+<li><p>Both crawler services capture the results as <a class="reference external" href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1/">WARC</a> files and log files which are tranferred to our <a class="reference external" href="https://en.wikipedia.org/wiki/Apache_Hadoop">Hadoop</a> cluster.</p></li>
+<li><p>Indexing tasks run over those WARC files, creating indexes that allow us to find archived URLs.</p></li>
+<li><p>The <em>Ingest Services</em> make all web pages available for inspection via a dedicated playback service known as <em>QA Wayback</em> (using the indexes and the WARC files to replay the archived web pages).</p></li>
+<li><p>The <em>Curators</em> add or update the metadata that describes the content that has been collected. This includes license agreements with website owners to facilitate capture and/or open access to the archived material.</p></li>
+</ol>
+<p>For <em>Readers</em>, the overall <em>access</em> flow is:</p>
+<ol class="simple">
+<li><p>Our <em>Readers</em> come to the <em>Website</em>, either directly or via links or metadata in other discovery systems.</p></li>
+<li><p>They can lookup URLs of interest, and play them back via the <em>Wayback Service</em>. Note that in library reading rooms they will have full access to the content, whereas the public <em>Website</em> only gives access suitably-licensed material.</p></li>
+<li><p>They can browse the collections of archived pages via the <em>‘Topics &amp; Themes’</em> section of the <em>Website</em>.</p></li>
+<li><p>They can use full-text faceted search to find URLs of interest based on their content.</p></li>
+<li><p>They can use trend analysis or download datasets in order to understand and analyse the archived web pages.</p></li>
+</ol>
+</div>
+<div class="section" id="components-customisation-maturity">
+<h2>Components, Customisation &amp; Maturity<a class="headerlink" href="#components-customisation-maturity" title="Permalink to this headline">¶</a></h2>
+<p>As indicated by the position of the services on the diagram above, the Hadoop cluster is entirely generic, and the WARC files are specific to web archiving, but generic across web archives.</p>
+<p>The Wayback service and the indexes are also fairly generic across web archives, although not quite as widely used as the WARC format.</p>
+<p>The crawl systems are based on the Internet Archive’s <a class="reference external" href="https://github.com/internetarchive/heritrix3">Heritrix3</a> crawler, but a number of additional modules added to support our specific needs and remit.</p>
+<p>The end-user systems are the most heavily custom-built components, with the website itself being the most recent and least mature.</p>
+</div>
+<div class="section" id="development-deployment">
+<h2>Development &amp; Deployment<a class="headerlink" href="#development-deployment" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<p>The individual components are deployed so that <em>access</em>, <em>ingest</em> and <em>management</em> services all run independently.</p>
+<p>…</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -284,7 +342,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./inbox"
+            path: "./how-ukwa-works"
         },
         predefinedOutput: true
     }
@@ -299,6 +357,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="_index.html" title="previous page">How UKWA Works</a>
+    <a class='right-next' id="next-link" href="manage.html" title="next page">Management Services</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

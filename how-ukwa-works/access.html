@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; UKWA Technical Documentation</title>
+    <title>Access Services &#8212; UKWA Technical Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,6 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using UKWA Services" href="../using-ukwa-services/index.html" />
+    <link rel="prev" title="Ingest Services" href="ingest.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,29 +93,29 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../how-ukwa-works/_index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="_index.html">
    How UKWA Works
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/overview.html">
+    <a class="reference internal" href="overview.html">
      Technical Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/manage.html">
+    <a class="reference internal" href="manage.html">
      Management Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/ingest.html">
+    <a class="reference internal" href="ingest.html">
      Ingest Services
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/access.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Access Services
     </a>
    </li>
@@ -200,7 +202,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/inbox/Working-With-Luigi.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/how-ukwa-works/access.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -220,7 +222,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Working-With-Luigi.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/access.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -245,7 +247,22 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#playback">
+   Playback
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#browse-search">
+   Browse &amp; Search
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datasets-statistical-reports-apis">
+   Datasets, Statistical Reports &amp; APIs
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -257,19 +274,23 @@
         
               <div>
                 
-  <p>Note resolution of TMP location issue, and note this point and that requires() is a worse place for dynamic dependencies than run(), but run() serialises execution.</p>
-<ul class="simple">
-<li><p>Describe issues around atomic behaviour and suitable patterns.</p></li>
-<li><p>Explain our patterns of use.</p></li>
-<li><p>Thoroughly document the MoveToHdfs process.</p></li>
-</ul>
-<p>https://luigi.readthedocs.io/en/stable/</p>
-<p>How Luigi is deployed</p>
-<p>/etc/luigi/client.cfg
-/etc/luigi/logging.cfg</p>
-<p>/etc/supervisor.d/luigi.ini</p>
-<p>etc.</p>
-<p><code class="docutils literal notranslate"><span class="pre">get_metrics</span></code></p>
+  <div class="section" id="access-services">
+<h1>Access Services<a class="headerlink" href="#access-services" title="Permalink to this headline">¶</a></h1>
+<p>Combining the WARCs and logs with metadata from curators, we offer various types of access.</p>
+<div class="section" id="playback">
+<h2>Playback<a class="headerlink" href="#playback" title="Permalink to this headline">¶</a></h2>
+<p>The primary access mode is via a Playback service. This relies on readers knowing which URLs they wish to access, and a Content Index (or CDX) service is used to look up which WARC records hold copies of each URL, and from what times.</p>
+</div>
+<div class="section" id="browse-search">
+<h2>Browse &amp; Search<a class="headerlink" href="#browse-search" title="Permalink to this headline">¶</a></h2>
+<p>We take a range of steps to provide useful access to our collections for users who do not know which specific URLs they need. We use W3ACT to gather archived material into a set of browsable collections, and create a full-text index so the contents of the archive can be searched. This index can also be used to explore trends and perform some basic analyses.</p>
+</div>
+<div class="section" id="datasets-statistical-reports-apis">
+<h2>Datasets, Statistical Reports &amp; APIs<a class="headerlink" href="#datasets-statistical-reports-apis" title="Permalink to this headline">¶</a></h2>
+<p>We also work with researchers to provide data sets that summarise some factual aspects of the archived resources. For example, in the past we have processed our WARCs to analyse links between web sites, and how they change over time. The same infrastructure can be used to generate statistical reports.</p>
+<p>Where appropriate, we also offer API access to information that it better queried than downloaded. For example our Playback service offers the Memento API, which allows others to query our holdings without downloading some massive dataset.</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -284,7 +305,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./inbox"
+            path: "./how-ukwa-works"
         },
         predefinedOutput: true
     }
@@ -299,6 +320,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="ingest.html" title="previous page">Ingest Services</a>
+    <a class='right-next' id="next-link" href="../using-ukwa-services/index.html" title="next page">Using UKWA Services</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

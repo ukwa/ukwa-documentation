@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; UKWA Technical Documentation</title>
+    <title>How UKWA Works &#8212; UKWA Technical Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,6 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Technical Overview" href="overview.html" />
+    <link rel="prev" title="Welcome" href="../index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,29 +93,29 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../how-ukwa-works/_index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
    How UKWA Works
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/overview.html">
+    <a class="reference internal" href="overview.html">
      Technical Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/manage.html">
+    <a class="reference internal" href="manage.html">
      Management Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/ingest.html">
+    <a class="reference internal" href="ingest.html">
      Ingest Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/access.html">
+    <a class="reference internal" href="access.html">
      Access Services
     </a>
    </li>
@@ -200,7 +202,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/inbox/Working-With-Luigi.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/how-ukwa-works/_index.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -220,7 +222,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Working-With-Luigi.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/_index.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -245,7 +247,12 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-cases">
+   Use Cases
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -257,19 +264,31 @@
         
               <div>
                 
-  <p>Note resolution of TMP location issue, and note this point and that requires() is a worse place for dynamic dependencies than run(), but run() serialises execution.</p>
+  <div class="section" id="how-ukwa-works">
+<h1>How UKWA Works<a class="headerlink" href="#how-ukwa-works" title="Permalink to this headline">¶</a></h1>
+<p>The UK Web Archive (UKWA) collects millions of websites each year, and have been collecting websites since 2005. We do this for posterity, but also for readers and researchers today.</p>
+<p>We enable curators and collaborators to define what we should collect, and how often. We attempt to visit every UK website at least once a year, and for the sites the curators have identified we can visit much more frequently. For example, we collect news sites at least once per day.</p>
+<p>We capture the websites using web crawling software, and converting the live sites into static records we can preserve for the future.</p>
+<p>We use these records to reconstruct an imperfect facsimile of the original live site, allowing our readers and researchers to browse the UK web as it was in the past. We can also analyse these historical records as data, to extract historical trends, or to build access tools.</p>
+<div class="section" id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
+<p>For our Readers, we want them to be able to:</p>
 <ul class="simple">
-<li><p>Describe issues around atomic behaviour and suitable patterns.</p></li>
-<li><p>Explain our patterns of use.</p></li>
-<li><p>Thoroughly document the MoveToHdfs process.</p></li>
+<li><p><strong>View</strong> archive web pages as the were in the past, if they know what URL they are interested in.</p></li>
+<li><p><strong>Browse</strong> curated collections of archived web pages and sites.</p></li>
+<li><p><strong>Search</strong> for web pages to find what they need.</p></li>
+<li><p><strong>Analyse</strong> our archived web pages, exploring the collection as a dataset.</p></li>
 </ul>
-<p>https://luigi.readthedocs.io/en/stable/</p>
-<p>How Luigi is deployed</p>
-<p>/etc/luigi/client.cfg
-/etc/luigi/logging.cfg</p>
-<p>/etc/supervisor.d/luigi.ini</p>
-<p>etc.</p>
-<p><code class="docutils literal notranslate"><span class="pre">get_metrics</span></code></p>
+<p>To meet these needs, we need to populate the archive. To do this, our <em>Archivists</em> and <em>Curators</em> need to:</p>
+<ul class="simple">
+<li><p><strong>Collect</strong> live web pages, by directing our web crawlers to capture them on various frequencies.</p></li>
+<li><p><strong>View</strong> what the archived web pages the crawler collected, to check how well it’s working.</p></li>
+<li><p><strong>Describe</strong> the archived web pages and sites, to help document today’s web and make it easier for <em>Readers</em> to find.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -284,7 +303,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./inbox"
+            path: "./how-ukwa-works"
         },
         predefinedOutput: true
     }
@@ -299,6 +318,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Welcome</a>
+    <a class='right-next' id="next-link" href="overview.html" title="next page">Technical Overview</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

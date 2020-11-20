@@ -93,27 +93,27 @@
 </ul>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../how-ukwa-works/_index.html">
+  <a class="reference internal" href="_index.html">
    How UKWA Works
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/overview.html">
+    <a class="reference internal" href="overview.html">
      Technical Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/manage.html">
+    <a class="reference internal" href="manage.html">
      Management Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/ingest.html">
+    <a class="reference internal" href="ingest.html">
      Ingest Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../how-ukwa-works/access.html">
+    <a class="reference internal" href="access.html">
      Access Services
     </a>
    </li>
@@ -200,9 +200,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/inbox/Working-With-Luigi.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/how-ukwa-works/maps.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -220,7 +220,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Finbox/Working-With-Luigi.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/maps.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -235,6 +235,23 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ukwa/ukwa-documentation/master?urlpath=tree/content/how-ukwa-works/maps.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -257,19 +274,87 @@
         
               <div>
                 
-  <p>Note resolution of TMP location issue, and note this point and that requires() is a worse place for dynamic dependencies than run(), but run() serialises execution.</p>
-<ul class="simple">
-<li><p>Describe issues around atomic behaviour and suitable patterns.</p></li>
-<li><p>Explain our patterns of use.</p></li>
-<li><p>Thoroughly document the MoveToHdfs process.</p></li>
-</ul>
-<p>https://luigi.readthedocs.io/en/stable/</p>
-<p>How Luigi is deployed</p>
-<p>/etc/luigi/client.cfg
-/etc/luigi/logging.cfg</p>
-<p>/etc/supervisor.d/luigi.ini</p>
-<p>etc.</p>
-<p><code class="docutils literal notranslate"><span class="pre">get_metrics</span></code></p>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> ipywardley
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;svg&#39;
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">wardley</span>
+title UKWA Overview
+
+anchor Archivist [0.9,0.7]
+anchor Curator [0.9,0.55]
+anchor Reader [0.9,0.26]
+
+component Collect [0.8, 0.75] label [5, -13]
+component Describe [0.8, 0.6] label [5, -13]
+component View [0.8,0.5] label [5, -13]
+component Browse [0.8,0.4] label [-50, -6]
+component Search [0.8,0.25] label [-45, -6]
+component Analyse [0.8,0.11] label [-50, -6]
+
+Archivist-&gt;Collect
+Archivist-&gt;View
+Curator-&gt;Describe
+Curator-&gt;View
+Reader-&gt;View
+Reader-&gt;Browse
+Reader-&gt;Search
+Reader-&gt;Analyse
+
+component Website [0.65,0.2] label [-54, -6]
+component W3ACT [0.65,0.3] label [-45, -6]
+component Wayback [0.55,0.45]
+
+Collect-&gt;W3ACT
+Describe-&gt;W3ACT
+View-&gt;Website
+View-&gt;W3ACT
+Browse-&gt;Website
+Search-&gt;Website
+Analyse-&gt;Website
+
+component Indexes [0.45, 0.435] label [-45, -6]
+component Frequent Crawl [0.385, 0.35] label [-80, -3]
+component Domain Crawl [0.3, 0.35] label [-75, -3]
+component WARCs [0.2,0.7]
+
+Website-&gt;Indexes
+Website-&gt;Wayback
+Wayback-&gt;Indexes
+Wayback-&gt;WARCs
+
+W3ACT-&gt;Wayback
+W3ACT-&gt;Frequent Crawl
+W3ACT-&gt;Domain Crawl
+
+Frequent Crawl-&gt;WARCs
+Domain Crawl-&gt;WARCs
+WARCs-&gt;Indexes
+
+component Hadoop [0.1, 0.9]
+
+WARCs-&gt;Hadoop
+
+style plain
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/maps_2_0.svg" src="../_images/maps_2_0.svg" /></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -284,7 +369,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./inbox"
+            path: "./how-ukwa-works"
         },
         predefinedOutput: true
     }

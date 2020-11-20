@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="1179px"
+   height="793px"
+   viewBox="-0.5 -0.5 1179 793"
+   style="background-color: rgb(255, 255, 255);"
+   id="svg286"
+   sodipodi:docname="ukwa-arch-overview-Overview.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata290">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     id="namedview288"
+     showgrid="false"
+     inkscape:zoom="0.96216898"
+     inkscape:cx="589.5"
+     inkscape:cy="396.5"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg286" />
+  <defs
+     id="defs2" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path4"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 435,230 369,145" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path6"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 435,290 603.18,590" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path8"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 375,260 H 340" />
+  <rect
+     style="fill:#d5e8d4;stroke:#82b366"
+     id="rect10"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="230"
+     x="375" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g16"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text12"
+       y="256.5"
+       x="354.5">Access</text>
+    <text
+       id="text14"
+       y="278.5"
+       x="354.5">Services</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path18"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 590,230 555,140" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path20"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 795,590 V 500 H 735 V 389.37" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path22"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 735,384.12 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path24"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="m 650,260 v 20 h 205 v 303.63" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path26"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 855,588.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <rect
+     style="fill:#dae8fc;stroke:#6c8ebf"
+     id="rect28"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="230"
+     x="530" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g34"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text30"
+       y="256.5"
+       x="509.5">Curation</text>
+    <text
+       id="text32"
+       y="278.5"
+       x="509.5">Services</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path36"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="m 795,353 h 30 v 230.63" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path38"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 825,588.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path40"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 675,353 620,290" />
+  <rect
+     style="fill:#dae8fc;stroke:#6c8ebf"
+     id="rect42"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="323"
+     x="675" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g48"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text44"
+       y="349.5"
+       x="654.5">Crawl</text>
+    <text
+       id="text46"
+       y="371.5"
+       x="654.5">Services</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path50"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 765,620 435,290" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path52"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 765,620 320.42,290" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path54"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 765,620 590,290" />
+  <rect
+     style="fill:#f5f5f5;stroke:#666666"
+     id="rect56"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="590"
+     x="765" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#333333"
+     id="g62"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text58"
+       y="616.5"
+       x="744.5">Storage</text>
+    <text
+       id="text60"
+       y="638.5"
+       x="744.5">Services</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse64"
+     pointer-events="all"
+     cy="7.5"
+     cx="346" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path66"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 346,15 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g72"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect68"
+       height="22"
+       width="61"
+       y="68"
+       x="236" />
+    <text
+       id="text70"
+       y="83.5"
+       x="265.5">Reader</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse74"
+     pointer-events="all"
+     cy="7.5"
+     cx="725" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path76"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 725,15 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g82"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect78"
+       height="22"
+       width="70"
+       y="68"
+       x="611" />
+    <text
+       id="text80"
+       y="83.5"
+       x="644.5">Archivist</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path84"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 686.37,620 H 765" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path86"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 681.12,620 7,-3.5 -1.75,3.5 1.75,3.5 z" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path88"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 560,620 280,290" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path90"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 620,590 560,290" />
+  <rect
+     style="fill:#d5e8d4;stroke:#82b366"
+     id="rect92"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="590"
+     x="560" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g98"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text94"
+       y="616.5"
+       x="539.5">Index</text>
+    <text
+       id="text96"
+       y="638.5"
+       x="539.5">Services</text>
+  </g>
+  <rect
+     style="fill:#f5f5f5;stroke:#666666"
+     id="rect100"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="680"
+     x="700" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#333333"
+     id="g106"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text102"
+       y="706.5"
+       x="679.5">Monitoring</text>
+    <text
+       id="text104"
+       y="728.5"
+       x="679.5">Services</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse108"
+     pointer-events="all"
+     cy="7.5"
+     cx="555" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path110"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 555,15 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g116"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect112"
+       height="22"
+       width="62"
+       y="68"
+       x="445" />
+    <text
+       id="text114"
+       y="83.5"
+       x="474.5">Curator</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="5"
+     id="ellipse118"
+     pointer-events="all"
+     cy="140"
+     cx="369" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect120"
+     pointer-events="all"
+     height="20"
+     width="110"
+     y="130"
+     x="385" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g128"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text122"
+       y="125.5"
+       x="359.5">Find &amp; View</text>
+    <text
+       id="text124"
+       y="147.5"
+       x="359.5">Archived</text>
+    <text
+       id="text126"
+       y="169.5"
+       x="359.5">Web Sites</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="5"
+     id="ellipse130"
+     pointer-events="all"
+     cy="135"
+     cx="555" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect132"
+     pointer-events="all"
+     height="50"
+     width="110"
+     y="114"
+     x="571" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g140"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text134"
+       y="124.5"
+       x="545.5">Describe Archived</text>
+    <text
+       id="text136"
+       y="146.5"
+       x="545.5">Web Sites &amp;</text>
+    <text
+       id="text138"
+       y="168.5"
+       x="545.5">Collections</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path142"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 721.46,138.54 622.47,230" />
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="5"
+     id="ellipse144"
+     pointer-events="all"
+     cy="135"
+     cx="725" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect146"
+     pointer-events="all"
+     height="20"
+     width="110"
+     y="125"
+     x="730" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g152"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text148"
+       y="131.5"
+       x="704.5">Archive</text>
+    <text
+       id="text150"
+       y="153.5"
+       x="704.5">Web Sites</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse154"
+     pointer-events="all"
+     cy="7.5"
+     cx="265" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path156"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 265,15 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g162"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect158"
+       height="22"
+       width="95"
+       y="68"
+       x="138" />
+    <text
+       id="text160"
+       y="83.5"
+       x="184.5">Researcher</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="5"
+     id="ellipse164"
+     pointer-events="all"
+     cy="140"
+     cx="264" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect166"
+     pointer-events="all"
+     height="20"
+     width="110"
+     y="127"
+     x="70" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g174"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text168"
+       y="122.5"
+       x="124.5">Analyse</text>
+    <text
+       id="text170"
+       y="144.5"
+       x="124.5">Archived</text>
+    <text
+       id="text172"
+       y="166.5"
+       x="124.5">Web Sites</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path176"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 280,230 264,145" />
+  <rect
+     style="fill:#fff2cc;stroke:#d6b656"
+     id="rect178"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="230"
+     x="220" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g184"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text180"
+       y="256.5"
+       x="199.5">Data</text>
+    <text
+       id="text182"
+       y="278.5"
+       x="199.5">Services</text>
+  </g>
+  <rect
+     style="fill:#f8cecc;stroke:#b85450"
+     id="rect186"
+     pointer-events="all"
+     ry="9"
+     rx="9"
+     height="60"
+     width="120"
+     y="680"
+     x="255" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g192"
+     font-size="18px"
+     transform="translate(80)">
+    <text
+       id="text188"
+       y="706.5"
+       x="234.5">Management</text>
+    <text
+       id="text190"
+       y="728.5"
+       x="234.5">Services</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path194"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 730,270 h 25 v 17 q -6.25,-5.4 -12.5,0 -6.25,5.4 -12.5,0 v -14 z" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g202"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect196"
+       height="44"
+       width="108"
+       y="259"
+       x="677" />
+    <text
+       id="text198"
+       y="276.5"
+       x="676.5">Crawl Jobs &amp;</text>
+    <text
+       id="text200"
+       y="298.5"
+       x="676.5">Descriptions</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path204"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 815,470 h 25 v 14.45 q -6.25,-4.59 -12.5,0 -6.25,4.59 -12.5,0 v -11.9 z" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g210"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect206"
+       height="22"
+       width="132"
+       y="469"
+       x="762" />
+    <text
+       id="text208"
+       y="475"
+       x="761.5">Crawl Packages</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path212"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 720,413 h 25 v 14.45 q -6.25,-4.59 -12.5,0 -6.25,4.59 -12.5,0 v -11.9 z" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g218"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect214"
+       height="22"
+       width="91"
+       y="412"
+       x="667" />
+    <text
+       id="text216"
+       y="418"
+       x="666.5">Crawl Jobs</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path220"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 465,414 q 7.5,7.2 15,0 7.5,-7.2 15,0 v 12 q -7.5,-7.2 -15,0 -7.5,7.2 -15,0 z" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:end;fill:#000000"
+     id="g226"
+     font-size="18px"
+     transform="translate(80)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0"
+       id="rect222"
+       height="22"
+       width="40"
+       y="410"
+       x="345" />
+    <text
+       id="text224"
+       y="427.5"
+       x="382.5">APIs</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path228"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 50,760 V 26.37" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path230"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 50,21.12 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path232"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 50,760 H 1163.63" />
+  <path
+     style="fill:#000000;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path234"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     d="m 1168.88,760 -7,3.5 1.75,-3.5 -1.75,-3.5 z" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect236"
+     pointer-events="all"
+     transform="rotate(-90)"
+     height="20"
+     width="135"
+     y="25"
+     x="-458" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g240"
+     transform="rotate(-90,35,390.5)"
+     font-size="18px">
+    <text
+       id="text238"
+       y="398"
+       x="34.5">Value Chain</text>
+  </g>
+  <rect
+     style="fill:none;stroke:none"
+     id="rect242"
+     pointer-events="all"
+     transform="rotate(-90)"
+     height="20"
+     width="70"
+     y="25"
+     x="-755" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g246"
+     transform="rotate(-90,35,720)"
+     font-size="18px">
+    <text
+       id="text244"
+       y="727.5"
+       x="34.5">Invisible</text>
+  </g>
+  <rect
+     style="fill:none;stroke:none"
+     id="rect248"
+     pointer-events="all"
+     transform="rotate(-90)"
+     height="20"
+     width="70"
+     y="25"
+     x="-95" />
+  <g
+     style="font-size:18px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+     id="g252"
+     transform="rotate(-90,35,60)"
+     font-size="18px">
+    <text
+       id="text250"
+       y="67.5"
+       x="34.5">Visible</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:1, 2"
+     inkscape:connector-curvature="0"
+     id="path254"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 330,760 V 20" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:1, 2"
+     inkscape:connector-curvature="0"
+     id="path256"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 610,760 V 20" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:1, 2"
+     inkscape:connector-curvature="0"
+     id="path258"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     d="M 890,760 V 20" />
+  <rect
+     style="fill:none;stroke:none"
+     id="rect260"
+     pointer-events="all"
+     height="20"
+     width="150"
+     y="770"
+     x="50" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g264"
+     font-size="18px">
+    <text
+       id="text262"
+       y="787.5"
+       x="51.5">Genesis</text>
+  </g>
+  <rect
+     style="fill:none;stroke:none"
+     id="rect266"
+     pointer-events="all"
+     height="20"
+     width="150"
+     y="770"
+     x="330" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g270"
+     font-size="18px">
+    <text
+       id="text268"
+       y="787.5"
+       x="331.5">Custom Built</text>
+  </g>
+  <rect
+     style="fill:none;stroke:none"
+     id="rect272"
+     pointer-events="all"
+     height="20"
+     width="150"
+     y="770"
+     x="610" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g276"
+     font-size="18px">
+    <text
+       id="text274"
+       y="787.5"
+       x="611.5">Product/rental</text>
+  </g>
+  <rect
+     style="fill:none;stroke:none"
+     id="rect278"
+     pointer-events="all"
+     height="20"
+     width="150"
+     y="770"
+     x="890" />
+  <g
+     style="font-size:18px;font-family:Helvetica;fill:#000000"
+     id="g282"
+     font-size="18px">
+    <text
+       id="text280"
+       y="787.5"
+       x="891.5">Commodity/utility</text>
+  </g>
+</svg>

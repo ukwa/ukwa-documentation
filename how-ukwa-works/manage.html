@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How UKWA Works &#8212; UKWA Technical Documentation</title>
+    <title>Management Services &#8212; UKWA Technical Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Indexing for Access" href="../workflows/access-indexing.html" />
-    <link rel="prev" title="Welcome" href="../index.html" />
+    <link rel="next" title="Ingest Services" href="ingest.html" />
+    <link rel="prev" title="Technical Overview" href="overview.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -95,18 +95,28 @@
 </ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="_index.html">
    How UKWA Works
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/access-indexing.html">
-     Indexing for Access
+    <a class="reference internal" href="overview.html">
+     Technical Overview
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Management Services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/ingest-listings.html">
-     Ingest Tasks Based on HDFS Content
+    <a class="reference internal" href="ingest.html">
+     Ingest Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="access.html">
+     Access Services
     </a>
    </li>
   </ul>
@@ -192,9 +202,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/how-ukwa-works/index.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/how-ukwa-works/manage.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -212,7 +222,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/manage.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -228,23 +238,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ukwa/ukwa-documentation/master?urlpath=tree/content/how-ukwa-works/index.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -256,26 +249,9 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-cases">
-   Use Cases
+  <a class="reference internal nav-link" href="#preserve">
+   Preserve
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#high-level-technical-architecture">
-   High-Level Technical Architecture
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#information-flows">
-     Information Flows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#components-customisation-maturity">
-     Components, Customisation &amp; Maturity
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -288,67 +264,11 @@
         
               <div>
                 
-  <div class="section" id="how-ukwa-works">
-<h1>How UKWA Works<a class="headerlink" href="#how-ukwa-works" title="Permalink to this headline">¶</a></h1>
-<p>The UK Web Archive (UKWA) collects millions of websites each year, and have been collecting websites since 2005. We do this for posterity, but also for readers and researchers today.</p>
-<p>We enable curators and collaborators to define what we should collect, and how often. We attempt to visit every UK website at least once a year, and for the sites the curators have identified we can visit much more frequently. For example, we collect news sites at least once per day.</p>
-<p>We capture the websites using web crawling software, and converting the live sites into static records we can preserve for the future.</p>
-<p>We use these records to reconstruct an imperfect facsimile of the original live site, allowing our readers and researchers to browse the UK web as it was in the past. We can also analyse these historical records as data, to extract historical trends, or to build access tools.</p>
-<div class="section" id="use-cases">
-<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
-<p>For our Readers, we want them to be able to:</p>
-<ul class="simple">
-<li><p><strong>View</strong> archive web pages as the were in the past, if they know what URL they are interested in.</p></li>
-<li><p><strong>Browse</strong> curated collections of archived web pages and sites.</p></li>
-<li><p><strong>Search</strong> for web pages to find what they need.</p></li>
-<li><p><strong>Analyse</strong> our archived web pages, exploring the collection as a dataset.</p></li>
-</ul>
-<p>To meet these needs, we need to populate the archive. To do this, our <em>Archivists</em> and <em>Curators</em> need to:</p>
-<ul class="simple">
-<li><p><strong>Collect</strong> live web pages, by directing our web crawlers to capture them on various frequencies.</p></li>
-<li><p><strong>View</strong> what the archived web pages the crawler collected, to check how well it’s working.</p></li>
-<li><p><strong>Describe</strong> the archived web pages and sites, to help document today’s web and make it easier for <em>Readers</em> to find.</p></li>
-</ul>
-</div>
-<div class="section" id="high-level-technical-architecture">
-<h2>High-Level Technical Architecture<a class="headerlink" href="#high-level-technical-architecture" title="Permalink to this headline">¶</a></h2>
-<p>These use cases are supported by a set of <em>access</em>, <em>ingest</em> and <em>management</em> systems. To get an idea of the overall technical architecture, we won’t start with an attempt to enumerate every component involved. First, we’ll break it down as a set of larger technical areas, using the names we tend to use when discussing them.</p>
-<p>To give some insight into the nature of the underlying technical systems, we’ll use a <a class="reference external" href="https://learnwardleymapping.com/home/introduction/">Wardley map</a> and grade them on a scale they reflects how well understood and widely used they are.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/index_3_0.svg" src="../_images/index_3_0.svg" /></div>
-</div>
-<div class="section" id="information-flows">
-<h3>Information Flows<a class="headerlink" href="#information-flows" title="Permalink to this headline">¶</a></h3>
-<p>The <em>ingest</em> information flow, for <em>Archivists</em> and <em>Curators</em>, is as follows:</p>
-<ol class="simple">
-<li><p>The <em>Archivists</em> and <em>Curators</em> use the <em>W3ACT (WWW Annotation &amp; Curation Tool) Service</em> to configure the crawl parameters that say which sites to crawl, when, and how.</p></li>
-<li><p>The Frequent Crawl system takes the crawl definitions from <em>W3ACT</em> and attempts to crawl the specified sites.</p></li>
-<li><p>The Domain Crawl runs once a year and attempts to crawl all UK sites.</p></li>
-<li><p>Both crawler services capture the results as <a class="reference external" href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1/">WARC</a> files and log files which are tranferred to our <a class="reference external" href="https://en.wikipedia.org/wiki/Apache_Hadoop">Hadoop</a> cluster.</p></li>
-<li><p>Indexing tasks run over those WARC files, creating indexes that allow us to find archived URLs.</p></li>
-<li><p>The <em>Wayback Service</em> uses the indexes and the WARC files to replay the archived web pages.</p></li>
-<li><p>The <em>W3ACT Service</em> makes all web pages available for inspection.</p></li>
-<li><p>The <em>Curators</em> add or update the metadata that describes the content that has been collected. This includes license agreements with website owners to facilitate capture and/or open access to the archived material.</p></li>
-</ol>
-<p>For <em>Readers</em>, the overall <em>access</em> flow is:</p>
-<ol class="simple">
-<li><p>Our <em>Readers</em> come to the <em>Website</em>, either directly or via links or metadata in other discovery systems.</p></li>
-<li><p>They can lookup URLs of interest, and play them back via the <em>Wayback Service</em>. Note that in library reading rooms they will have full access to the content, whereas the public <em>Website</em> only gives access suitably-licensed material.</p></li>
-<li><p>They can browse the collections of archived pages via the <em>‘Topics &amp; Themes’</em> section of the <em>Website</em>.</p></li>
-<li><p>They can use full-text faceted search to find URLs of interest based on their content.</p></li>
-<li><p>They can use trend analysis or download datasets in order to understand and analyse the archived web pages.</p></li>
-</ol>
-</div>
-<div class="section" id="components-customisation-maturity">
-<h3>Components, Customisation &amp; Maturity<a class="headerlink" href="#components-customisation-maturity" title="Permalink to this headline">¶</a></h3>
-<p>As indicated by the position of the services on the diagram above, the Hadoop cluster is entirely generic, and the WARC files are specific to web archiving, but generic across web archives.</p>
-<p>The Wayback service and the indexes are also fairly generic across web archives, although not quite as widely used as the WARC format.</p>
-<p>The crawl systems are based on the Internet Archive’s <a class="reference external" href="https://github.com/internetarchive/heritrix3">Heritrix3</a> crawler, but a number of additional modules added to support our specific needs and remit.</p>
-<p>The end-user systems are the most heavily custom-built components, with the website itself being the most recent and least mature.</p>
-<div class="toctree-wrapper compound">
-</div>
-</div>
+  <div class="section" id="management-services">
+<h1>Management Services<a class="headerlink" href="#management-services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preserve">
+<h2>Preserve<a class="headerlink" href="#preserve" title="Permalink to this headline">¶</a></h2>
+<p>We keep the WARCs and log files from all the crawlers, in a folder structure that reflects the crawl process. We keep content obtained under different terms in separate folders. For example, openly available Non-Print Legal Deposit material is separate from material that we obtained by permission, or from behind a paywall.</p>
 </div>
 </div>
 
@@ -380,8 +300,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Welcome</a>
-    <a class='right-next' id="next-link" href="../workflows/access-indexing.html" title="next page">Indexing for Access</a>
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Technical Overview</a>
+    <a class='right-next' id="next-link" href="ingest.html" title="next page">Ingest Services</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
