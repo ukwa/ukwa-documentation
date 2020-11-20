@@ -14,6 +14,7 @@ Archivist->Crawl Sites
 component W3ACT [0.7,0.2] label [-52, 5]
 component QA Wayback [0.65,0.35] label [-68, 17]
 component PostgreSQL [0.65,0.7]
+component pdftohtmlEX [0.65,0.5]
 
 component OutbackCDX [0.6,0.4]
 component Crawl Engine [0.45,0.35] label [-35, 24]

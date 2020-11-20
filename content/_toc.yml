@@ -1,8 +1,10 @@
 - file: index
-- file: how-ukwa-works/index
+- file: how-ukwa-works/_index
   sections:
-    - file: workflows/access-indexing
-    - file: workflows/ingest-listings
+    - file: how-ukwa-works/overview
+    - file: how-ukwa-works/manage
+    - file: how-ukwa-works/ingest
+    - file: how-ukwa-works/access
 - file: using-ukwa-services/index
 - file: make-your-own-warcs/index
 - file: use-your-warcs/index
