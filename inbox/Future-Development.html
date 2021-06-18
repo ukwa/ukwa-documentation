@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Next Steps in Development &#8212; UKWA Technical Documentation</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -54,14 +51,14 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -70,32 +67,37 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
    Welcome
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../how-ukwa-works/_index.html">
    How UKWA Works
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../how-ukwa-works/overview.html">
      Technical Overview
@@ -117,8 +119,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../using-ukwa-services/index.html">
@@ -130,11 +130,16 @@
    Make your own WARCs
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../use-your-warcs/index.html">
    Use Your WARCs
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../use-your-warcs/analysis.html">
      Analysis
@@ -156,11 +161,10 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -176,21 +180,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -208,7 +212,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -226,25 +230,25 @@
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#development-work-ideas">
    Development Work Ideas
@@ -277,8 +281,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -307,7 +311,7 @@
 <ul class="simple">
 <li><p>Associating Request records with the relevant Response.</p></li>
 <li><p>Storing full timelines for each URI, e.g. when we visited and it was gone, based on the crawl logs.</p></li>
-<li><p>Associating metadata or annotations with the target resource, e.g. taking advantage of the gov.uk content API during indexing, or exploiting additional metadata extracted using tools like <a class="reference external" href="https://any23.apache.org/"><em>any23</em></a>.</p></li>
+<li><p>Associating metadata or annotations with the target resource, e.g. taking advantage of the <a class="reference external" href="http://gov.uk">gov.uk</a> content API during indexing, or exploiting additional metadata extracted using tools like <a class="reference external" href="https://any23.apache.org/"><em>any23</em></a>.</p></li>
 <li><p>Estimate URI lifespan, to add as a search facet.</p></li>
 <li><p>At crawl time, as a lookup that replaces and improves upon the current methods of deduplication and ‘already-seen-URIs’ checks, further reducing the amount of stage managed by the Heritrix crawler itself and significantly lowering the memory footprint due to the removal of the Bloom-filter-based already-seen URI lookup method.</p></li>
 </ul>
@@ -386,7 +390,7 @@
 <p>There is little point in shifting this data our of W3ACT unless it reduces the amount of code we need to maintain and the number of systems we need to manage. Therefore, we wish to consider moving this data into systems that can be supported by third-parties at modest cost, and that are based on open standard and open source so we can avoid vendor lock-in and shop around for support.</p>
 <p>Possible engines include <a class="reference external" href="http://omeka.org/">Omeka</a>, Blacklight’s <a class="reference external" href="http://spotlight.projectblacklight.org/">Spotlight</a> and <a class="reference external" href="https://www.drupal.org/">Drupal</a>. There’s also <span class="xref myst">Plone</span> which is a but like a Python version of Drupal but requires more back-end coding work. Then there are other tools like Collective Access, OpenRefine, citation managers like Zotero and Bibsonomy, and bookmark services like Pinboard/Delicious and Diigo.</p>
 <p>Drupal is very general, very powerful, and widely used. It is quite complex to manage and maintain, so third-party support would be needed, but there are lots of options. It’s not ‘pre-tuned’ to our kind of use cases, so would require a good deal of customisation at first, but is very flexible and could cover a wide range of use cases (e.g. we could probably move Permissions + Targets into it without using custom code, just configuring supported modules). Cloud hosting and support appears to be widespread but may be fairly expensive, but this requires more investigation (e.g. <a class="reference external" href="https://pantheon.io/">Pantheon</a> &amp; possible <a class="reference external" href="https://pantheon.io/edu">Pantheon EDU</a>, <a class="reference external" href="https://www.acquia.com/gb/products-services/acquia-cloud">Acquia Cloud</a>, <a class="reference external" href="https://platform.sh/">platform.sh</a>). Only Acquia Cloud includes automatic upgrades for security issues, although <a class="reference external" href="https://www.drupal.org/hosting-support/2015-04-11/hosts-that-perform-security-updates">in the past Drupal hosting services have acted quickly to respond to major issues</a>. At small scale, this is not terribly expensive (around £1,400/year for Acquia Cloud’s smallest server, which for curators only is likely fine.)</p>
-<p><a class="reference external" href="https://omeka.org/s/">Omeka S</a> is less widely used, but seems to match our use cases more closely. There are not as many support options as Drupal, but <a class="reference external" href="http://www.omeka.net/">hosting and support</a> is available from the lead developers at affordable rates, and [other support options are available)(https://digirati.com/updates/insights/a-crowdsourcing-platform-for-wales/). It seems very well suited to handling modern metadata. e.g. I was able to import a prototype <a class="reference external" href="https://groups.google.com/d/msg/memento-dev/xNHUXDxPxaQ/XQ250Y3AAwAJ">RDF model for Memento</a> into Omeka easily, and this could be used to clearly mark up our archived web pages and web sites. It can manage multi-lingual data, and also supports <a class="reference external" href="https://omeka.org/s/modules/ValueSuggest/">things like FAST and Library of Congress Subject Headings</a> using standard modules. The main different with our current model is that Omeka Collections (Item Sets) are not  hierarchical and would be managed as a flat list, although the heirarchy could still be captured via <code class="docutils literal notranslate"><span class="pre">Has</span> <span class="pre">Part</span></code> or <code class="docutils literal notranslate"><span class="pre">Is</span> <span class="pre">Part</span> <span class="pre">Of</span></code> relationships, or by using an additional taxonomy to manage where items appear. If needed, it can be used via Docker too, as shown <a class="reference external" href="https://github.com/klokantech/omeka-s-docker">here</a>.</p>
+<p><a class="reference external" href="https://omeka.org/s/">Omeka S</a> is less widely used, but seems to match our use cases more closely. There are not as many support options as Drupal, but <a class="reference external" href="http://www.omeka.net/">hosting and support</a> is available from the lead developers at affordable rates, and [other support options are available)(<a class="reference external" href="https://digirati.com/updates/insights/a-crowdsourcing-platform-for-wales/">https://digirati.com/updates/insights/a-crowdsourcing-platform-for-wales/</a>). It seems very well suited to handling modern metadata. e.g. I was able to import a prototype <a class="reference external" href="https://groups.google.com/d/msg/memento-dev/xNHUXDxPxaQ/XQ250Y3AAwAJ">RDF model for Memento</a> into Omeka easily, and this could be used to clearly mark up our archived web pages and web sites. It can manage multi-lingual data, and also supports <a class="reference external" href="https://omeka.org/s/modules/ValueSuggest/">things like FAST and Library of Congress Subject Headings</a> using standard modules. The main different with our current model is that Omeka Collections (Item Sets) are not  hierarchical and would be managed as a flat list, although the heirarchy could still be captured via <code class="docutils literal notranslate"><span class="pre">Has</span> <span class="pre">Part</span></code> or <code class="docutils literal notranslate"><span class="pre">Is</span> <span class="pre">Part</span> <span class="pre">Of</span></code> relationships, or by using an additional taxonomy to manage where items appear. If needed, it can be used via Docker too, as shown <a class="reference external" href="https://github.com/klokantech/omeka-s-docker">here</a>.</p>
 <p>To make using it easier, it would make sense to consider adding some kind of helper module to smooth the process of discovering archived resources for inclusion, using Wayback (and perhaps Solr) queries to help pick the timestamps of interest. This could be a kind of ‘importer’ that pre-populated any necessary fields, e.g. oEmbeds (see below). For example, the Document Harvester workflow could be re-built as a Omeka Importer that queried the Solr service to find documents relating to e.g. ‘Watched Sites’ Items owned by a particular user (say).</p>
 <p>Spotlight is more geared towards highlighting items in a Solr index. This quite suites the Document use case, but the system is less strong on the kind of metadata management required in the other cases. There are also no hosted options and little formal third-party support, so we’d have to take this on in house. This would be worth it if we could much most internal Solr UI work onto Blacklight.</p>
 <p>Note that the main challenge in using any of these for the main public website is how to handle the integration of the kind of search-oriented functionality we use in Shine. For example, it may be possible to use Omeka as a end-user collections browser, but then hand over to a dedicated search UI for complex Solr queries.</p>
@@ -458,13 +462,13 @@
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -472,7 +476,7 @@
         
           By The UK Web Archive<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
@@ -481,11 +485,9 @@
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>
