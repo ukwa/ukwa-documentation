@@ -1,15 +1,17 @@
-- file: index
+format: jb-article
+root: index
+sections:
 - file: how-ukwa-works/_index
   sections:
-    - file: how-ukwa-works/overview
-    - file: how-ukwa-works/manage
-    - file: how-ukwa-works/ingest
-    - file: how-ukwa-works/access
+  - file: how-ukwa-works/overview
+  - file: how-ukwa-works/manage
+  - file: how-ukwa-works/ingest
+  - file: how-ukwa-works/access
 - file: using-ukwa-services/index
 - file: make-your-own-warcs/index
 - file: use-your-warcs/index
   sections:
-    - file: use-your-warcs/analysis
-    - file: use-your-warcs/integration
-    - file: use-your-warcs/playback
-    - file: use-your-warcs/search
+  - file: use-your-warcs/analysis
+  - file: use-your-warcs/integration
+  - file: use-your-warcs/playback
+  - file: use-your-warcs/search
