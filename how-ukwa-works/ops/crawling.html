@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crawler Operations &#8212; UKWA Technical Documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using UKWA Services" href="../../using-ukwa-services/index.html" />
+    <link rel="prev" title="Access Services" href="../access.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/ukwa-2018-onwhite-close.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">UKWA Technical Documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../_index.html">
+   How UKWA Works
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../overview.html">
+     Technical Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ingest.html">
+     Ingest Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../manage.html">
+     Management Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../access.html">
+     Access Services
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Crawler Operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../make-your-own-warcs/index.html">
+   Make your own WARCs
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../use-your-warcs/index.html">
+   Use Your WARCs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../use-your-warcs/analysis.html">
+     Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../use-your-warcs/integration.html">
+     Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../use-your-warcs/playback.html">
+     Playback
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../use-your-warcs/search.html">
+     Search
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/how-ukwa-works/ops/crawling.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ukwa/ukwa-documentation"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/ops/crawling.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launching-the-crawl-services">
+   Launching the Crawl Services
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reviewing-the-deployment-configuration">
+     Reviewing the Deployment Configuration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-kafka">
+     Launching Kafka
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawl-job-operations">
+   Crawl Job Operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#starting-crawls">
+     Starting Crawls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stopping-crawls">
+     Stopping Crawls
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pause-the-crawl-job-s">
+       Pause the crawl job(s)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checkpoint-the-job-s">
+       Checkpoint the job(s)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shutdown-the-crawl-job-s">
+     Shutdown the Crawl Job(s)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shut-down-the-crawl-services">
+   Shut down the Crawl Services
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="crawler-operations">
+<h1>Crawler Operations<a class="headerlink" href="#crawler-operations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This page describes how to a manage our crawl services and jobs. This applies to all crawl jobs:</p>
+<ul class="simple">
+<li><p>The Domain Crawl (<code class="docutils literal notranslate"><span class="pre">dc</span></code>)</p></li>
+<li><p>The Frequent Crawls (<code class="docutils literal notranslate"><span class="pre">fc</span></code>) which consist of two different crawls (NPLD <code class="docutils literal notranslate"><span class="pre">npld</span></code> and By-Permission <code class="docutils literal notranslate"><span class="pre">bypm</span></code>)</p></li>
+</ul>
+<p>This page assumes that a suitable crawler has already been set up, with sufficient disk space and with Docker Swarm installed. For details, see:</p>
+<ul class="simple">
+<li><p><em>TBA: Link to local crawler setup</em></p></li>
+<li><p><a class="reference internal" href="crawler_setup_aws_dc.html"><span class="doc std std-doc">AWS Domain Crawl Setup</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="launching-the-crawl-services">
+<h2>Launching the Crawl Services<a class="headerlink" href="#launching-the-crawl-services" title="Permalink to this headline">¶</a></h2>
+<p>Before doing any service changes, it is often helpful to clear out any information associated with services that are no longer running. e.g. this avoids confusion when inspecting the logs of services.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker system prune -f
+</pre></div>
+</div>
+<div class="section" id="reviewing-the-deployment-configuration">
+<h3>Reviewing the Deployment Configuration<a class="headerlink" href="#reviewing-the-deployment-configuration" title="Permalink to this headline">¶</a></h3>
+<p><em>TBA: VARS</em></p>
+</div>
+<div class="section" id="launching-kafka">
+<h3>Launching Kafka<a class="headerlink" href="#launching-kafka" title="Permalink to this headline">¶</a></h3>
+<p>The current crawl engine is integrated with <em>Apache Kafka</em>, and so this service needs be started before Heritrix.  This means the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> and <code class="docutils literal notranslate"><span class="pre">dc_kafka</span></code> stacks for the frequent and domain crawls respectively. These configurations are available at:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka">https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka">https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka</a></p></li>
+</ul>
+<div class="figure align-center" id="fc-kafka-stack">
+<a class="reference internal image-reference" href="../../_images/fc_kafka_stack.svg"><img alt="../../_images/fc_kafka_stack.svg" src="../../_images/fc_kafka_stack.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
+</div>
+<p>To deploy the Kafka service stack. e.g. for <code class="docutils literal notranslate"><span class="pre">dc</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd ingest/dc/dc-kafka
+./deploy-kafka-prod.sh
+</pre></div>
+</div>
+<p>We can then check what’s happening either using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker service ps --no-trunc dc_kafka_kafka_1
+
+docker service logs --tail 100 -f dc_kafka_kafka_1
+</pre></div>
+</div>
+<p>If the Kafka instance is brand new, it will be up and running very quickly. However, if this is any kind of restart, Kafka can take quite some time to start up, with regular logging like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>...Loading producer state from snapshot files...
+</pre></div>
+</div>
+<p>Once it’s checked all the partitions of the topics it contains, the logging should settle down. You can also check this by looking at the <em>Trifecta</em> user interface, which should be accessible on port 9000 of the crawling machine.  Note that it does tend to get confused if it is accessed before Kafka is ready. In this case, it’ll need to be restarted, like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker service update --force dc_kafka_ui
+</pre></div>
+</div>
+<p>Check surts and exclusions.
+Check GeoIP DB (GeoLite2-City.mmdb) is installed and up to date.</p>
+<p>JE cleaner threads
+je.cleaner.threads to 16 (from the default of 1) - note large numbers went very badly causing memory exhaustion
+Bloom filter
+MAX_RETRIES=4</p>
+</div>
+</div>
+<div class="section" id="crawl-job-operations">
+<h2>Crawl Job Operations<a class="headerlink" href="#crawl-job-operations" title="Permalink to this headline">¶</a></h2>
+<p>The current crawl engine relies on Heritrix3 state management to keep track of crawl state, and this was not designed to cope under un-supervised system restarts. i.e. rather than being stateless, or delegating state management to something that ensures the live state is preserved immediately, we need to manage ensuring the runtime state is recorded on disk. This is why crawler operations are more complex than other areas.</p>
+<div class="section" id="starting-crawls">
+<h3>Starting Crawls<a class="headerlink" href="#starting-crawls" title="Permalink to this headline">¶</a></h3>
+<p>As stated above, before going any further, we need to ensure that Kafka has completed starting up and is ready for producers and consumers to connect.</p>
+<ul class="simple">
+<li><p>Build.</p></li>
+<li><p>Select Checkpoint. If expected checkpoints are not present, this means something went wrong while writing them. This should be reported to try to determine and address the root cause, but there’s not much to be done other than select the most recent valid checkpoint.</p></li>
+<li><p>Launch.</p></li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="stopping-crawls">
+<h3>Stopping Crawls<a class="headerlink" href="#stopping-crawls" title="Permalink to this headline">¶</a></h3>
+<p>If possible, we wish to preserve the current state of the crawl, so we try to cleanly shut down while making a checkpoint to restart from.</p>
+<p>Note that for our frequent crawls, we run two Heritrix services, one for NPLD content and one for by-permission crawling. When performing a full stop of the frequent crawls, both services need to be dealt with cleanly. When running on crawler06, this means:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://crawler06.bl.uk:8443/">https://crawler06.bl.uk:8443/</a> is NPLD crawling.</p></li>
+<li><p><a class="reference external" href="https://crawler06.bl.uk:9443/">https://crawler06.bl.uk:9443/</a> is By-Permission crawling.</p></li>
+</ul>
+<div class="section" id="pause-the-crawl-job-s">
+<h4>Pause the crawl job(s)<a class="headerlink" href="#pause-the-crawl-job-s" title="Permalink to this headline">¶</a></h4>
+<p>For all Heritrixes in the Docker Stack: log into the Heritrix3 control UI, and pause any job(s) on the crawler that are in the <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> state. This can take a while (say up to two hours) as each worker thread tries to finish it’s work neatly. Sometimes pausing never completes because of some bug, in which case we proceed anyway and accept some inaccuracies in the crawl state. If it works, all <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> jobs will now be in the state <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p>
+</div>
+<div class="section" id="checkpoint-the-job-s">
+<h4>Checkpoint the job(s)<a class="headerlink" href="#checkpoint-the-job-s" title="Permalink to this headline">¶</a></h4>
+<p>Via the UI, request a checkpoint. If there’s not been one for a while, this can be quite slow (tens of minutes). If it works, a banner should flash up with the checkpoint ID, which should be noted so the crawl can be resumed from the right checkpoint. If the checkpointing fails, the logs will need to be checked for errors, as unless a new checkpoint is succefully completed, it will likely not be valid.</p>
+<p>As an example, under some circumstances the log rotation does not work correctly. This means non-timestamped log files may be missing, which means when the next checkpoint runs, there are errors like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker logs --tail 100 fc_crawl_npld-heritrix-worker.1.h21137sr8l31niwsx3m3o7jri
+....
+SEVERE: org.archive.crawler.framework.CheckpointService checkpointFailed  Checkpoint failed [Wed May 19 12:47:13 GMT 2021]
+java.io.IOException: Unable to move /heritrix/output/frequent-npld/20210424211346/logs/runtime-errors.log to /heritrix/output/frequent-npld/20210424211346/logs/runtime-erro
+rs.log.cp00025-20210519124709
+</pre></div>
+</div>
+<p>These errors can be avoided by adding empty files in the right place, e.g.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>touch /mnt/gluster/fc/heritrix/output/frequent-npld/20210424211346/logs/runtime-errors.log
+</pre></div>
+</div>
+<p>But immediately re-attempting to checkpoint a paused crawl will usually fail with:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Checkpoint not made -- perhaps no progress since last? (see logs)
+</pre></div>
+</div>
+<p>This is because the system will not attempt a new checkpoint if the crawl state has not changed. Therefore, to force a new checkpoint, it is necessary to briefly un-pause the crawl so some progress is made, then re-pause and re-checkpoint.</p>
+</div>
+</div>
+<div class="section" id="shutdown-the-crawl-job-s">
+<h3>Shutdown the Crawl Job(s)<a class="headerlink" href="#shutdown-the-crawl-job-s" title="Permalink to this headline">¶</a></h3>
+<p>At this point, all activity should have stopped, so it should not make much difference how exactly the service is halted.  To attempt to keep things as clean as possible, first terminate and then teardown the job(s) via the Heritrix UI.</p>
+<p>You can now shut down the services…</p>
+</div>
+</div>
+<div class="section" id="shut-down-the-crawl-services">
+<h2>Shut down the Crawl Services<a class="headerlink" href="#shut-down-the-crawl-services" title="Permalink to this headline">¶</a></h2>
+<p>At this point, all activity should have stopped, so it should not make much difference how exactly the service is halted.  To attempt to keep things as clean as possible, first terminate and then teardown the job(s) via the Heritrix UI.</p>
+<p>Then remote the crawl stack:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm fc_crawl
+</pre></div>
+</div>
+<p>If this is not responsive, it may be necessary to restart Docker itself. This means all the services get restarted with the current deployment configuration.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>service docker restart
+</pre></div>
+</div>
+<p>Even this can be quite slow sometimes, so be patient.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./how-ukwa-works/ops"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../access.html" title="previous page">Access Services</a>
+    <a class='right-next' id="next-link" href="../../using-ukwa-services/index.html" title="next page">Using UKWA Services</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The UK Web Archive<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
