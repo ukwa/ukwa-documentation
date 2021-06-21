@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using UKWA Services" href="../../using-ukwa-services/index.html" />
-    <link rel="prev" title="Access Services" href="../access.html" />
+    <link rel="next" title="Management Services" href="../manage.html" />
+    <link rel="prev" title="Ingest Services" href="../ingest.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,6 +90,11 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../using-ukwa-services/index.html">
+   Using UKWA Services
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../_index.html">
    How UKWA Works
@@ -105,10 +110,22 @@
      Technical Overview
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../ingest.html">
      Ingest Services
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Crawler Operations
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../manage.html">
@@ -120,17 +137,7 @@
      Access Services
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Crawler Operations
-    </a>
-   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../using-ukwa-services/index.html">
-   Using UKWA Services
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../make-your-own-warcs/index.html">
@@ -141,8 +148,8 @@
   <a class="reference internal" href="../../use-your-warcs/index.html">
    Use Your WARCs
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -361,7 +368,7 @@
 <li><p><a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka">https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka</a></p></li>
 </ul>
 <div class="figure align-center" id="fc-kafka-stack">
-<a class="reference internal image-reference" href="../../_images/fc_kafka_stack.svg"><img alt="../../_images/fc_kafka_stack.svg" src="../../_images/fc_kafka_stack.svg" width="100%" /></a>
+<a class="reference internal image-reference" href="../../_images/fc_kafka_stack.svg"><img alt="../../_images/fc_kafka_stack.svg" height="500px" src="../../_images/fc_kafka_stack.svg" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
 </div>
 <p>To deploy the Kafka service stack. e.g. for <code class="docutils literal notranslate"><span class="pre">dc</span></code>:</p>
@@ -389,6 +396,10 @@ Check GeoIP DB (GeoLite2-City.mmdb) is installed and up to date.</p>
 je.cleaner.threads to 16 (from the default of 1) - note large numbers went very badly causing memory exhaustion
 Bloom filter
 MAX_RETRIES=4</p>
+<div class="figure align-center" id="fc-crawk-stack">
+<a class="reference internal image-reference" href="../../_images/fc_crawl_stack.svg"><img alt="../../_images/fc_crawl_stack.svg" height="500px" src="../../_images/fc_crawl_stack.svg" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-crawk-stack" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="crawl-job-operations">
@@ -484,8 +495,8 @@ rs.log.cp00025-20210519124709
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../access.html" title="previous page">Access Services</a>
-    <a class='right-next' id="next-link" href="../../using-ukwa-services/index.html" title="next page">Using UKWA Services</a>
+    <a class='left-prev' id="prev-link" href="../ingest.html" title="previous page">Ingest Services</a>
+    <a class='right-next' id="next-link" href="../manage.html" title="next page">Management Services</a>
 
         </div>
         
