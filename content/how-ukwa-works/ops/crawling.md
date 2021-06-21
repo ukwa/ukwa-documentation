@@ -31,7 +31,7 @@ The current crawl engine is integrated with _Apache Kafka_, and so this service 
 
 ```{figure} ./fc_kafka_stack.svg
 ---
-width: 100%
+height: 500px
 align: center
 name: fc-kafka-stack
 ---
@@ -67,6 +67,14 @@ je.cleaner.threads to 16 (from the default of 1) - note large numbers went very 
 Bloom filter
 MAX_RETRIES=4
 
+```{figure} ./fc_crawl_stack.svg
+---
+height: 500px
+align: center
+name: fc-crawk-stack
+---
+A visualiation of the main components of the `fc_crawl` Docker Stack configuration.
+```
 
 
 ## Crawl Job Operations

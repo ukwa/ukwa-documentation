@@ -1,14 +1,15 @@
 format: jb-book
 root: index
 chapters:
+- file: using-ukwa-services/index
 - file: how-ukwa-works/_index
   sections:
   - file: how-ukwa-works/overview
   - file: how-ukwa-works/ingest
+    sections:
+    - file: how-ukwa-works/ops/crawling
   - file: how-ukwa-works/manage
   - file: how-ukwa-works/access
-  - file: how-ukwa-works/ops/crawling
-- file: using-ukwa-services/index
 - file: make-your-own-warcs/index
 - file: use-your-warcs/index
   sections:
