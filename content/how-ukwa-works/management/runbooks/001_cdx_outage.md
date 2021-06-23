@@ -1,5 +1,5 @@
-CDX Outage
-==========
+Switching over to the secondary CDX service
+===========================================
 
 Triggers
 --------
@@ -10,7 +10,7 @@ Triggers
 
 Dependents
 ----------
-~~~~
+
 - Wayback access will also report as down in this situation (although that also happens for other reasons, see TBA). However, access services can be left running in this situation without causing harm.
 - The Frequent Crawl uses a CDX to store crawl state, so will also by affected and should be paused during remediation.
 - The CDX update process will fail while the CDX is down.  This should be paused during remediation, as this is the process that writes to the CDX and we need to make sure we are updating the index correctly.

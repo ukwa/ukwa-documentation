@@ -137,6 +137,7 @@ While the launch/resume process is happening, the crawler will report as `PREPAR
 - Unbuilt -> Ready
 - Active: PREPARING, RUNNING, EMPTY, PAUSING PAUSED, STOPPING, Finished/ABORTED
 
+(crawl-op-unpause)=
 ## Unpausing crawl job(s)
 
 When the crawler is in the `PAUSED` state, just click the `UNPAUSE` button to begin or resume a crawl.
@@ -151,13 +152,16 @@ Every crawl stack includes an embedded Prometheus instance that gathers crawl me
 
 If possible, we wish to preserve the current state of the crawl, so we try to pause and cleanly shut down while making a checkpoint to restart from.
 
+(crawl-op-pause)=
 ## Pause the crawl job(s)
 
 For all Heritrixes in the Docker Stack: log into the Heritrix3 control UI, and pause any job(s) on the crawler that are in the `RUNNING` state. After the `PAUSE` button is pressed, the crawl enters the `PAUSING` state, while it waits for various threads to shutdown neatly. This can take a while (say up to two hours) if a given `ToeThread` is doing something like processing many thousands of discovered URLs from a site map.  If all goes well, all `RUNNING` jobs will eventually go from `PAUSING` to `PAUSED`.
 
-Sometimes pausing never completes because of some bug. For example, under some cirumstances a `ToeThread` can die due to a run time error, and after that happens, and attempt to pause will get stuck in the `PAUSING` state.  Worst still, if some critical component is down (like a disk drive or remote service like the crawl-time CDX index), then the `ToeThreads` may all get stuck trying to shut down. If this happens, there's not a lot we can do except accept shut down and accept that we may need to restart from an older checkpoint.
+Sometimes pausing never completes because of some bug. For example, under some cirumstances a `ToeThread` can die due to a run time error, and after that happens, and attempt to pause will get stuck in the `PAUSING` state. 
 
-If the crawler is being paused due to a temporary network outage, there's no need to proceed with the full shutdown, and instead we can skip to Unpausing the crawl jobs(s) TBA TBA.  However, it does not hurt to take this opportunity to checkpoint each crawl job, in case something goes wrong while we're `PAUSED`.
+If the crawler is being paused due to a temporary network outage, it doesn't matter if the crawler is `PAUSING` rather than `PAUSED`. In either case, we can go ahead and [unpause](crawl-op-unpause) when the outage is over.  However, it does not hurt to take this opportunity to checkpoint each crawl job, in case something goes wrong while we're `PAUSING/PAUSED`.
+
+However, if some critical component is down (like a disk drive or remote service like the crawl-time CDX index), then the `ToeThreads` may all get stuck trying to shut down. If this happens, there's not a lot we can do except accept shut down and accept that we may need to restart from an older checkpoint.
 
 ## Checkpoint the job(s)
 
