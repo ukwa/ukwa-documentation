@@ -14,7 +14,16 @@ To avoid any unexpected variation between EC2 instance types, we will stay withi
 
 The overall AWS deployment architecture looks like this (although note that for clarity, only the storage drive dedicated to crawler output is shown, see below for more details):
 
-![AWS DC Deployment](arch-dc/img/structurizr-AmazonWebServicesDeployment.svg)
+
+```{figure} ../arch-dc/img/structurizr-AmazonWebServicesDeployment.svg
+---
+width: 100%
+align: center
+name: aws-dc-arch
+---
+Illustration of how the domain crawl is deployed on Amazon Web Services.
+```
+
 
 ## Storage Drives
 

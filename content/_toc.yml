@@ -1,19 +1,26 @@
 format: jb-book
-root: index
-chapters:
-- file: using-ukwa-services/index
-- file: how-ukwa-works/_index
-  sections:
-  - file: how-ukwa-works/overview
-  - file: how-ukwa-works/ingest
+root: intro
+parts:
+- caption: Using the UK Web Archive
+  chapters:
+  - file: using-ukwa-services/index
+- caption: How UKWA Works
+  chapters:
+  - file: how-ukwa-works/_index
     sections:
-    - file: how-ukwa-works/ops/crawling
-  - file: how-ukwa-works/manage
-  - file: how-ukwa-works/access
-- file: make-your-own-warcs/index
-- file: use-your-warcs/index
-  sections:
-  - file: use-your-warcs/analysis
-  - file: use-your-warcs/integration
-  - file: use-your-warcs/playback
-  - file: use-your-warcs/search
+    - file: how-ukwa-works/overview
+    - file: how-ukwa-works/ingest
+      sections:
+      - glob: how-ukwa-works/ops/*
+      - glob: how-ukwa-works/runbooks/*
+    - file: how-ukwa-works/manage
+    - file: how-ukwa-works/access
+- caption: Run Your Own Web Archives
+  chapters:
+  - file: make-your-own-warcs/index
+  - file: use-your-warcs/index
+    sections:
+    - file: use-your-warcs/analysis
+    - file: use-your-warcs/integration
+    - file: use-your-warcs/playback
+    - file: use-your-warcs/search
