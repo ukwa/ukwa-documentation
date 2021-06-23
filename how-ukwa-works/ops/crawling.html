@@ -296,57 +296,58 @@
   <a class="reference internal nav-link" href="#introduction">
    Introduction
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching-the-crawl-services">
-   Launching the Crawl Services
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reviewing-the-deployment-configuration">
-     Reviewing the Deployment Configuration
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#launching-kafka">
-     Launching Kafka
+    <a class="reference internal nav-link" href="#cleaning-up">
+     Cleaning Up
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#crawl-job-operations">
-   Crawl Job Operations
+  <a class="reference internal nav-link" href="#reviewing-the-deployment-configuration">
+   Reviewing the Deployment Configuration
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#starting-crawls">
-     Starting Crawls
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stopping-crawls">
-     Stopping Crawls
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pause-the-crawl-job-s">
-       Pause the crawl job(s)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#checkpoint-the-job-s">
-       Checkpoint the job(s)
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shutdown-the-crawl-job-s">
-     Shutdown the Crawl Job(s)
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launching-the-kafka-stack">
+   Launching the Kafka stack
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launching-the-crawler-stack">
+   Launching the Crawler stack
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawl-jobs">
+   Crawl Jobs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#starting-crawl-jobs">
+   Starting Crawl Jobs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stopping-crawl-jobs">
+   Stopping Crawl Jobs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pause-the-crawl-job-s">
+   Pause the crawl job(s)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checkpoint-the-job-s">
+   Checkpoint the job(s)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shutdown-the-crawl-job-s">
+   Shutdown the Crawl Job(s)
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#shut-down-the-crawl-services">
@@ -373,31 +374,28 @@
 <li><p>The Domain Crawl (<code class="docutils literal notranslate"><span class="pre">dc</span></code>)</p></li>
 <li><p>The Frequent Crawls (<code class="docutils literal notranslate"><span class="pre">fc</span></code>) which consist of two different crawls (NPLD <code class="docutils literal notranslate"><span class="pre">npld</span></code> and By-Permission <code class="docutils literal notranslate"><span class="pre">bypm</span></code>)</p></li>
 </ul>
-<p>This page assumes that a suitable crawler has already been set up, with sufficient disk space and with Docker Swarm installed. For details, see:</p>
+<p>This page assumes that a suitable host server has already been set up, with sufficient disk space, and public IP address, and with Docker Swarm installed. For details, see:</p>
 <ul class="simple">
 <li><p><em>TBA: Link to local crawler setup</em></p></li>
 <li><p><a class="reference internal" href="crawler_setup_aws_dc.html"><span class="doc std std-doc">AWS Domain Crawl Setup</span></a></p></li>
 </ul>
-</div>
-<div class="section" id="launching-the-crawl-services">
-<h2>Launching the Crawl Services<a class="headerlink" href="#launching-the-crawl-services" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cleaning-up">
+<h3>Cleaning Up<a class="headerlink" href="#cleaning-up" title="Permalink to this headline">¶</a></h3>
 <p>Before doing any service changes, it is often helpful to clear out any information associated with services that are no longer running. e.g. this avoids confusion when inspecting the logs of services.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker system prune -f
 </pre></div>
 </div>
+</div>
+</div>
 <div class="section" id="reviewing-the-deployment-configuration">
-<h3>Reviewing the Deployment Configuration<a class="headerlink" href="#reviewing-the-deployment-configuration" title="Permalink to this headline">¶</a></h3>
+<h2>Reviewing the Deployment Configuration<a class="headerlink" href="#reviewing-the-deployment-configuration" title="Permalink to this headline">¶</a></h2>
 <p><em>TBA: VARS</em></p>
 </div>
-<div class="section" id="launching-kafka">
-<h3>Launching Kafka<a class="headerlink" href="#launching-kafka" title="Permalink to this headline">¶</a></h3>
-<p>The current crawl engine is integrated with <em>Apache Kafka</em>, and so this service needs be started before Heritrix.  This means the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> and <code class="docutils literal notranslate"><span class="pre">dc_kafka</span></code> stacks for the frequent and domain crawls respectively. These configurations are available at:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka">https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka</a></p></li>
-<li><p><a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka">https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka</a></p></li>
-</ul>
+<div class="section" id="launching-the-kafka-stack">
+<h2>Launching the Kafka stack<a class="headerlink" href="#launching-the-kafka-stack" title="Permalink to this headline">¶</a></h2>
+<p>The current crawl engine is integrated with <em>Apache Kafka</em>, and so this service needs be started before Heritrix.  This means the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> and <code class="docutils literal notranslate"><span class="pre">dc_kafka</span></code> stacks for the frequent and domain crawls respectively. These configurations are available at <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka">fc-kafka</a>, <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka">dc-kafka</a>.</p>
 <div class="figure align-center" id="fc-kafka-stack">
-<a class="reference internal image-reference" href="../../_images/fc_kafka_stack.svg"><img alt="../../_images/fc_kafka_stack.svg" height="500px" src="../../_images/fc_kafka_stack.svg" /></a>
+<a class="reference internal image-reference" href="../../_images/fc_kafka.svg"><img alt="../../_images/fc_kafka.svg" height="500px" src="../../_images/fc_kafka.svg" /></a>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
 </div>
 <p>To deploy the Kafka service stack. e.g. for <code class="docutils literal notranslate"><span class="pre">dc</span></code>:</p>
@@ -419,24 +417,53 @@ docker service logs --tail 100 -f dc_kafka_kafka_1
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker service update --force dc_kafka_ui
 </pre></div>
 </div>
-<p>Check surts and exclusions.
-Check GeoIP DB (GeoLite2-City.mmdb) is installed and up to date.</p>
-<p>JE cleaner threads
-je.cleaner.threads to 16 (from the default of 1) - note large numbers went very badly causing memory exhaustion
-Bloom filter
-MAX_RETRIES=4</p>
+</div>
+<div class="section" id="launching-the-crawler-stack">
+<h2>Launching the Crawler stack<a class="headerlink" href="#launching-the-crawler-stack" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> and <code class="docutils literal notranslate"><span class="pre">dc_crawl</span></code> stack definitions can be found at <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-crawl">fc-crawl</a>, <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-crawl">dc-crawl</a>.</p>
 <div class="figure align-center" id="fc-crawk-stack">
-<a class="reference internal image-reference" href="../../_images/fc_crawl_stack.svg"><img alt="../../_images/fc_crawl_stack.svg" height="500px" src="../../_images/fc_crawl_stack.svg" /></a>
+<a class="reference internal image-reference" href="../../_images/fc_crawl.svg"><img alt="../../_images/fc_crawl.svg" height="500px" src="../../_images/fc_crawl.svg" /></a>
 <p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-crawk-stack" title="Permalink to this image">¶</a></p>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> stack is the more complex than the <code class="docutils literal notranslate"><span class="pre">dc</span></code> equivalent, as it includes the components needed to render some web pages using a web browser behind an archiving proxy (<code class="docutils literal notranslate"><span class="pre">warcprox</span></code>).  There are also some differences in how the crawls are configured. The details of the Heritrix configuration are described in <em>TBA</em>.</p>
+<p><em>TBC</em></p>
+<ul class="simple">
+<li><p>Check surts and exclusions.</p></li>
+<li><p>Check GeoIP DB (GeoLite2-City.mmdb) is installed and up to date.</p></li>
+<li><p>JE cleaner threads</p></li>
+<li><p>je.cleaner.threads to 16 (from the default of 1) - note large numbers went very badly causing memory exhaustion</p></li>
+<li><p>Bloom filter</p></li>
+<li><p>MAX_RETRIES=4</p></li>
+</ul>
 </div>
-</div>
-<div class="section" id="crawl-job-operations">
-<h2>Crawl Job Operations<a class="headerlink" href="#crawl-job-operations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="crawl-jobs">
+<h2>Crawl Jobs<a class="headerlink" href="#crawl-jobs" title="Permalink to this headline">¶</a></h2>
 <p>The current crawl engine relies on Heritrix3 state management to keep track of crawl state, and this was not designed to cope under un-supervised system restarts. i.e. rather than being stateless, or delegating state management to something that ensures the live state is preserved immediately, we need to manage ensuring the runtime state is recorded on disk. This is why crawler operations are more complex than other areas.</p>
-<div class="section" id="starting-crawls">
-<h3>Starting Crawls<a class="headerlink" href="#starting-crawls" title="Permalink to this headline">¶</a></h3>
-<p>As stated above, before going any further, we need to ensure that Kafka has completed starting up and is ready for producers and consumers to connect.</p>
+<p>Specifically, when running long crawls, operational managment of Heritrix tends to focus on managing crawl state and the <em>checkpoints</em> that preserve the state of the crawl frontier so that crawls can be resumed if needed.</p>
+<p>Note that as well as the domain crawl, we run two Heritrix ‘frequent crawl’ services, one for NPLD content and one for by-permission crawling. When performing a full stop of the frequent crawls, both services need to be dealt with cleanly.</p>
+<table class="colwidths-auto table" id="crawls-table">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Crawls and Service Endpoints. These are only accessible from UKWA networks and by UKWA staff.</span><a class="headerlink" href="#crawls-table" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Crawl</p></th>
+<th class="head"><p>Heritrix Service</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Frequent NPLD</p></td>
+<td><p><a class="reference external" href="https://crawler06.bl.uk:8443/">https://crawler06.bl.uk:8443/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Frequent By-Permission</p></td>
+<td><p><a class="reference external" href="https://crawler06.bl.uk:9443/">https://crawler06.bl.uk:9443/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Domain</p></td>
+<td><p><a class="reference external" href="https://crawler07.bl.uk:8443/">https://crawler07.bl.uk:8443/</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="starting-crawl-jobs">
+<h2>Starting Crawl Jobs<a class="headerlink" href="#starting-crawl-jobs" title="Permalink to this headline">¶</a></h2>
+<p>Once the Kafka and Crawler stacks are running, we can visit the Heritrix interface and start managing crawl jobs.</p>
 <ul class="simple">
 <li><p>Build.</p></li>
 <li><p>Select Checkpoint. If expected checkpoints are not present, this means something went wrong while writing them. This should be reported to try to determine and address the root cause, but there’s not much to be done other than select the most recent valid checkpoint.</p></li>
@@ -444,20 +471,18 @@ MAX_RETRIES=4</p>
 <li></li>
 </ul>
 </div>
-<div class="section" id="stopping-crawls">
-<h3>Stopping Crawls<a class="headerlink" href="#stopping-crawls" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="stopping-crawl-jobs">
+<h2>Stopping Crawl Jobs<a class="headerlink" href="#stopping-crawl-jobs" title="Permalink to this headline">¶</a></h2>
 <p>If possible, we wish to preserve the current state of the crawl, so we try to cleanly shut down while making a checkpoint to restart from.</p>
-<p>Note that for our frequent crawls, we run two Heritrix services, one for NPLD content and one for by-permission crawling. When performing a full stop of the frequent crawls, both services need to be dealt with cleanly. When running on crawler06, this means:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://crawler06.bl.uk:8443/">https://crawler06.bl.uk:8443/</a> is NPLD crawling.</p></li>
-<li><p><a class="reference external" href="https://crawler06.bl.uk:9443/">https://crawler06.bl.uk:9443/</a> is By-Permission crawling.</p></li>
-</ul>
+</div>
 <div class="section" id="pause-the-crawl-job-s">
-<h4>Pause the crawl job(s)<a class="headerlink" href="#pause-the-crawl-job-s" title="Permalink to this headline">¶</a></h4>
-<p>For all Heritrixes in the Docker Stack: log into the Heritrix3 control UI, and pause any job(s) on the crawler that are in the <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> state. This can take a while (say up to two hours) as each worker thread tries to finish it’s work neatly. Sometimes pausing never completes because of some bug, in which case we proceed anyway and accept some inaccuracies in the crawl state. If it works, all <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> jobs will now be in the state <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p>
+<h2>Pause the crawl job(s)<a class="headerlink" href="#pause-the-crawl-job-s" title="Permalink to this headline">¶</a></h2>
+<p>For all Heritrixes in the Docker Stack: log into the Heritrix3 control UI, and pause any job(s) on the crawler that are in the <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> state. After the <code class="docutils literal notranslate"><span class="pre">PAUSE</span></code> button is pressed, the crawl enters the <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> state, while it waits for various threads to shutdown neatly. This can take a while (say up to two hours) if a given <code class="docutils literal notranslate"><span class="pre">ToeThread</span></code> is doing something like processing many thousands of discovered URLs from a site map.  If all goes well, all <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> jobs will eventually go from <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> to <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p>
+<p>Sometimes pausing never completes because of some bug. For example, under some cirumstances a <code class="docutils literal notranslate"><span class="pre">ToeThread</span></code> can die due to a run time error, and after that happens, and attempt to pause will get stuck in the <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> state.  Worst still, if some critical component is down (like a disk drive or remote service like the crawl-time CDX index), then the <code class="docutils literal notranslate"><span class="pre">ToeThreads</span></code> may all get stuck trying to shut down. If this happens, there’s not a lot we can do except accept shut down and accept that we may need to restart from an older checkpoint.</p>
+<p>If the crawler is being paused due to a temporary network outage, there’s no need to proceed with the full shutdown, and instead we can skip to Unpausing the crawl jobs(s) TBA TBA.  However, it does not hurt to take this opportunity to checkpoint each crawl job, in case something goes wrong while we’re <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p>
 </div>
 <div class="section" id="checkpoint-the-job-s">
-<h4>Checkpoint the job(s)<a class="headerlink" href="#checkpoint-the-job-s" title="Permalink to this headline">¶</a></h4>
+<h2>Checkpoint the job(s)<a class="headerlink" href="#checkpoint-the-job-s" title="Permalink to this headline">¶</a></h2>
 <p>Via the UI, request a checkpoint. If there’s not been one for a while, this can be quite slow (tens of minutes). If it works, a banner should flash up with the checkpoint ID, which should be noted so the crawl can be resumed from the right checkpoint. If the checkpointing fails, the logs will need to be checked for errors, as unless a new checkpoint is succefully completed, it will likely not be valid.</p>
 <p>As an example, under some circumstances the log rotation does not work correctly. This means non-timestamped log files may be missing, which means when the next checkpoint runs, there are errors like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker logs --tail 100 fc_crawl_npld-heritrix-worker.1.h21137sr8l31niwsx3m3o7jri
@@ -477,12 +502,10 @@ rs.log.cp00025-20210519124709
 </div>
 <p>This is because the system will not attempt a new checkpoint if the crawl state has not changed. Therefore, to force a new checkpoint, it is necessary to briefly un-pause the crawl so some progress is made, then re-pause and re-checkpoint.</p>
 </div>
-</div>
 <div class="section" id="shutdown-the-crawl-job-s">
-<h3>Shutdown the Crawl Job(s)<a class="headerlink" href="#shutdown-the-crawl-job-s" title="Permalink to this headline">¶</a></h3>
+<h2>Shutdown the Crawl Job(s)<a class="headerlink" href="#shutdown-the-crawl-job-s" title="Permalink to this headline">¶</a></h2>
 <p>At this point, all activity should have stopped, so it should not make much difference how exactly the service is halted.  To attempt to keep things as clean as possible, first terminate and then teardown the job(s) via the Heritrix UI.</p>
 <p>You can now shut down the services…</p>
-</div>
 </div>
 <div class="section" id="shut-down-the-crawl-services">
 <h2>Shut down the Crawl Services<a class="headerlink" href="#shut-down-the-crawl-services" title="Permalink to this headline">¶</a></h2>
