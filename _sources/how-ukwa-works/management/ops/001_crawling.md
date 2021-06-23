@@ -7,6 +7,9 @@ This page describes how to a manage our crawl services and jobs. This applies to
 - The Domain Crawl (`dc`)
 - The Frequent Crawls (`fc`) which consist of two different crawls (NPLD `npld` and By-Permission `bypm`)
 
+### How to test this documentation
+
+The [ukwa-heritrix](https://github.com/ukwa/ukwa-heritrix) repository contains the source code for our crawler, and also comes with a Docker Compose file so the whole thing can be spun up locally.  This is a very close match for the Frequent Crawl system can be used to try out the operations shown below. See the [ukwa-heritrix README on GitHub](https://github.com/ukwa/ukwa-heritrix#readme) for details.
 
 ## Pre-requisites
 
