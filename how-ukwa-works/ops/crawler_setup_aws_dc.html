@@ -51,6 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Crawler Operations" href="crawling.html" />
+    <link rel="prev" title="Ingest Services" href="../ingest.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,45 +84,67 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
+  <a class="reference internal" href="../../intro.html">
    Welcome
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Using the UK Web Archive
+ </span>
+</p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../using-ukwa-services/index.html">
    Using UKWA Services
   </a>
  </li>
- <li class="toctree-l1 has-children">
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  How UKWA Works
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../_index.html">
    How UKWA Works
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../overview.html">
      Technical Overview
     </a>
    </li>
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../ingest.html">
      Ingest Services
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Setting up a AWS Cloud server for the Domain Crawl
+      </a>
+     </li>
      <li class="toctree-l3">
       <a class="reference internal" href="crawling.html">
        Crawler Operations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../runbooks/001_cdx_outage.html">
+       CDX Outage
       </a>
      </li>
     </ul>
@@ -137,6 +161,13 @@
    </li>
   </ul>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Run Your Own Web Archives
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../make-your-own-warcs/index.html">
    Make your own WARCs
@@ -310,7 +341,10 @@
 <div class="section" id="overall-architecture">
 <h2>Overall Architecture<a class="headerlink" href="#overall-architecture" title="Permalink to this headline">¶</a></h2>
 <p>The overall AWS deployment architecture looks like this (although note that for clarity, only the storage drive dedicated to crawler output is shown, see below for more details):</p>
-<p><img alt="AWS DC Deployment" src="how-ukwa-works/ops/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg" /></p>
+<div class="figure align-center" id="aws-dc-arch">
+<a class="reference internal image-reference" href="how-ukwa-works/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg"><img alt="how-ukwa-works/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg" src="how-ukwa-works/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Illustration of how the domain crawl is deployed on Amazon Web Services.</span><a class="headerlink" href="#aws-dc-arch" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="storage-drives">
 <h2>Storage Drives<a class="headerlink" href="#storage-drives" title="Permalink to this headline">¶</a></h2>
@@ -443,6 +477,8 @@ Custom TCP TCP 9100 194.66.232.85/32 node_exporter
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="../ingest.html" title="previous page">Ingest Services</a>
+    <a class='right-next' id="next-link" href="crawling.html" title="next page">Crawler Operations</a>
 
         </div>
         

@@ -1,0 +1,217 @@
+<svg height="567pt" viewBox="0.00 0.00 609.43 566.79" width="609pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(36 530.79)">
+<polygon fill="#ffffff" points="-36,36 -36,-530.79 573.43,-530.79 573.43,36 -36,36" stroke="transparent"/>
+<!-- net: default -->
+<g class="node" id="node1">
+<title>net: default</title>
+<polygon fill="none" points="159.1,-23.56 79.53,-36 -0.03,-23.56 30.36,-3.44 128.71,-3.44 159.1,-23.56" stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="79.53" y="-14.3">net: default</text>
+</g>
+<!-- net: webrender -->
+<g class="node" id="node2">
+<title>net: webrender</title>
+<polygon fill="none" points="379.98,-23.56 278.53,-36 177.08,-23.56 215.83,-3.44 341.23,-3.44 379.98,-23.56" stroke="gray"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="278.53" y="-14.3">net: webrender</text>
+</g>
+<!-- net: kafka -->
+<g class="node" id="node3">
+<title>net: kafka</title>
+<polygon fill="none" points="537.32,-23.56 467.53,-36 397.75,-23.56 424.4,-3.44 510.66,-3.44 537.32,-23.56" stroke="gray"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="467.53" y="-14.3">net: kafka</text>
+</g>
+<!-- npld&#45;heritrix&#45;worker -->
+<g class="node" id="node4">
+<title>npld-heritrix-worker</title>
+<polygon fill="none" points="439.03,-255 278.03,-255 278.03,-251 274.03,-251 274.03,-247 278.03,-247 278.03,-227 274.03,-227 274.03,-223 278.03,-223 278.03,-219 439.03,-219 439.03,-255" stroke="black"/>
+<polyline fill="none" points="278.03,-251 282.03,-251 282.03,-247 278.03,-247 " stroke="black"/>
+<polyline fill="none" points="278.03,-227 282.03,-227 282.03,-223 278.03,-223 " stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="358.53" y="-233.3">npld-heritrix-worker</text>
+</g>
+<!-- npld&#45;heritrix&#45;worker&#45;&gt;net: default -->
+<g class="edge" id="edge4">
+<title>npld-heritrix-worker-&gt;net: default</title>
+<path d="M322.4,-218.95C296.71,-206.58 264.69,-190.56 252.53,-182 248.39,-179.08 148.55,-84.49 102.47,-40.77" fill="none" stroke="black"/>
+<polygon fill="black" points="104.7,-38.06 95.04,-33.72 99.88,-43.14 104.7,-38.06" stroke="black"/>
+</g>
+<!-- npld&#45;heritrix&#45;worker&#45;&gt;net: kafka -->
+<g class="edge" id="edge5">
+<title>npld-heritrix-worker-&gt;net: kafka</title>
+<path d="M372.98,-218.73C381.13,-208.47 391.13,-194.97 398.53,-182 405.71,-169.43 439.69,-87.08 457.14,-44.47" fill="none" stroke="black"/>
+<polygon fill="black" points="460.45,-45.62 461,-35.04 453.97,-42.97 460.45,-45.62" stroke="black"/>
+</g>
+<!-- clamd -->
+<g class="node" id="node5">
+<title>clamd</title>
+<polygon fill="none" points="205.03,-182 146.03,-182 146.03,-178 142.03,-178 142.03,-174 146.03,-174 146.03,-154 142.03,-154 142.03,-150 146.03,-150 146.03,-146 205.03,-146 205.03,-182" stroke="black"/>
+<polyline fill="none" points="146.03,-178 150.03,-178 150.03,-174 146.03,-174 " stroke="black"/>
+<polyline fill="none" points="146.03,-154 150.03,-154 150.03,-150 146.03,-150 " stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="175.53" y="-160.3">clamd</text>
+</g>
+<!-- npld&#45;heritrix&#45;worker&#45;&gt;clamd -->
+<g class="edge" id="edge1">
+<title>npld-heritrix-worker-&gt;clamd</title>
+<path d="M314.7,-218.99C284.3,-207.2 244.16,-191.63 214.8,-180.24" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="215.88,-176.9 205.29,-176.55 213.35,-183.43 215.88,-176.9" stroke="black"/>
+</g>
+<!-- webrender -->
+<g class="node" id="node6">
+<title>webrender</title>
+<polygon fill="none" points="355.53,-182 261.53,-182 261.53,-178 257.53,-178 257.53,-174 261.53,-174 261.53,-154 257.53,-154 257.53,-150 261.53,-150 261.53,-146 355.53,-146 355.53,-182" stroke="black"/>
+<polyline fill="none" points="261.53,-178 265.53,-178 265.53,-174 261.53,-174 " stroke="black"/>
+<polyline fill="none" points="261.53,-154 265.53,-154 265.53,-150 261.53,-150 " stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="308.53" y="-160.3">webrender</text>
+</g>
+<!-- npld&#45;heritrix&#45;worker&#45;&gt;webrender -->
+<g class="edge" id="edge2">
+<title>npld-heritrix-worker-&gt;webrender</title>
+<path d="M346.43,-218.81C340.41,-210.27 333.02,-199.77 326.37,-190.32" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="329.15,-188.19 320.53,-182.03 323.42,-192.22 329.15,-188.19" stroke="black"/>
+</g>
+<!-- webrender&#45;&gt;net: default -->
+<g class="edge" id="edge15">
+<title>webrender-&gt;net: default</title>
+<path d="M281.37,-145.92C238.36,-118.87 154.89,-66.38 109.94,-38.12" fill="none" stroke="black"/>
+<polygon fill="black" points="111.55,-35 101.23,-32.64 107.83,-40.93 111.55,-35" stroke="black"/>
+</g>
+<!-- webrender&#45;&gt;net: webrender -->
+<g class="edge" id="edge16">
+<title>webrender-&gt;net: webrender</title>
+<path d="M290.79,-145.77C281.96,-135.94 272.19,-122.83 267.53,-109 260.53,-88.2 264.42,-63.36 269.41,-45.06" fill="none" stroke="black"/>
+<polygon fill="black" points="272.8,-45.95 272.32,-35.37 266.09,-43.94 272.8,-45.95" stroke="black"/>
+</g>
+<!-- warcprox -->
+<g class="node" id="node10">
+<title>warcprox</title>
+<polygon fill="none" points="360.03,-109 277.03,-109 277.03,-105 273.03,-105 273.03,-101 277.03,-101 277.03,-81 273.03,-81 273.03,-77 277.03,-77 277.03,-73 360.03,-73 360.03,-109" stroke="black"/>
+<polyline fill="none" points="277.03,-105 281.03,-105 281.03,-101 277.03,-101 " stroke="black"/>
+<polyline fill="none" points="277.03,-81 281.03,-81 281.03,-77 277.03,-77 " stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.53" y="-87.3">warcprox</text>
+</g>
+<!-- webrender&#45;&gt;warcprox -->
+<g class="edge" id="edge14">
+<title>webrender-&gt;warcprox</title>
+<path d="M310.95,-145.81C312.08,-137.79 313.46,-128.05 314.72,-119.07" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="318.21,-119.42 316.14,-109.03 311.27,-118.44 318.21,-119.42" stroke="black"/>
+</g>
+<!-- 8443 -->
+<g class="node" id="node7">
+<title>8443</title>
+<ellipse cx="369.53" cy="-340.45" fill="none" rx="34.39" ry="34.39" stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="369.53" y="-336.75">8443</text>
+</g>
+<!-- 8443&#45;&gt;npld&#45;heritrix&#45;worker -->
+<g class="edge" id="edge3">
+<title>8443-&gt;npld-heritrix-worker</title>
+<path d="M365.9,-305.95C364.48,-292.82 362.87,-277.96 361.51,-265.48" fill="none" stroke="black"/>
+<polygon fill="black" points="364.96,-264.8 360.4,-255.24 358,-265.56 364.96,-264.8" stroke="black"/>
+</g>
+<!-- bypm&#45;heritrix&#45;worker -->
+<g class="node" id="node8">
+<title>bypm-heritrix-worker</title>
+<polygon fill="none" points="260.03,-255 91.03,-255 91.03,-251 87.03,-251 87.03,-247 91.03,-247 91.03,-227 87.03,-227 87.03,-223 91.03,-223 91.03,-219 260.03,-219 260.03,-255" stroke="black"/>
+<polyline fill="none" points="91.03,-251 95.03,-251 95.03,-247 91.03,-247 " stroke="black"/>
+<polyline fill="none" points="91.03,-227 95.03,-227 95.03,-223 91.03,-223 " stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="175.53" y="-233.3">bypm-heritrix-worker</text>
+</g>
+<!-- bypm&#45;heritrix&#45;worker&#45;&gt;net: default -->
+<g class="edge" id="edge9">
+<title>bypm-heritrix-worker-&gt;net: default</title>
+<path d="M161.17,-218.84C153.13,-208.62 143.38,-195.12 136.53,-182 112.63,-136.19 95.08,-78.19 86.16,-45.17" fill="none" stroke="black"/>
+<polygon fill="black" points="89.51,-44.14 83.57,-35.37 82.74,-45.93 89.51,-44.14" stroke="black"/>
+</g>
+<!-- bypm&#45;heritrix&#45;worker&#45;&gt;net: kafka -->
+<g class="edge" id="edge10">
+<title>bypm-heritrix-worker-&gt;net: kafka</title>
+<path d="M257.91,-218.94C300.66,-208.84 347.46,-195.41 364.53,-182 408.36,-147.57 395.84,-119.52 426.53,-73 433.38,-62.62 441.56,-51.61 448.81,-42.26" fill="none" stroke="black"/>
+<polygon fill="black" points="451.71,-44.23 455.13,-34.2 446.21,-39.9 451.71,-44.23" stroke="black"/>
+</g>
+<!-- bypm&#45;heritrix&#45;worker&#45;&gt;clamd -->
+<g class="edge" id="edge6">
+<title>bypm-heritrix-worker-&gt;clamd</title>
+<path d="M175.53,-218.81C175.53,-210.79 175.53,-201.05 175.53,-192.07" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="179.03,-192.03 175.53,-182.03 172.03,-192.03 179.03,-192.03" stroke="black"/>
+</g>
+<!-- bypm&#45;heritrix&#45;worker&#45;&gt;webrender -->
+<g class="edge" id="edge7">
+<title>bypm-heritrix-worker-&gt;webrender</title>
+<path d="M207.39,-218.99C225.44,-209.36 248.2,-197.21 267.57,-186.87" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="269.3,-189.91 276.48,-182.11 266.01,-183.74 269.3,-189.91" stroke="black"/>
+</g>
+<!-- 9443 -->
+<g class="node" id="node9">
+<title>9443</title>
+<ellipse cx="163.53" cy="-340.45" fill="none" rx="34.39" ry="34.39" stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="163.53" y="-336.75">9443</text>
+</g>
+<!-- 9443&#45;&gt;bypm&#45;heritrix&#45;worker -->
+<g class="edge" id="edge8">
+<title>9443-&gt;bypm-heritrix-worker</title>
+<path d="M167.5,-305.95C169.05,-292.82 170.81,-277.96 172.28,-265.48" fill="none" stroke="black"/>
+<polygon fill="black" points="175.8,-265.58 173.49,-255.24 168.84,-264.76 175.8,-265.58" stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="190.03" y="-276.8">8443</text>
+</g>
+<!-- warcprox&#45;&gt;net: default -->
+<g class="edge" id="edge11">
+<title>warcprox-&gt;net: default</title>
+<path d="M276.78,-75.6C256.56,-68.78 231.87,-60.69 209.53,-54 183.77,-46.28 154.9,-38.43 130.93,-32.13" fill="none" stroke="black"/>
+<polygon fill="black" points="131.54,-28.67 120.98,-29.53 129.77,-35.44 131.54,-28.67" stroke="black"/>
+</g>
+<!-- warcprox&#45;&gt;net: webrender -->
+<g class="edge" id="edge13">
+<title>warcprox-&gt;net: webrender</title>
+<path d="M308.85,-72.81C303.94,-64.1 297.9,-53.37 292.5,-43.79" fill="none" stroke="black"/>
+<polygon fill="black" points="295.54,-42.05 287.58,-35.06 289.44,-45.49 295.54,-42.05" stroke="black"/>
+</g>
+<!-- warcprox&#45;&gt;net: kafka -->
+<g class="edge" id="edge12">
+<title>warcprox-&gt;net: kafka</title>
+<path d="M342.68,-72.89C352.32,-66.48 363.69,-59.45 374.53,-54 390.11,-46.17 407.87,-39.07 423.68,-33.35" fill="none" stroke="black"/>
+<polygon fill="black" points="424.97,-36.6 433.22,-29.96 422.63,-30 424.97,-36.6" stroke="black"/>
+</g>
+<!-- prometheus -->
+<g class="node" id="node11">
+<title>prometheus</title>
+<polygon fill="none" points="317.53,-358.45 215.53,-358.45 215.53,-354.45 211.53,-354.45 211.53,-350.45 215.53,-350.45 215.53,-330.45 211.53,-330.45 211.53,-326.45 215.53,-326.45 215.53,-322.45 317.53,-322.45 317.53,-358.45" stroke="black"/>
+<polyline fill="none" points="215.53,-354.45 219.53,-354.45 219.53,-350.45 215.53,-350.45 " stroke="black"/>
+<polyline fill="none" points="215.53,-330.45 219.53,-330.45 219.53,-326.45 215.53,-326.45 " stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="266.53" y="-336.75">prometheus</text>
+</g>
+<!-- prometheus&#45;&gt;net: default -->
+<g class="edge" id="edge20">
+<title>prometheus-&gt;net: default</title>
+<path d="M237.61,-322.39C227.87,-316.9 216.85,-310.96 206.53,-306 143.1,-275.52 63.53,-308.38 63.53,-238 63.53,-238 63.53,-238 63.53,-90 63.53,-74.85 67.05,-58.31 70.78,-45.01" fill="none" stroke="black"/>
+<polygon fill="black" points="74.22,-45.71 73.76,-35.12 67.52,-43.69 74.22,-45.71" stroke="black"/>
+</g>
+<!-- prometheus&#45;&gt;net: kafka -->
+<g class="edge" id="edge21">
+<title>prometheus-&gt;net: kafka</title>
+<path d="M295.48,-322.45C305.22,-316.96 316.24,-311 326.53,-306 389.11,-275.6 467.53,-307.57 467.53,-238 467.53,-238 467.53,-238 467.53,-90 467.53,-75.65 467.53,-59.67 467.53,-46.51" fill="none" stroke="black"/>
+<polygon fill="black" points="471.03,-46.22 467.53,-36.22 464.03,-46.22 471.03,-46.22" stroke="black"/>
+</g>
+<!-- prometheus&#45;&gt;npld&#45;heritrix&#45;worker -->
+<g class="edge" id="edge17">
+<title>prometheus-&gt;npld-heritrix-worker</title>
+<path d="M282.14,-322.24C296.94,-305.91 319.35,-281.21 336.07,-262.77" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="338.73,-265.05 342.85,-255.29 333.54,-260.35 338.73,-265.05" stroke="black"/>
+</g>
+<!-- prometheus&#45;&gt;bypm&#45;heritrix&#45;worker -->
+<g class="edge" id="edge18">
+<title>prometheus-&gt;bypm-heritrix-worker</title>
+<path d="M253.58,-322.28C242.99,-308.55 227.39,-289.02 212.53,-273 209.25,-269.46 205.68,-265.84 202.1,-262.33" fill="none" stroke="black" stroke-dasharray="1,5"/>
+<polygon fill="black" points="204.46,-259.74 194.82,-255.34 199.62,-264.79 204.46,-259.74" stroke="black"/>
+</g>
+<!-- 9191 -->
+<g class="node" id="node12">
+<title>9191</title>
+<ellipse cx="266.53" cy="-460.34" fill="none" rx="34.39" ry="34.39" stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="266.53" y="-456.64">9191</text>
+</g>
+<!-- 9191&#45;&gt;prometheus -->
+<g class="edge" id="edge19">
+<title>9191-&gt;prometheus</title>
+<path d="M266.53,-425.87C266.53,-407.89 266.53,-385.99 266.53,-369" fill="none" stroke="black"/>
+<polygon fill="black" points="270.03,-368.64 266.53,-358.64 263.03,-368.64 270.03,-368.64" stroke="black"/>
+<text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="285.03" y="-396.69">9090</text>
+</g>
+</g>
+</svg>

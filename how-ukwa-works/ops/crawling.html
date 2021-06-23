@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Management Services" href="../manage.html" />
-    <link rel="prev" title="Ingest Services" href="../ingest.html" />
+    <link rel="next" title="CDX Outage" href="../runbooks/001_cdx_outage.html" />
+    <link rel="prev" title="Setting up a AWS Cloud server for the Domain Crawl" href="crawler_setup_aws_dc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -84,17 +84,29 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
+  <a class="reference internal" href="../../intro.html">
    Welcome
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<p class="caption">
+ <span class="caption-text">
+  Using the UK Web Archive
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../using-ukwa-services/index.html">
    Using UKWA Services
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  How UKWA Works
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../_index.html">
    How UKWA Works
@@ -120,9 +132,19 @@
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="crawler_setup_aws_dc.html">
+       Setting up a AWS Cloud server for the Domain Crawl
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        Crawler Operations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../runbooks/001_cdx_outage.html">
+       CDX Outage
       </a>
      </li>
     </ul>
@@ -139,6 +161,13 @@
    </li>
   </ul>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Run Your Own Web Archives
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../make-your-own-warcs/index.html">
    Make your own WARCs
@@ -369,7 +398,7 @@
 </ul>
 <div class="figure align-center" id="fc-kafka-stack">
 <a class="reference internal image-reference" href="../../_images/fc_kafka_stack.svg"><img alt="../../_images/fc_kafka_stack.svg" height="500px" src="../../_images/fc_kafka_stack.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
 </div>
 <p>To deploy the Kafka service stack. e.g. for <code class="docutils literal notranslate"><span class="pre">dc</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd ingest/dc/dc-kafka
@@ -398,7 +427,7 @@ Bloom filter
 MAX_RETRIES=4</p>
 <div class="figure align-center" id="fc-crawk-stack">
 <a class="reference internal image-reference" href="../../_images/fc_crawl_stack.svg"><img alt="../../_images/fc_crawl_stack.svg" height="500px" src="../../_images/fc_crawl_stack.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-crawk-stack" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-crawk-stack" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -495,8 +524,8 @@ rs.log.cp00025-20210519124709
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../ingest.html" title="previous page">Ingest Services</a>
-    <a class='right-next' id="next-link" href="../manage.html" title="next page">Management Services</a>
+    <a class='left-prev' id="prev-link" href="crawler_setup_aws_dc.html" title="previous page">Setting up a AWS Cloud server for the Domain Crawl</a>
+    <a class='right-next' id="next-link" href="../runbooks/001_cdx_outage.html" title="next page">CDX Outage</a>
 
         </div>
         
