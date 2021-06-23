@@ -1,1 +1,4 @@
 # Management
+
+```{tableofcontents}
+```

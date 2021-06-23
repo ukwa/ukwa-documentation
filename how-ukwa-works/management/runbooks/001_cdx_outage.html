@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDX Outage &#8212; UKWA Technical Documentation</title>
+    <title>Switching over to the secondary CDX service &#8212; UKWA Technical Documentation</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -109,7 +109,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../_index.html">
-   Our Goals
+   Goals &amp; Principles
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -160,13 +160,13 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ops/crawler_setup_aws_dc.html">
-       Setting up a AWS Cloud server for the Domain Crawl
+      <a class="reference internal" href="../ops/001_crawling.html">
+       Crawler Operations
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ops/crawling.html">
-       Crawler Operations
+      <a class="reference internal" href="../ops/010_crawler_setup_aws_dc.html">
+       Setting up a AWS Cloud server for the Domain Crawl
       </a>
      </li>
     </ul>
@@ -183,7 +183,7 @@
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       CDX Outage
+       Switching over to the secondary CDX service
       </a>
      </li>
     </ul>
@@ -331,6 +331,18 @@
    Dependents
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#actions">
+   Actions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#switch-to-failover-read-only-cdx-server">
+     Switch to failover read-only CDX server
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -342,8 +354,8 @@
         
               <div>
                 
-  <div class="section" id="cdx-outage">
-<h1>CDX Outage<a class="headerlink" href="#cdx-outage" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="switching-over-to-the-secondary-cdx-service">
+<h1>Switching over to the secondary CDX service<a class="headerlink" href="#switching-over-to-the-secondary-cdx-service" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="triggers">
 <h2>Triggers<a class="headerlink" href="#triggers" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -353,79 +365,51 @@
 </div>
 <div class="section" id="dependents">
 <h2>Dependents<a class="headerlink" href="#dependents" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Wayback access will also report as down in this situation (although that also happens for other reasons, see TBA). However, access services can be left running in this situation without causing harm.
-- The Frequent Crawl uses a CDX to store crawl state, so will also by affected and should be paused during remediation.
-- The CDX update process will fail while the CDX is down.  This should be paused during remediation, as this is the process that writes to the CDX and we need to make sure we are updating the index correctly.
-
-
-Actions
--------
-
-
-### Switch to failover read-only CDX server
-
-We run the CDX service as a pair of servers, with one &#39;leader&#39; that is usually in use for both reads and writes, and one &#39;follower&#39; that has an up-to-date replica of the data needed for accessing the web archive.
-
-Therefore, when 
-
-/root/gitlab/outbackcdx
-
-./start_outbackcdx.sh
-
-[root@cdx1 outbackcdx]# docker service ps outbackcdx_outbackcdx
+<ul class="simple">
+<li><p>Wayback access will also report as down in this situation (although that also happens for other reasons, see TBA). However, access services can be left running in this situation without causing harm.</p></li>
+<li><p>The Frequent Crawl uses a CDX to store crawl state, so will also by affected and should be paused during remediation.</p></li>
+<li><p>The CDX update process will fail while the CDX is down.  This should be paused during remediation, as this is the process that writes to the CDX and we need to make sure we are updating the index correctly.</p></li>
+</ul>
+</div>
+<div class="section" id="actions">
+<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="switch-to-failover-read-only-cdx-server">
+<h3>Switch to failover read-only CDX server<a class="headerlink" href="#switch-to-failover-read-only-cdx-server" title="Permalink to this headline">¶</a></h3>
+<p>We run the CDX service as a pair of servers, with one ‘leader’ that is usually in use for both reads and writes, and one ‘follower’ that has an up-to-date replica of the data needed for accessing the web archive.</p>
+<p>Therefore, when</p>
+<p>/root/gitlab/outbackcdx</p>
+<p>./start_outbackcdx.sh</p>
+<p>[root&#64;cdx1 outbackcdx]# docker service ps outbackcdx_outbackcdx
 ID             NAME                      IMAGE                       NODE      DESIRED STATE   CURRENT STATE                ERROR     PORTS
-rdt9ivi1sqlx   outbackcdx_outbackcdx.1   nlagovau/outbackcdx:0.7.0   cdx1      Running         Running about a minute ago
-
-
-http://cdx1.n45.wa.bl.uk:8080/#/data-heritrix?url=https%3A%2F%2Fwww.bl.uk
-
-Now switch over cdx.api.wa.bl.uk to point at cdx1 instead of cdx2.
-
-
-./start_crawldb-fc.sh
-
-```
-[root@cdx1 outbackcdx]# docker service ps crawldb-fc_crawldb-fc
-ID             NAME                      IMAGE                       NODE      DESIRED STATE   CURRENT STATE            ERROR     PORTS
-xz1rxq1vzzp7   crawldb-fc_crawldb-fc.1   nlagovau/outbackcdx:0.7.0   cdx1      Running         Running 15 seconds ago
-[root@cdx1 outbackcdx]# docker service ls
-ID             NAME                    MODE         REPLICAS   IMAGE                       PORTS
-enyvz8j2xohl   crawldb-fc_crawldb-fc   replicated   1/1        nlagovau/outbackcdx:0.7.0   *:8081-&gt;8081/tcp
-u8eczz7fw3e2   outbackcdx_outbackcdx   replicated   1/1        nlagovau/outbackcdx:0.7.0   *:8080-&gt;8080/tcp
-```
-
-
-
-Crawler
-
- docker run -ti ukwa/hapy h3cc -H crawler06.bl.uk -P 8443 -u admin -p \*\*\*\*\*\*\*\*\*\* show-metadata
-
-`kill-all-toethreads`
-
-TODO Add command to run CP?
-
-ocdxc = appCtx.getBean(&quot;outbackCDXClient&quot;)
+rdt9ivi1sqlx   outbackcdx_outbackcdx.1   nlagovau/outbackcdx:0.7.0   cdx1      Running         Running about a minute ago</p>
+<p><a class="reference external" href="http://cdx1.n45.wa.bl.uk:8080/#/data-heritrix?url=https%3A%2F%2Fwww.bl.uk">http://cdx1.n45.wa.bl.uk:8080/#/data-heritrix?url=https://www.bl.uk</a></p>
+<p>Now switch over <a class="reference external" href="http://cdx.api.wa.bl.uk">cdx.api.wa.bl.uk</a> to point at cdx1 instead of cdx2.</p>
+<p>./start_crawldb-fc.sh</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@cdx1</span> <span class="n">outbackcdx</span><span class="p">]</span><span class="c1"># docker service ps crawldb-fc_crawldb-fc</span>
+<span class="n">ID</span>             <span class="n">NAME</span>                      <span class="n">IMAGE</span>                       <span class="n">NODE</span>      <span class="n">DESIRED</span> <span class="n">STATE</span>   <span class="n">CURRENT</span> <span class="n">STATE</span>            <span class="n">ERROR</span>     <span class="n">PORTS</span>
+<span class="n">xz1rxq1vzzp7</span>   <span class="n">crawldb</span><span class="o">-</span><span class="n">fc_crawldb</span><span class="o">-</span><span class="n">fc</span><span class="mf">.1</span>   <span class="n">nlagovau</span><span class="o">/</span><span class="n">outbackcdx</span><span class="p">:</span><span class="mf">0.7.0</span>   <span class="n">cdx1</span>      <span class="n">Running</span>         <span class="n">Running</span> <span class="mi">15</span> <span class="n">seconds</span> <span class="n">ago</span>
+<span class="p">[</span><span class="n">root</span><span class="nd">@cdx1</span> <span class="n">outbackcdx</span><span class="p">]</span><span class="c1"># docker service ls</span>
+<span class="n">ID</span>             <span class="n">NAME</span>                    <span class="n">MODE</span>         <span class="n">REPLICAS</span>   <span class="n">IMAGE</span>                       <span class="n">PORTS</span>
+<span class="n">enyvz8j2xohl</span>   <span class="n">crawldb</span><span class="o">-</span><span class="n">fc_crawldb</span><span class="o">-</span><span class="n">fc</span>   <span class="n">replicated</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>        <span class="n">nlagovau</span><span class="o">/</span><span class="n">outbackcdx</span><span class="p">:</span><span class="mf">0.7.0</span>   <span class="o">*</span><span class="p">:</span><span class="mi">8081</span><span class="o">-&gt;</span><span class="mi">8081</span><span class="o">/</span><span class="n">tcp</span>
+<span class="n">u8eczz7fw3e2</span>   <span class="n">outbackcdx_outbackcdx</span>   <span class="n">replicated</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>        <span class="n">nlagovau</span><span class="o">/</span><span class="n">outbackcdx</span><span class="p">:</span><span class="mf">0.7.0</span>   <span class="o">*</span><span class="p">:</span><span class="mi">8080</span><span class="o">-&gt;</span><span class="mi">8080</span><span class="o">/</span><span class="n">tcp</span>
+</pre></div>
+</div>
+<p>Crawler</p>
+<p>docker run -ti ukwa/hapy h3cc -H <a class="reference external" href="http://crawler06.bl.uk">crawler06.bl.uk</a> -P 8443 -u admin -p ********** show-metadata</p>
+<p><code class="docutils literal notranslate"><span class="pre">kill-all-toethreads</span></code></p>
+<p>TODO Add command to run CP?</p>
+<p>ocdxc = appCtx.getBean(“outbackCDXClient”)
 rawOut.println(ocdxc.endpoint)
-ocdxc.endpoint = &quot;http://192.168.45.7:8081/fc&quot;
-rawOut.println(ocdxc.endpoint)
-
-(Not a proper solution as warcprox needs the update too)
-
-
-
-b = appCtx.getBean(&quot;checkpointService&quot;)
+ocdxc.endpoint = “<a class="reference external" href="http://192.168.45.7:8081/fc">http://192.168.45.7:8081/fc</a>”
+rawOut.println(ocdxc.endpoint)</p>
+<p>(Not a proper solution as warcprox needs the update too)</p>
+<p>b = appCtx.getBean(“checkpointService”)
 rawOut.println(b.lastCheckpointSnapshot)
 b.lastCheckpointSnapshot = null
-rawOut.println(b.lastCheckpointSnapshot)
-
-touch /mnt/gluster/fc/heritrix/output/frequent-npld/20210519154706/logs/crawl.log
-
-`Checkpoint cp00033-20210528102926 saved`
-
-
-
-Checkpoint cp00049-20210610194553 saved
-</pre></div>
+rawOut.println(b.lastCheckpointSnapshot)</p>
+<p>touch /mnt/gluster/fc/heritrix/output/frequent-npld/20210519154706/logs/crawl.log</p>
+<p><code class="docutils literal notranslate"><span class="pre">Checkpoint</span> <span class="pre">cp00033-20210528102926</span> <span class="pre">saved</span></code></p>
+<p>Checkpoint cp00049-20210610194553 saved</p>
 </div>
 </div>
 </div>

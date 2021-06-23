@@ -1,4 +1,4 @@
-# Our Goals
+# Goals & Principles
 
 The UK Web Archive (UKWA) collects millions of websites each year, and have been collecting websites since 2005. We do this for posterity, but also for readers and researchers today.
 

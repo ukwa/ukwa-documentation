@@ -51,8 +51,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Runbooks" href="../op_response.html" />
-    <link rel="prev" title="Setting up a AWS Cloud server for the Domain Crawl" href="crawler_setup_aws_dc.html" />
+    <link rel="next" title="Setting up a AWS Cloud server for the Domain Crawl" href="010_crawler_setup_aws_dc.html" />
+    <link rel="prev" title="Operations" href="../op_act.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,7 +109,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../_index.html">
-   Our Goals
+   Goals &amp; Principles
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -159,14 +159,14 @@
      </i>
     </label>
     <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="crawler_setup_aws_dc.html">
-       Setting up a AWS Cloud server for the Domain Crawl
-      </a>
-     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        Crawler Operations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="010_crawler_setup_aws_dc.html">
+       Setting up a AWS Cloud server for the Domain Crawl
       </a>
      </li>
     </ul>
@@ -183,7 +183,7 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../runbooks/001_cdx_outage.html">
-       CDX Outage
+       Switching over to the secondary CDX service
       </a>
      </li>
     </ul>
@@ -275,7 +275,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/how-ukwa-works/management/ops/crawling.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/how-ukwa-works/management/ops/001_crawling.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -295,7 +295,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/management/ops/crawling.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/management/ops/001_crawling.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -430,7 +430,7 @@
 <p>For further details, see:</p>
 <ul class="simple">
 <li><p><em>TBA: Link to local crawler setup</em></p></li>
-<li><p><a class="reference internal" href="crawler_setup_aws_dc.html"><span class="doc std std-doc">AWS Domain Crawl Setup</span></a></p></li>
+<li><p><span class="xref myst">AWS Domain Crawl Setup</span></p></li>
 </ul>
 <div class="section" id="checking-service-status">
 <h3>Checking Service Status<a class="headerlink" href="#checking-service-status" title="Permalink to this headline">¶</a></h3>
@@ -467,7 +467,7 @@
 <p>The current crawl engine is integrated with <em>Apache Kafka</em>, and so this service needs be started before Heritrix.  This means the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> and <code class="docutils literal notranslate"><span class="pre">dc_kafka</span></code> stacks for the frequent and domain crawls respectively. These configurations are available at <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka">fc-kafka</a>, <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka">dc-kafka</a>.</p>
 <div class="figure align-center" id="fc-kafka-stack">
 <a class="reference internal image-reference" href="../../../_images/fc_kafka.svg"><img alt="../../../_images/fc_kafka.svg" height="500px" src="../../../_images/fc_kafka.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_kafka</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-kafka-stack" title="Permalink to this image">¶</a></p>
 </div>
 <p>To deploy the Kafka service stack. e.g. for <code class="docutils literal notranslate"><span class="pre">dc</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd ingest/dc/dc-kafka
@@ -494,7 +494,7 @@ docker service logs --tail 100 -f dc_kafka_kafka_1
 <p>The <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> and <code class="docutils literal notranslate"><span class="pre">dc_crawl</span></code> stack definitions can be found at <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-crawl">fc-crawl</a>, <a class="reference external" href="https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-crawl">dc-crawl</a>.</p>
 <div class="figure align-center" id="fc-crawk-stack">
 <a class="reference internal image-reference" href="../../../_images/fc_crawl.svg"><img alt="../../../_images/fc_crawl.svg" height="500px" src="../../../_images/fc_crawl.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-crawk-stack" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A visualiation of the main components of the <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> Docker Stack configuration.</span><a class="headerlink" href="#fc-crawk-stack" title="Permalink to this image">¶</a></p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">fc_crawl</span></code> stack is the more complex than the <code class="docutils literal notranslate"><span class="pre">dc</span></code> equivalent, as it includes the components needed to render some web pages using a web browser behind an archiving proxy (<code class="docutils literal notranslate"><span class="pre">warcprox</span></code>).  There are also some differences in how the crawls are configured. The details of the Heritrix configuration are described in <em>TBA</em>.</p>
 <p><em>TBC</em></p>
@@ -552,7 +552,7 @@ docker service logs --tail 100 -f dc_kafka_kafka_1
 </ul>
 </div>
 <div class="section" id="unpausing-crawl-job-s">
-<h2>Unpausing crawl job(s)<a class="headerlink" href="#unpausing-crawl-job-s" title="Permalink to this headline">¶</a></h2>
+<span id="crawl-op-unpause"></span><h2>Unpausing crawl job(s)<a class="headerlink" href="#unpausing-crawl-job-s" title="Permalink to this headline">¶</a></h2>
 <p>When the crawler is in the <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code> state, just click the <code class="docutils literal notranslate"><span class="pre">UNPAUSE</span></code> button to begin or resume a crawl.</p>
 </div>
 <div class="section" id="monitoring-crawl-jobs">
@@ -565,10 +565,11 @@ docker service logs --tail 100 -f dc_kafka_kafka_1
 <p>If possible, we wish to preserve the current state of the crawl, so we try to pause and cleanly shut down while making a checkpoint to restart from.</p>
 </div>
 <div class="section" id="pause-the-crawl-job-s">
-<h2>Pause the crawl job(s)<a class="headerlink" href="#pause-the-crawl-job-s" title="Permalink to this headline">¶</a></h2>
+<span id="crawl-op-pause"></span><h2>Pause the crawl job(s)<a class="headerlink" href="#pause-the-crawl-job-s" title="Permalink to this headline">¶</a></h2>
 <p>For all Heritrixes in the Docker Stack: log into the Heritrix3 control UI, and pause any job(s) on the crawler that are in the <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> state. After the <code class="docutils literal notranslate"><span class="pre">PAUSE</span></code> button is pressed, the crawl enters the <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> state, while it waits for various threads to shutdown neatly. This can take a while (say up to two hours) if a given <code class="docutils literal notranslate"><span class="pre">ToeThread</span></code> is doing something like processing many thousands of discovered URLs from a site map.  If all goes well, all <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> jobs will eventually go from <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> to <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p>
-<p>Sometimes pausing never completes because of some bug. For example, under some cirumstances a <code class="docutils literal notranslate"><span class="pre">ToeThread</span></code> can die due to a run time error, and after that happens, and attempt to pause will get stuck in the <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> state.  Worst still, if some critical component is down (like a disk drive or remote service like the crawl-time CDX index), then the <code class="docutils literal notranslate"><span class="pre">ToeThreads</span></code> may all get stuck trying to shut down. If this happens, there’s not a lot we can do except accept shut down and accept that we may need to restart from an older checkpoint.</p>
-<p>If the crawler is being paused due to a temporary network outage, there’s no need to proceed with the full shutdown, and instead we can skip to Unpausing the crawl jobs(s) TBA TBA.  However, it does not hurt to take this opportunity to checkpoint each crawl job, in case something goes wrong while we’re <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p>
+<p>Sometimes pausing never completes because of some bug. For example, under some cirumstances a <code class="docutils literal notranslate"><span class="pre">ToeThread</span></code> can die due to a run time error, and after that happens, and attempt to pause will get stuck in the <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> state.</p>
+<p>If the crawler is being paused due to a temporary network outage, it doesn’t matter if the crawler is <code class="docutils literal notranslate"><span class="pre">PAUSING</span></code> rather than <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>. In either case, we can go ahead and <a class="reference internal" href="#crawl-op-unpause"><span class="std std-ref">unpause</span></a> when the outage is over.  However, it does not hurt to take this opportunity to checkpoint each crawl job, in case something goes wrong while we’re <code class="docutils literal notranslate"><span class="pre">PAUSING/PAUSED</span></code>.</p>
+<p>However, if some critical component is down (like a disk drive or remote service like the crawl-time CDX index), then the <code class="docutils literal notranslate"><span class="pre">ToeThreads</span></code> may all get stuck trying to shut down. If this happens, there’s not a lot we can do except accept shut down and accept that we may need to restart from an older checkpoint.</p>
 </div>
 <div class="section" id="checkpoint-the-job-s">
 <h2>Checkpoint the job(s)<a class="headerlink" href="#checkpoint-the-job-s" title="Permalink to this headline">¶</a></h2>
@@ -641,8 +642,8 @@ rs.log.cp00025-20210519124709
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="crawler_setup_aws_dc.html" title="previous page">Setting up a AWS Cloud server for the Domain Crawl</a>
-    <a class='right-next' id="next-link" href="../op_response.html" title="next page">Runbooks</a>
+    <a class='left-prev' id="prev-link" href="../op_act.html" title="previous page">Operations</a>
+    <a class='right-next' id="next-link" href="010_crawler_setup_aws_dc.html" title="next page">Setting up a AWS Cloud server for the Domain Crawl</a>
 
         </div>
         

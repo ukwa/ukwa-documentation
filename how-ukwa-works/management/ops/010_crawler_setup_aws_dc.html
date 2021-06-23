@@ -51,8 +51,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Crawler Operations" href="crawling.html" />
-    <link rel="prev" title="Operations" href="../op_act.html" />
+    <link rel="next" title="Runbooks" href="../op_response.html" />
+    <link rel="prev" title="Crawler Operations" href="001_crawling.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,7 +109,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../_index.html">
-   Our Goals
+   Goals &amp; Principles
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -159,14 +159,14 @@
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="001_crawling.html">
+       Crawler Operations
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        Setting up a AWS Cloud server for the Domain Crawl
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="crawling.html">
-       Crawler Operations
       </a>
      </li>
     </ul>
@@ -183,7 +183,7 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../runbooks/001_cdx_outage.html">
-       CDX Outage
+       Switching over to the secondary CDX service
       </a>
      </li>
     </ul>
@@ -275,7 +275,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/how-ukwa-works/management/ops/crawler_setup_aws_dc.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/how-ukwa-works/management/ops/010_crawler_setup_aws_dc.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -295,7 +295,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/management/ops/crawler_setup_aws_dc.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/management/ops/010_crawler_setup_aws_dc.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -372,7 +372,7 @@
 <p>The overall AWS deployment architecture looks like this (although note that for clarity, only the storage drive dedicated to crawler output is shown, see below for more details):</p>
 <div class="figure align-center" id="aws-dc-arch">
 <a class="reference internal image-reference" href="how-ukwa-works/arch-plots/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg"><img alt="how-ukwa-works/arch-plots/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg" src="how-ukwa-works/arch-plots/arch-dc/img/structurizr-AmazonWebServicesDeployment.svg" width="100%" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Illustration of how the domain crawl is deployed on Amazon Web Services.</span><a class="headerlink" href="#aws-dc-arch" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Illustration of how the domain crawl is deployed on Amazon Web Services.</span><a class="headerlink" href="#aws-dc-arch" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="storage-drives">
@@ -506,8 +506,8 @@ Custom TCP TCP 9100 194.66.232.85/32 node_exporter
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../op_act.html" title="previous page">Operations</a>
-    <a class='right-next' id="next-link" href="crawling.html" title="next page">Crawler Operations</a>
+    <a class='left-prev' id="prev-link" href="001_crawling.html" title="previous page">Crawler Operations</a>
+    <a class='right-next' id="next-link" href="../op_response.html" title="next page">Runbooks</a>
 
         </div>
         
