@@ -1,4 +1,4 @@
-# Technical Overview
+# Technical Architecture
 
 To get an idea of the overall technical architecture, we won't start with an attempt to enumerate every component involved. First, we'll break it down as a set of larger technical areas, using the names we tend to use when discussing them.
 
@@ -8,7 +8,7 @@ The web archive is composed of a number of distinct groups of services, with cle
 
 Here we present them as a [Wardley map](https://learnwardleymapping.com/home/introduction/), starting with users and the required user capabilities at the top, and moving down the chain of services that fulfil those needs. The horizontal position of each service group gives a rough indication of the maturity and degree of UKWA-specific customisation involved for each group of services.
 
-```{figure} ../maps/ukwa-arch-overview-Overview.svg
+```{figure} ../../maps/ukwa-arch-overview-Overview.svg
 ---
 width: 100%
 align: center
