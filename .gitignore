@@ -1,3 +1,4 @@
 _site/
 _build/
 .ipynb_checkpoints
+.cache

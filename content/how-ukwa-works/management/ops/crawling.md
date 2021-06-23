@@ -34,7 +34,7 @@ If the state of the system cannot be made clear, the simplest thing is to start 
 1. as per instructions below, remove all running Docker Stacks.
 2. reboot the server.
 
-The system will then come back with no live services, and you may launch them as described below, and resume the relevant crawls as approppriate.
+The system will then come back with no live services, and you may launch them as described below, and resume the relevant crawls as appropriate.
 
 ### Cleaning Up
 
@@ -50,7 +50,7 @@ _TBA: VARS_
 
 The current crawl engine is integrated with _Apache Kafka_, and so this service needs be started before Heritrix.  This means the `fc_kafka` and `dc_kafka` stacks for the frequent and domain crawls respectively. These configurations are available at [fc-kafka](https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-kafka), [dc-kafka](https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-kafka).
 
-```{figure} ../arch-plots/stacks/fc_kafka.svg
+```{figure} ../../arch-plots/stacks/fc_kafka.svg
 ---
 height: 500px
 align: center
@@ -83,7 +83,7 @@ Once it's checked all the partitions of the topics it contains, the logging shou
 
 The `fc_crawl` and `dc_crawl` stack definitions can be found at [fc-crawl](https://github.com/ukwa/ukwa-services/tree/master/ingest/fc/fc-crawl), [dc-crawl](https://github.com/ukwa/ukwa-services/tree/master/ingest/dc/dc-crawl).
     
-```{figure} ../arch-plots/stacks/fc_crawl.svg
+```{figure} ../../arch-plots/stacks/fc_crawl.svg
 ---
 height: 500px
 align: center

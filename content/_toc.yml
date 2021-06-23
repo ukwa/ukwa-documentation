@@ -7,14 +7,19 @@ parts:
 - caption: How UKWA Works
   chapters:
   - file: how-ukwa-works/_index
+  - file: how-ukwa-works/arch/overview
     sections:
-    - file: how-ukwa-works/overview
-    - file: how-ukwa-works/ingest
+    - file: how-ukwa-works/arch/ingest
+    - file: how-ukwa-works/arch/manage
+    - file: how-ukwa-works/arch/access
+  - file: how-ukwa-works/management/_index
+    sections:
+    - file: how-ukwa-works/management/op_act
       sections:
-      - glob: how-ukwa-works/ops/*
-      - glob: how-ukwa-works/runbooks/*
-    - file: how-ukwa-works/manage
-    - file: how-ukwa-works/access
+      - glob: how-ukwa-works/management/ops/*
+    - file: how-ukwa-works/management/op_response
+      sections:
+      - glob: how-ukwa-works/management/runbooks/*
 - caption: Run Your Own Web Archives
   chapters:
   - file: make-your-own-warcs/index
