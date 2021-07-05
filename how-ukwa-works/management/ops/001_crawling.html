@@ -82,14 +82,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../intro.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p class="caption">
+        <p class="caption">
  <span class="caption-text">
   Using the UK Web Archive
  </span>
@@ -298,7 +291,9 @@
             href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/management/ops/001_crawling.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+        <a class="edit-button" href="https://github.com/ukwa/ukwa-documentation/edit/master/content/how-ukwa-works/management/ops/001_crawling.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -610,13 +605,21 @@ rs.log.cp00025-20210519124709
 </div>
 <div class="section" id="shut-down-the-crawl-services">
 <h2>Shut down the Crawl Services<a class="headerlink" href="#shut-down-the-crawl-services" title="Permalink to this headline">¶</a></h2>
-<p>First, remove the crawl stack, e.g.:</p>
+<p>First, remove the crawl stack, e.g. for the frequent crawl:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm fc_crawl
+</pre></div>
+</div>
+<p>Or for the domain crawl:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm dc_crawl
 </pre></div>
 </div>
 <p>The Heritrix containers are configured to give themselves a few minutes to shut down neatly.  If this is unnecessary, the container can be killed directly using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">&lt;container.id&gt;</span></code> .</p>
 <p>Then shut down Kafka</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm fc_kafka
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm dc_kafka
 </pre></div>
 </div>
 <p>If Docker actions are not responsive, it may be necessary to restart Docker itself. This means all the services get restarted with the current deployment configuration.</p>

@@ -80,14 +80,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p class="caption">
+        <p class="caption">
  <span class="caption-text">
   Using the UK Web Archive
  </span>
@@ -296,7 +289,9 @@
             href="https://github.com/ukwa/ukwa-documentation/issues/new?title=Issue%20on%20page%20%2Fhow-ukwa-works/arch-plots/render-arch-plots.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+        <a class="edit-button" href="https://github.com/ukwa/ukwa-documentation/edit/master/content/how-ukwa-works/arch-plots/render-arch-plots.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -366,6 +361,59 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generate_from_dsl</span><span class="p">(</span><span class="s2">&quot;arch-dc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exporting workspace from arch-dc.dsl
+ - loading workspace from DSL
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> - using StructurizrPlantUMLExporter
+ - writing /home/runner/work/ukwa-documentation/ukwa-documentation/content/how-ukwa-works/arch-plots/arch-dc/structurizr-SystemLandscape.puml
+ - writing /home/runner/work/ukwa-documentation/ukwa-documentation/content/how-ukwa-works/arch-plots/arch-dc/structurizr-CrawlerContainers.puml
+ - writing /home/runner/work/ukwa-documentation/ukwa-documentation/content/how-ukwa-works/arch-plots/arch-dc/structurizr-KafkaContainers.puml
+ - writing /home/runner/work/ukwa-documentation/ukwa-documentation/content/how-ukwa-works/arch-plots/arch-dc/structurizr-AmazonWebServicesDeployment.puml
+ - finished
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>java.io.IOException: Cannot run program &quot;/opt/local/bin/dot&quot;: error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:592)
+	at net.sourceforge.plantuml.cucadiagram.dot.ProcessRunner$MainThread.startThreads(ProcessRunner.java:163)
+	at net.sourceforge.plantuml.cucadiagram.dot.ProcessRunner$MainThread.runJob(ProcessRunner.java:123)
+	at net.sourceforge.plantuml.api.TimeoutExecutor$MyThread.run(TimeoutExecutor.java:79)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 5 more
+java.io.IOException: Cannot run program &quot;/opt/local/bin/dot&quot;: error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at java.base/java.lang.Runtime.exec(Runtime.java:592)
+	at net.sourceforge.plantuml.cucadiagram.dot.ProcessRunner$MainThread.startThreads(ProcessRunner.java:163)
+	at net.sourceforge.plantuml.cucadiagram.dot.ProcessRunner$MainThread.runJob(ProcessRunner.java:123)
+	at net.sourceforge.plantuml.api.TimeoutExecutor$MyThread.run(TimeoutExecutor.java:79)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 5 more
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 48
+-rw-r--r-- 1 runner docker 3753 Jul  5 10:35 structurizr-AmazonWebServicesDeployment.puml
+-rw-r--r-- 1 runner docker 6538 Jul  5 10:35 structurizr-AmazonWebServicesDeployment.svg
+-rw-r--r-- 1 runner docker 3036 Jul  5 10:35 structurizr-CrawlerContainers.puml
+-rw-r--r-- 1 runner docker 5786 Jul  5 10:35 structurizr-CrawlerContainers.svg
+-rw-r--r-- 1 runner docker 2009 Jul  5 10:35 structurizr-KafkaContainers.puml
+-rw-r--r-- 1 runner docker 4736 Jul  5 10:35 structurizr-KafkaContainers.svg
+-rw-r--r-- 1 runner docker 2582 Jul  5 10:35 structurizr-SystemLandscape.puml
+-rw-r--r-- 1 runner docker 5308 Jul  5 10:35 structurizr-SystemLandscape.svg
 </pre></div>
 </div>
 </div>
