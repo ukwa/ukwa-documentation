@@ -197,15 +197,23 @@ You can now shut down the services at the Docker level.
 
 ## Shut down the Crawl Services
 
-First, remove the crawl stack, e.g.:
+First, remove the crawl stack, e.g. for the frequent crawl:
 
     docker stack rm fc_crawl
+
+Or for the domain crawl:
+
+    docker stack rm dc_crawl
 
 The Heritrix containers are configured to give themselves a few minutes to shut down neatly.  If this is unnecessary, the container can be killed directly using `docker rm <container.id>` .
 
 Then shut down Kafka
 
     docker stack rm fc_kafka
+
+or
+
+    docker stack rm dc_kafka
     
 If Docker actions are not responsive, it may be necessary to restart Docker itself. This means all the services get restarted with the current deployment configuration.
 
