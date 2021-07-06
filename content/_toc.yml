@@ -4,6 +4,18 @@ parts:
 - caption: Using the UK Web Archive
   chapters:
   - file: using-ukwa-services/index
+  - file: opendata/_index
+    sections:
+    - file: opendata/ukwa.ds.1/_index
+      sections:
+      - file: opendata/ukwa.ds.1/classification/index
+    - file: opendata/ukwa.ds.2/_index
+      sections:
+      - file: opendata/ukwa.ds.2/cdx/index
+      - file: opendata/ukwa.ds.2/fmt/index
+      - file: opendata/ukwa.ds.2/geo/index
+      - file: opendata/ukwa.ds.2/linkage/index
+      - file: opendata/ukwa.ds.2/host-linkage/index
 - caption: How UKWA Works
   chapters:
   - file: how-ukwa-works/_index

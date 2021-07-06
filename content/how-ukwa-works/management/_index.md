@@ -1,8 +1,8 @@
 # Management
 
-The UK Web Archive is a fixed-resource cross-organisational service delivery team, funded by the UK Legal Deposit Libraries. We are responsible for both the day-to-day operation of the service, and it's continuous improvement over time.
+The UK Web Archive is an interdisciplinary cross-organisational service delivery team, funded by the UK Legal Deposit Libraries. We are responsible for both the day-to-day operation of the service, and it's continuous improvement over time.
 
-We are 
+We are a fixed-resource team: the roles are permanent positions, and each role has a fixed amount of time dedicated to web archiving, which is usually 100%.  This gives us the stability we need to manage operations as well as implement the continuous improvement we need to respond to the changing web.
 
 ## Priorities
 
