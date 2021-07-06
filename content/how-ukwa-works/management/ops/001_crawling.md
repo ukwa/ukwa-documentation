@@ -9,7 +9,9 @@ This page describes how to a manage our crawl services and jobs. This applies to
 
 ### How to test this documentation
 
-The [ukwa-heritrix](https://github.com/ukwa/ukwa-heritrix) repository contains the source code for our crawler, and also comes with a Docker Compose file so the whole thing can be spun up locally.  This is a very close match for the Frequent Crawl system can be used to try out the operations shown below. See the [ukwa-heritrix README on GitHub](https://github.com/ukwa/ukwa-heritrix#readme) for details.
+The [ukwa-heritrix](https://github.com/ukwa/ukwa-heritrix) repository contains the source code for our crawler, and also comes with a Docker Compose file so the whole thing can be spun up locally.  This is a very close match for the Frequent Crawl system can be used to try out the operations shown below. See the [ukwa-heritrix README on GitHub](https://github.com/ukwa/ukwa-heritrix#readme) for more details.
+
+One notable difference between the development version and the production version is that production does not use a single Docker Compose file with everything in it. Intead we use two separate Compose files that are deployed as Docker Swarm Stacks: one for the Kafka subsystem and another for the actual crawler itself.
 
 ## Pre-requisites
 
@@ -201,7 +203,7 @@ First, remove the crawl stack, e.g. for the frequent crawl:
 
     docker stack rm fc_crawl
 
-Or for the domain crawl:
+or for the domain crawl:
 
     docker stack rm dc_crawl
 
