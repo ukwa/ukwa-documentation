@@ -311,6 +311,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priorities">
+   Priorities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedures">
+   Procedures
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -321,6 +339,71 @@
                 
   <div class="section" id="management">
 <h1>Management<a class="headerlink" href="#management" title="Permalink to this headline">¶</a></h1>
+<p>The UK Web Archive is a fixed-resource cross-organisational service delivery team, funded by the UK Legal Deposit Libraries. We are responsible for both the day-to-day operation of the service, and it’s continuous improvement over time.</p>
+<p>We are</p>
+<div class="section" id="priorities">
+<h2>Priorities<a class="headerlink" href="#priorities" title="Permalink to this headline">¶</a></h2>
+<p>When there is so much to be done, and especially dealing with unexpected and urgent issues, it is important that we all understand the overall priorities of the different types of work we undertake.</p>
+<p>Generally, operational issues take precedence over continuous improvement. Within that overall framework, our services are prioritised as follows:</p>
+<ol class="simple">
+<li><p><strong>Crawling:</strong> We cannot preserve what we fail to capture in the first place. Ensuring our regular and domain crawls are running as expected is our highest priority end-user service.</p>
+<ul class="simple">
+<li><p>Frequent Crawls</p></li>
+<li><p>Domain Crawl (if running)</p></li>
+<li><p>Supporting services like Gluster.</p></li>
+<li><p>Automation platform, and automated tasks like launches, tidying, etc.</p></li>
+<li><p>Monitoring</p></li>
+</ul>
+</li>
+<li><p><strong>Long-Term Storage:</strong> Crawled material needs to be transferred to HDFS promptly for safe keeping.</p>
+<ul class="simple">
+<li><p>HDFS itself and capacity management.</p></li>
+<li><p>Operation and monitoring of HDFS and <code class="docutils literal notranslate"><span class="pre">move-to-hdfs</span></code> processes.</p></li>
+<li><p>Backup of live service databases to HDFS.</p></li>
+<li><p>Replication of HDFS to a separate location (NLS).</p></li>
+<li><p>TrackDB (which is used to track indexing status etc.) ???</p></li>
+</ul>
+</li>
+<li><p><strong>Ingest Services:</strong> So curators, archivists and parters can define what gets crawled and how it’s described.</p>
+<ul class="simple">
+<li><p>W3ACT</p></li>
+<li><p>QA Wayback</p></li>
+<li><p>Document Harvester</p></li>
+</ul>
+</li>
+<li><p><strong>Access Services:</strong> So readers and researchers can access and use our collections.</p>
+<ul class="simple">
+<li><p>The website</p></li>
+<li><p>Public Wayback</p></li>
+<li><p>Full-text Search</p></li>
+</ul>
+</li>
+<li><p><strong>Improving Crawl Quality:</strong> Areas for improvement include:</p>
+<ul class="simple">
+<li><p>Improved automation</p></li>
+<li><p>Improved reporting</p></li>
+<li><p>Automated verification &amp; QA</p></li>
+</ul>
+</li>
+<li><p><strong>Improving Ingest Services:</strong> Areas for improvement include:</p>
+<ul class="simple">
+<li><p>W3ACT fixes and features</p></li>
+<li><p>Document Harvester improvements</p></li>
+<li><p>Integrated reporting and analysis</p></li>
+</ul>
+</li>
+<li><p><strong>Improving Access Services:</strong> Areas for improvement include:</p>
+<ul class="simple">
+<li><p>New website features</p></li>
+<li><p>Updated version of Wayback</p></li>
+<li><p>APIs and datasets</p></li>
+</ul>
+</li>
+</ol>
+<p>This is a service-oriented perspective. Of course, each service area has its own underlying infrastructure, like servers and networks.</p>
+</div>
+<div class="section" id="procedures">
+<h2>Procedures<a class="headerlink" href="#procedures" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="op_act.html">Operations</a><ul>
@@ -333,6 +416,7 @@
 </ul>
 </li>
 </ul>
+</div>
 </div>
 </div>
 

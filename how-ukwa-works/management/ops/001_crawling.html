@@ -427,7 +427,8 @@
 </ul>
 <div class="section" id="how-to-test-this-documentation">
 <h3>How to test this documentation<a class="headerlink" href="#how-to-test-this-documentation" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://github.com/ukwa/ukwa-heritrix">ukwa-heritrix</a> repository contains the source code for our crawler, and also comes with a Docker Compose file so the whole thing can be spun up locally.  This is a very close match for the Frequent Crawl system can be used to try out the operations shown below. See the <a class="reference external" href="https://github.com/ukwa/ukwa-heritrix#readme">ukwa-heritrix README on GitHub</a> for details.</p>
+<p>The <a class="reference external" href="https://github.com/ukwa/ukwa-heritrix">ukwa-heritrix</a> repository contains the source code for our crawler, and also comes with a Docker Compose file so the whole thing can be spun up locally.  This is a very close match for the Frequent Crawl system can be used to try out the operations shown below. See the <a class="reference external" href="https://github.com/ukwa/ukwa-heritrix#readme">ukwa-heritrix README on GitHub</a> for more details.</p>
+<p>One notable difference between the development version and the production version is that production does not use a single Docker Compose file with everything in it. Intead we use two separate Compose files that are deployed as Docker Swarm Stacks: one for the Kafka subsystem and another for the actual crawler itself.</p>
 </div>
 </div>
 <div class="section" id="pre-requisites">
@@ -609,7 +610,7 @@ rs.log.cp00025-20210519124709
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm fc_crawl
 </pre></div>
 </div>
-<p>Or for the domain crawl:</p>
+<p>or for the domain crawl:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>docker stack rm dc_crawl
 </pre></div>
 </div>
