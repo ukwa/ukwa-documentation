@@ -10,6 +10,9 @@ outputs:
 
 # Links by Domain Suffix
 
+```{download} link-matrix.json
+```
+
 <style>
 
 .tab-pane {
