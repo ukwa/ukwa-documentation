@@ -407,37 +407,54 @@
 <h1>Crawled URL Index<a class="headerlink" href="#crawled-url-index" title="Permalink to this headline">¶</a></h1>
 <p>In order to enable access to web archives, we use <a class="reference external" href="https://archive.org/web/researcher/cdx_file_format.php">CDX files</a> to act as indexes so that we can look up which ARC or WARC files contain which URLs and responses.</p>
 <p>The original CDX files were generated for us by the Internet Archive, with one CDX file for each ARC or WARC file. This makes it easy for us to manage those files, but it is not very convenient for researchers to have to download and deal with over half a million separate small files. Therefore, we have processed those CDX files and aggregated the  data into 18 separate CDX files – one per year of crawling activity. Please note that the individual CDX files are not sorted.</p>
+<p>See <a class="reference external" href="https://doi.org/10.5259/ukwa.ds.2/cdx/1">10.5259/ukwa.ds.2/cdx/1</a> for further information, including how to cite this dataset.</p>
 <div class="section" id="schema">
 <h2>Schema<a class="headerlink" href="#schema" title="Permalink to this headline">¶</a></h2>
-<p>There are a few variations on the CDX format, but for this dataset, the CDX lines look like this:</p>
-<pre>
-vanguard.ntu.ac.uk/ 19961018104851 http://vanguard.ntu.ac.uk:80/ text/html 200 2TAC6RS2DMTHHFVWCSDHNL6W6RIIOQIV - 34954008 DOTUK-HISTORICAL-1996-2010-GROUP-AA-XABEGS-20110428000000-00000.arc.gz
-</pre>
+<p>There are a few variations on <a class="reference external" href="https://iipc.github.io/warc-specifications/specifications/cdx-format/cdx-2015/">the CDX format</a>, but for this dataset, the CDX lines look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vanguard</span><span class="o">.</span><span class="n">ntu</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span><span class="o">/</span> <span class="mi">19961018104851</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">vanguard</span><span class="o">.</span><span class="n">ntu</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span><span class="p">:</span><span class="mi">80</span><span class="o">/</span> <span class="n">text</span><span class="o">/</span><span class="n">html</span> <span class="mi">200</span> <span class="mi">2</span><span class="n">TAC6RS2DMTHHFVWCSDHNL6W6RIIOQIV</span> <span class="o">-</span> <span class="mi">34954008</span> <span class="n">DOTUK</span><span class="o">-</span><span class="n">HISTORICAL</span><span class="o">-</span><span class="mi">1996</span><span class="o">-</span><span class="mi">2010</span><span class="o">-</span><span class="n">GROUP</span><span class="o">-</span><span class="n">AA</span><span class="o">-</span><span class="n">XABEGS</span><span class="o">-</span><span class="mi">20110428000000</span><span class="o">-</span><span class="mf">00000.</span><span class="n">arc</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
 <p>These space-separated fields can be interpreted as follows:</p>
-<p><a class="reference external" href="http://vanguard.ntu.ac.uk/">vanguard.ntu.ac.uk/</a>
-: This is the canonicalized version of the URL (the ‘key’ of the index)</p>
-<p>19961018104851
-: Time of capture (in ‘YYYYMMDDHHMMSS’ format)</p>
-<p><a class="reference external" href="http://vanguard.ntu.ac.uk:80/">http://vanguard.ntu.ac.uk:80/</a>
-: The actual URL crawled</p>
-<p>text/html
-: The ‘Content-Type’ (as returned in the original server response)</p>
-<p>200
-: HTTP status code reported by the server</p>
-<p>2TAC6RS2DMTHHFVWCSDHNL6W6RIIOQIV
-: Checksum (this is the Base32 encoded form of the SHA1 digest of the response payload).</p>
-<ul class="simple">
-<li></li>
-</ul>
-<p>: This is the redirect URL (i.e. the ‘Location’ header, populated only for 3** responses, “-” for others).</p>
-<p>34954008
-: This is the offset of the record in the WARC/ARC file.</p>
-<p>DOTUK-HISTORICAL-1996-2010-GROUP-AA-XABEGS-20110428000000-00000.arc.gz
-: This is the WARC/ARC which contains the record (coupled with the above offset, used to determine the exact location).</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vanguard.ntu.ac.uk/</span></code></p></td>
+<td><p>This is the canonicalized version of the URL (the ‘key’ of the index)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">19961018104851</span></code></p></td>
+<td><p>Time of capture (in ‘YYYYMMDDHHMMSS’ format)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">http://vanguard.ntu.ac.uk:80/</span></code></p></td>
+<td><p>The actual URL crawled</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text/html</span></code></p></td>
+<td><p>The ‘Content-Type’ (as returned in the original server response)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">200</span></code></p></td>
+<td><p>HTTP status code reported by the server</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">2TAC6RS2DMTHHFVWCSDHNL6W6RIIOQIV</span></code></p></td>
+<td><p>Checksum (this is the Base32 encoded form of the SHA1 digest of the response payload).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>This is the redirect URL (i.e. the ‘Location’ header, populated only for 3** responses, “-” for others).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">34954008</span></code></p></td>
+<td><p>This is the offset of the record in the WARC/ARC file.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DOTUK-HISTORICAL-1996-2010-GROUP-AA-XABEGS-20110428000000-00000.arc.gz</span></code></p></td>
+<td><p>This is the WARC/ARC which contains the record (coupled with the above offset, used to determine the exact location).</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
-<p>This large dataset cannot be hosted on GitHub. It can be downloaded from <a class="reference external" href="http://www.webarchive.org.uk/datasets/ukwa.ds.2/cdx/">here</a> instead, as compressed files containing the CDX data for each year of crawler activity.</p>
+<p>It can be downloaded from <a class="reference external" href="http://www.webarchive.org.uk/datasets/ukwa.ds.2/cdx/">here</a> instead, as compressed files containing the CDX data for each year of crawler activity.</p>
 </div>
 </div>
 
